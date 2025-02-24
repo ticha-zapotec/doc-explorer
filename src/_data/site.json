@@ -1,0 +1,54 @@
+{
+  "title": "Ticha Document Explorer",
+  "description": "",
+  "url": "",
+  "menu": [
+    {
+      "title": "Get Started",
+      "sub": [
+        {
+          "title": "Guide",
+          "url": "/get-started/guide"
+        },
+        {
+          "title": "Bibliography",
+          "url": "/get-started/bibliography"
+        }
+      ]
+    },
+    {
+      "title": "Explore",
+      "sub": [
+        {
+          "title": "Primary Documents",
+          "url": "/explore/all"
+        },
+        {
+          "title": "Digital Editions",
+          "url": "/explore/editions"
+        }
+      ]
+    },
+    {
+      "title": "Visualize",
+      "url": "/visualize"
+    },
+    {
+      "title": "Connect",
+      "sub": [
+        {
+          "title": "Credits",
+          "url": "/connect/credits"
+        },
+        {
+          "title": "Get in Touch",
+          "url": "/connect/contact"
+        },
+        {
+          "title": "Teaching Resources",
+          "url": "/connect/teaching"
+        }
+      ]
+    }
+  ]
+}
