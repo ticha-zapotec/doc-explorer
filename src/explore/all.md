@@ -5,7 +5,7 @@ permalink: "/explore/all.html"
 ---
 
 <section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
+  <div class="lg:container px-5 py-24 mx-auto">
     <div class="flex flex-wrap w-full mb-20">
       <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
         <h3 class="text-xs text-red-700 tracking-widest font-medium title-font mb-1 uppercase">Explore</h3>

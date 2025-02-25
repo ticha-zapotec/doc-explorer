@@ -4,13 +4,8 @@
   background: #fcf49a;
 }
 
-.dropdown {
+/* .dropdown-menu {
   transition: all 0.2s ease-in-out;
   overflow: hidden;
-  margin: 30px;
   cursor: pointer;
-}
-
-.dropdown.closed .menu {
-  height: 0px;
-}
+} */

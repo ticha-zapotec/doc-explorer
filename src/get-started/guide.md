@@ -26,7 +26,7 @@ browse_blocks:
     icon: ''
 ---
 <section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
+  <div class="lg:container px-5 py-24 mx-auto">
     <div class="flex flex-wrap w-full mb-20">
       <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
         <h3 class="text-xs text-red-700 tracking-widest font-medium title-font mb-1 uppercase">Get Started</h3>
@@ -41,7 +41,7 @@ browse_blocks:
     <div class="my-6">
       <h2 class="md:text-2xl text-xl font-medium title-font text-gray-900">Exploring By Category</h2>
     </div>
-    <div class="container mx-auto flex flex-wrap mb-12">
+    <div class="lg:container mx-auto flex flex-wrap mb-12">
       <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
         <img alt="feature" class="object-cover object-center w-full" src="https://dummyimage.com/460x500">
         <p class="text-xs text-red-700 tracking-widest font-medium title-font my-2 uppercase">Above: Translation of Bill of Sale from San Jerónimo Tlacochahuaya, 1675</p>
