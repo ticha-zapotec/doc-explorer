@@ -17,16 +17,20 @@
           </button>
           <div class="dropdown-menu absolute hidden py-2 w-48">
             {% for sub in item.sub %}
-            <a href="{{ sub.url }}" class="block pb-1">{{ sub.title }}</a>
+              {% if sub.external %}
+              <a href="{{ sub.url }}" class="block pb-2 leading-tight text-sm" target="_blank">{{ sub.title }} ↗</a>
+              {% else %}
+              <a href="{{ sub.url }}" class="block pb-2 leading-tight text-sm" >{{ sub.title }}</a>
+              {% endif %}
             {% endfor %}
           </div>
         </div>
         {% else %}
-        <a href="{{ item. url }}" class="mr-5 hover:text-gray-900">{{ item.title }}</a>
+        <a href="{{ item. url }}" class="mr-5 hover:text-gray-900 text-sm">{{ item.title }}</a>
         {% endif %}
       {% endfor %}
     </nav>
-    <a href="#" class="inline-flex items-center bg-red-700 border-0 py-1 px-3 focus:outline-none hover:bg-red-800 rounded text-white mt-4 md:mt-0">
+    <a href="https://ticha.haverford.edu" target="_blank" class="inline-flex items-center bg-red-700 border-0 py-1 px-3 focus:outline-none hover:bg-red-800 rounded text-white mt-4 md:mt-0">
       Ticha Project Home
       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
         <path d="M5 12h14M12 5l7 7-7 7"></path>

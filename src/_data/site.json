@@ -7,12 +7,13 @@
       "title": "Get Started",
       "sub": [
         {
-          "title": "Guide",
+          "title": "Guide to the Document Explorer",
           "url": "/get-started/guide"
         },
         {
-          "title": "Bibliography",
-          "url": "/get-started/bibliography"
+          "title": "About Colonial Valley Zapotec",
+          "url": "https://ticha.haverford.edu/en/context/",
+          "external": true
         }
       ]
     },
@@ -26,27 +27,39 @@
         {
           "title": "Digital Editions",
           "url": "/explore/editions"
+        },
+        {
+          "title": "Document Statistics",
+          "url": "/explore/statistics"
         }
       ]
-    },
-    {
-      "title": "Visualize",
-      "url": "/visualize"
     },
     {
       "title": "Connect",
       "sub": [
         {
-          "title": "Credits",
+          "title": "Credits and Acknowledgements",
           "url": "/connect/credits"
         },
         {
           "title": "Get in Touch",
-          "url": "/connect/contact"
+          "external": true,
+          "url": "https://ticha.haverford.edu/en/form/"
+        }
+      ]
+    },
+    {
+      "title": "Companion Resources",
+      "sub": [
+        {
+          "title": "Ticha Diccionario Colonial Valley Zapotec",
+          "url": "https://www.webonary.org/colonial_valley_zapotec/",
+          "external": true
         },
         {
-          "title": "Teaching Resources",
-          "url": "/connect/teaching"
+          "title": "Caseidyneën Saën Teaching Modules",
+          "url": "https://ticha.haverford.edu/en/lessons/",
+          "external": true
         }
       ]
     }
