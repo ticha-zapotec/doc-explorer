@@ -1,8 +1,7 @@
 ---
-title: "Document Visualizations and Statistics"
-description: ""
+title: "Find and Access Documents by Person"
 layout: "base"
-permalink: "/explore/statistics.html"
+permalink: "/explore/people.html"
 ---
 
 <section class="text-gray-600 body-font">
@@ -15,7 +14,6 @@ permalink: "/explore/statistics.html"
       </div>
       <div class="lg:w-1/2 w-full">
         <p class="leading-relaxed text-gray-500 mb-2"></p>
-      </div>
     </div>
 
 

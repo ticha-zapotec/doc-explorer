@@ -4,19 +4,19 @@ description: ""
 layout: "base"
 permalink: "/index.html"
 cards:
-  - label: 'A Guide to Using the Ticha Document Explorer'
+  - label: 'Using the Ticha Document Explorer'
     eyebrow: 'Get Started'
     img: 'https://ticha.haverford.edu/static/img/flowers_copy.jpg'
-    link: '/get-started/guide'
+    link: '/get-started/guides'
   - label: 'Find and Access Primary Documents'
     eyebrow: 'Explore'
     img: 'https://ticha.haverford.edu/static/img/linguistic-background_DSC_0245.jpg'
     link: '/explore/all'
-  - label: 'Browse Digital Editions'
+  - label: 'Ticha Digital Editions'
     eyebrow: 'Explore'
     img: 'https://ticha.haverford.edu/static/img/doctrina_images/doctrina_example.png'
     link: '/explore/editions'
-  - label: 'Interact with Document Maps and Statistics'
+  - label: 'Document Visualizations and Statistics'
     eyebrow: 'Explore'
     img: '/static/map-screen.png'
     link: '/explore/statistics'
@@ -38,15 +38,16 @@ cards:
         <div class="h-1 w-20 bg-red-700 rounded mt-4"></div>
       </div>
       <div class="lg:w-1/2 w-full">
-        <p class="leading-relaxed text-gray-500 mb-4">The <b>Ticha Document Explorer</b> allows users to access and explore many interlinked layers of texts from a corpus of <a href="https://ticha.haverford.edu/en/context/" target="_blank" class="text-red-700 underline hover:no-underline">Colonial Valley Zapotec ↗</a> manuscripts and printed books, including images of the original documents, transcriptions, translations, and linguistic analysis, including morphological interlinearization.</p>
-        <p class="leading-relaxed text-gray-500 mb-4"><b>Ticha</b> itself is an international effort to document and promote Zapotec languages and knowledge through workshops, events, and online resources provided to the public at no cost. We enouage you to browse our <a href="https://ticha.haverford.edu" target="_blank" class="text-red-700 underline hover:no-underline">main website ↗</a> to learn more about what we do, the resources we provide, and how to get involved.</p>
+        <p class="leading-relaxed text-gray-500 mb-4"><b>Ticha Document Explorer</b> allows users to access and explore many interlinked layers of texts from a corpus of <a href="https://ticha.haverford.edu/en/context/" target="_blank" class="text-red-700 underline hover:no-underline">Colonial Valley Zapotec ↗</a> manuscripts and printed books, including images of the original documents, transcriptions, translations, and linguistic analysis, including morphological interlinearization.</p>
+        <p class="leading-relaxed text-gray-500 mb-4"><b>Ticha</b> is an international effort to document and promote Zapotec languages and knowledge through workshops, events, and online resources provided to the public at no cost. We enouage you to browse our <a href="https://ticha.haverford.edu" target="_blank" class="text-red-700 underline hover:no-underline">main website ↗</a> to learn more about what we do, the resources we provide, and how to get involved.</p>
       </div>
     </div>
     <div class="flex flex-wrap -m-4">
       {% for card in cards %}
       <div class="xl:w-1/4 md:w-1/3 sm:w-1/2 p-4">
         <a href="{{ card.link }}">
-          <div class="bg-[#ffffff] p-6 rounded-lg shadow-xl hover:shadow-md">
+          <!-- class="bg-[#ffffff] p-6 rounded-lg shadow-xl hover:shadow-md" -->
+          <div class="transition duration-250 ease-in-out hover:scale-105">
             <img class="h-40 rounded w-full object-cover object-center mb-6" src="{{ card.img | default: 'https://dummyimage.com/720x400 '}}" alt="content">
             <h3 class="uppercase tracking-widest text-red-700 text-xs font-medium title-font">{{ card.eyebrow }}</h3>
             <h2 class="text-lg text-gray-900 font-medium title-font my-2 leading-tight">{{ card.label }}</h2>

@@ -7,8 +7,8 @@
       "title": "Get Started",
       "sub": [
         {
-          "title": "Guide to the Document Explorer",
-          "url": "/get-started/guide"
+          "title": "Using the Ticha Document Explorer",
+          "url": "/get-started/guides"
         },
         {
           "title": "About Colonial Valley Zapotec",
@@ -21,15 +21,23 @@
       "title": "Explore",
       "sub": [
         {
-          "title": "Primary Documents",
+          "title": "All Primary Documents",
           "url": "/explore/all"
         },
         {
-          "title": "Digital Editions",
+          "title": "Digital Editons",
           "url": "/explore/editions"
         },
         {
-          "title": "Document Statistics",
+          "title": "Browse by Town",
+          "url": "/explore/towns"
+        },
+        {
+          "title": "Browse by Archive",
+          "url": "/explore/archive"
+        },
+        {
+          "title": "Visualizations and Statistics",
           "url": "/explore/statistics"
         }
       ]
