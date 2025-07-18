@@ -19,7 +19,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('static', 'static')
   
   return {
-    pathPrefix: '/ticha-doc-explorer',
+    pathPrefix: '/doc-explorer',
     markdownTemplateEngine: 'liquid',
     dir: {
       input: 'src',
