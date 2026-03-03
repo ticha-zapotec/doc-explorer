@@ -11,7 +11,7 @@ cards:
   - label: 'Find and Access Primary Documents'
     eyebrow: 'Explore'
     img: 'https://ticha.haverford.edu/static/img/linguistic-background_DSC_0245.jpg'
-    link: '/explore/all'
+    link: '/explore/documents'
   - label: 'Ticha Digital Editions'
     eyebrow: 'Explore'
     img: 'https://ticha.haverford.edu/static/img/doctrina_images/doctrina_example.png'

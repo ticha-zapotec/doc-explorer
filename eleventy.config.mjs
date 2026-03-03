@@ -14,7 +14,12 @@ export default function (eleventyConfig) {
     return JSON.stringify(data, null, "\t")
   })  
 
+  eleventyConfig.addFilter('uri_encode', function(str) {
+    return encodeURIComponent(str);
+  })
+
   eleventyConfig.addLayoutAlias('base', 'layouts/base.html')
+  eleventyConfig.addLayoutAlias('document', 'layouts/document.html')
 
   eleventyConfig.addPassthroughCopy('static', 'static')
   
