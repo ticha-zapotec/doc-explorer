@@ -1,0 +1,1885 @@
+<!doctype html>
+<html lang="en" id="top" data-theme="light" class="bg-[#f7efdc] scroll-smooth">
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
+  <title>Find and Access Ticha Primary Documents | Ticha Document Explorer</title>
+
+
+  <link href="/doc-explorer/css/styles.css" rel="stylesheet">
+  <link rel="icon" href="/doc-explorer/static/favicon.png" type="image/png">
+</head>
+
+  <body class="flex flex-col min-h-screen overflow-x-clip">
+    <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x mb-13"></div> -->
+<header class="text-gray-600 body-font mt-13">
+  <div class="lg:container mx-auto flex p-5 md:flex-row justify-between items-center gap-4">
+    <nav class="flex flex-wrap text-base items-center justify-between gap-4 leading-tight w-full">
+      <div class="justify-start flex flex-wrap items-center gap-4">
+        <a href="/doc-explorer/" class="text-red-700 hover:text-red-800 flex title-font font-medium items-center justify-self-start">
+          <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-8">
+          <span class="ml-2 text-xl text-nowrap">Ticha Document Explorer</span>
+        </a>
+        <div class="flex flex-wrap gap-4">
+        
+          
+          <div>
+            <button type="button" class="dropdown-toggle flex items-center justify-start gap-2 cursor-pointer hover:text-gray-900">
+              <span class="pointer-events-none select-none px-2">Get Started</span>
+              <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+              </svg>
+            </button>
+            <div class="dropdown-menu absolute bg-white mt-2 shadow pl-2 pr-4 py-2 rounded-lg hidden w-fit">
+              
+                
+                <a href="/doc-explorer/get-started/guides" class="block pb-2 leading-tight text-sm hover:text-gray-900">Using the Ticha Document Explorer</a>
+                
+              
+                
+                <a href="https://ticha.haverford.edu/en/context/" class="block pb-2 leading-tight text-sm hover:text-gray-900" target="_blank">About Colonial Valley Zapotec ↗</a>
+                
+              
+            </div>
+          </div>
+          
+        
+          
+          <div>
+            <button type="button" class="dropdown-toggle flex items-center justify-start gap-2 cursor-pointer hover:text-gray-900">
+              <span class="pointer-events-none select-none px-2">Explore</span>
+              <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+              </svg>
+            </button>
+            <div class="dropdown-menu absolute bg-white mt-2 shadow pl-2 pr-4 py-2 rounded-lg hidden w-fit">
+              
+                
+                <a href="/doc-explorer/explore/documents" class="block pb-2 leading-tight text-sm hover:text-gray-900">All Primary Documents</a>
+                
+              
+                
+                <a href="/doc-explorer/explore/editions" class="block pb-2 leading-tight text-sm hover:text-gray-900">Digital Editons</a>
+                
+              
+                
+                <a href="/doc-explorer/explore/towns" class="block pb-2 leading-tight text-sm hover:text-gray-900">Browse by Town</a>
+                
+              
+                
+                <a href="/doc-explorer/explore/archive" class="block pb-2 leading-tight text-sm hover:text-gray-900">Browse by Archive</a>
+                
+              
+                
+                <a href="/doc-explorer/explore/statistics" class="block pb-2 leading-tight text-sm hover:text-gray-900">Visualizations and Statistics</a>
+                
+              
+            </div>
+          </div>
+          
+        
+          
+          <div>
+            <button type="button" class="dropdown-toggle flex items-center justify-start gap-2 cursor-pointer hover:text-gray-900">
+              <span class="pointer-events-none select-none px-2">Connect</span>
+              <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+              </svg>
+            </button>
+            <div class="dropdown-menu absolute bg-white mt-2 shadow pl-2 pr-4 py-2 rounded-lg hidden w-fit">
+              
+                
+                <a href="/doc-explorer/connect/credits" class="block pb-2 leading-tight text-sm hover:text-gray-900">Credits and Acknowledgements</a>
+                
+              
+                
+                <a href="https://ticha.haverford.edu/en/form/" class="block pb-2 leading-tight text-sm hover:text-gray-900" target="_blank">Get in Touch ↗</a>
+                
+              
+            </div>
+          </div>
+          
+        
+          
+          <div>
+            <button type="button" class="dropdown-toggle flex items-center justify-start gap-2 cursor-pointer hover:text-gray-900">
+              <span class="pointer-events-none select-none px-2">More Resources</span>
+              <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+              </svg>
+            </button>
+            <div class="dropdown-menu absolute bg-white mt-2 shadow pl-2 pr-4 py-2 rounded-lg hidden w-fit">
+              
+                
+                <a href="https://www.webonary.org/colonial_valley_zapotec/" class="block pb-2 leading-tight text-sm hover:text-gray-900" target="_blank">Ticha Diccionario Colonial Valley Zapotec ↗</a>
+                
+              
+                
+                <a href="https://ticha.haverford.edu/en/lessons/" class="block pb-2 leading-tight text-sm hover:text-gray-900" target="_blank">Caseidyneën Saën Teaching Modules ↗</a>
+                
+              
+            </div>
+          </div>
+          
+        
+        </div>
+      </div>
+      <div class="inline">
+      <a href="https://ticha.haverford.edu" target="_blank" class="lg:bg-red-700 inline-flex items-center border-0 py-1 px-2 lg:focus:outline-none lg:hover:bg-red-800 rounded lg:text-white">
+        Ticha Website ↗
+      </a>
+      </div>
+    </nav>
+    
+  </div>
+</header>
+    <main class="flex-1">
+      <section class="text-gray-600 body-font">
+  <div class="lg:container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap w-full mb-20">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h3 class="text-xs text-red-700 tracking-widest font-medium title-font mb-1 uppercase">Explore</h3>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Find and Access Ticha Primary Documents</h1>
+        <div class="h-1 w-20 bg-red-700 rounded mt-4"></div>
+      </div>
+      <div class="lg:w-1/2 w-full"></div>
+    </div>
+    <div class="container mx-0">
+      <div class="flex flex-wrap w-full">
+        <div class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full">
+          <h2 class="font-bold text-2xl tracking-tight mb-4">Filter Results</h2>
+          <ul><li class="pb-6 pr-6">
+              <div class="text-xl tracking-tight my-1">Language</div>
+              <ul><li class="py-1 pl-2"><a data="Zapotec" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Language&query=Zapotec">Zapotec</a></li><li class="py-1 pl-2"><a data="Spanish" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Language&query=Spanish">Spanish</a></li></ul>
+            </li><li class="pb-6 pr-6">
+              <div class="text-xl tracking-tight my-1">Document Type</div>
+              <ul><li class="py-1 pl-2"><a data="Bill of Sale" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Document%20Type&query=Bill%20of%20Sale">Bill of Sale</a></li><li class="py-1 pl-2"><a data="Testament" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Document%20Type&query=Testament">Testament</a></li><li class="py-1 pl-2"><a data="Land Deed" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Document%20Type&query=Land%20Deed">Land Deed</a></li><li class="py-1 pl-2"><a data="Receipt" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Document%20Type&query=Receipt">Receipt</a></li><li class="py-1 pl-2"><a data="Petition" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Document%20Type&query=Petition">Petition</a></li><li class="py-1 pl-2"><a data="Complaint" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Document%20Type&query=Complaint">Complaint</a></li><li class="py-1 pl-2"><a data="Land Description" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Document%20Type&query=Land%20Description">Land Description</a></li></ul>
+            </li><li class="pb-6 pr-6">
+              <div class="text-xl tracking-tight my-1">Archive</div>
+              <ul><li class="py-1 pl-2"><a data="Archivo General de la Nación" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Archive&query=Archivo%20General%20de%20la%20Naci%C3%B3n">Archivo General de la Nación</a></li><li class="py-1 pl-2"><a data="Archivo General del Poder Ejecutivo del Estado de Oaxaca" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Archive&query=Archivo%20General%20del%20Poder%20Ejecutivo%20del%20Estado%20de%20Oaxaca">Archivo General del Poder Ejecutivo del Estado de Oaxaca</a></li><li class="py-1 pl-2"><a data="Archivo Histórico de Notarias del Estado de Oaxaca" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Archive&query=Archivo%20Hist%C3%B3rico%20de%20Notarias%20del%20Estado%20de%20Oaxaca">Archivo Histórico de Notarias del Estado de Oaxaca</a></li><li class="py-1 pl-2"><a data="Archivo Histórico de Tlacolula de Matamoros Oaxaca" class="link hover:text-accent" href="/doc-explorer/doc-explorer/explore/documents.html?limit=Archive&query=Archivo%20Hist%C3%B3rico%20de%20Tlacolula%20de%20Matamoros%20Oaxaca">Archivo Histórico de Tlacolula de Matamoros Oaxaca</a></li></ul>
+            </li></ul>
+        </div>
+        <div class="xl:w-5/6 lg:w-4/5 md:w-2/3 w-full px-4">
+          <h2 class="font-bold text-2xl tracking-tight mb-4">Search</h2><div class="w-full mb-12">
+            <div class="relative mt-2">
+                <div class="absolute top-1 left-1 flex items-center">
+                <button id="dropdownButton" class="rounded border border-transparent py-1 px-1.5 text-center flex items-center text-sm transition-all text-slate-600">
+                  <span id="dropdownSpan" class="text-ellipsis overflow-hidden">All Fields</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4 ml-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                  </svg>
+                </button>
+                <div class="h-6 border-l border-slate-200 ml-1"></div>
+                <div id="dropdownMenu" class="min-w-[150px] overflow-hidden absolute left-0 w-full mt-10 hidden w-full bg-white border border-slate-200 rounded-md shadow-lg z-10">
+                  <ul id="dropdownOptions">
+                    <li class="px-4 py-2 text-slate-600 hover:bg-slate-50 text-sm cursor-pointer" data-value="All">All Fields</li>
+                    <li class="px-4 py-2 text-slate-600 hover:bg-slate-50 text-sm cursor-pointer" data-value="Transcription">Transcription</li>
+                    <li class="px-4 py-2 text-slate-600 hover:bg-slate-50 text-sm cursor-pointer" data-value="Translation">Translation</li>
+                    <li class="px-4 py-2 text-slate-600 hover:bg-slate-5- text-sm cursor-pointer" data-value="Archive">Archive</li>
+                    <li class="px-4 py-2 text-slate-600 hover:bg-slate-5- text-sm cursor-pointer" data-value="Title">Title</li>
+                    <li class="px-4 py-2 text-slate-600 hover:bg-slate-5- text-sm cursor-pointer" data-value="Witnesses">Witnesses</li>
+                  </ul>
+                </div>
+              </div>
+              <input type="text" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pr-12 pl-28 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Search">
+              <button class="absolute right-1 top-1 rounded bg-slate-800 p-1.5 border border-transparent text-center text-sm text-white transition-all shadow-sm hover:shadow focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                  <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"></path>
+                </svg>
+              </button> 
+            </div>   
+          </div>
+          <script>
+            document.getElementById('dropdownButton').addEventListener('click', function() {
+              var dropdownMenu = document.getElementById('dropdownMenu');
+              if (dropdownMenu.classList.contains('hidden')) {
+                dropdownMenu.classList.remove('hidden');
+              } else {
+                dropdownMenu.classList.add('hidden');
+              }
+            });
+            document.getElementById('dropdownOptions').addEventListener('click', function(event) {
+              if (event.target.tagName === 'LI') {
+                const dataValue = event.target.getAttribute('data-value');
+                document.getElementById('dropdownSpan').textContent = dataValue;
+                document.getElementById('dropdownMenu').classList.add('hidden');
+              }
+            });
+            document.addEventListener('click', function(event) {
+              var isClickInside = document.getElementById('dropdownButton').contains(event.target) || document.getElementById('dropdownMenu').contains(event.target);
+              var dropdownMenu = document.getElementById('dropdownMenu');
+              if (!isClickInside) {
+                dropdownMenu.classList.add('hidden');
+              }
+            });
+          </script><p class="mb-6">Found 203 results</p>
+          <div class="flex flex-wrap gap-12 justify-start"><a href="/doc-explorer/document/Al642" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Pedro el Alto, 1642</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al642T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from San Pedro el Alto, 1642</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al649" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1649</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al649T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1649</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al683a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1683</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al683aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1683</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al683b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1683</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al683bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1683</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al684" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1684</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al684T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1684</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al686a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1686</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al686aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1686</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al686b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1686</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al686bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1686</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al697" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1697</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al697T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1697</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al698" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Pedro el Alto, 1698</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al698T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from San Pedro el Alto, 1698</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al699" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Land Deed? from San Pedro el Alto, 1699</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al699T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Land Deed? from San Pedro el Alto, 1699</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al700" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Pedro el Alto, 1700</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al700T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from San Pedro el Alto, 1700</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al707" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Pedro el Alto, 1707</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al707T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from San Pedro el Alto, 1707</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al709a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Petition from San Pedro el Alto, 1709</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al709aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Petition from San Pedro el Alto, 1709</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al709b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Receipt from San Pedro el Alto, 1709</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al709bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Receipt from San Pedro el Alto, 1709</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al710" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Receipt from San Pedro el Alto, 1710</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al710T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Receipt from San Pedro el Alto, 1710</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al711a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1711</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al711aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1711</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al711b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Pedro el Alto, 1711</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al711bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from San Pedro el Alto, 1711</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al711c" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1711</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al711cT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1711</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al711d" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Pedro el Alto, 1711</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al711dT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from San Pedro el Alto</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al713" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Receipt from San Pedro el Alto, 1713</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al713T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Receipt from San Pedro el Alto, 1713</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al714" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Pedro el Alto, 1714</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al714T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from San Pedro el Alto, 1714</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al724a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish with some Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Spanish Testament from San Pedro el Alto, 1724***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al724b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1724</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al724bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1724</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al741" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al741T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al753" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1753</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al764" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1764***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al764T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1764</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al776" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Pedro el Alto, 1776</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Al776T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Pedro el Alto, 1776</h2>
+              </div>
+            </a><a href="/doc-explorer/document/An633" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Oaxaca de Juárez, 1633</h2>
+              </div>
+            </a><a href="/doc-explorer/document/An633T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of testament from Oaxaca de Juárez, 1633</h2>
+              </div>
+            </a><a href="/doc-explorer/document/An670" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Oaxaca de Juárez, 1670</h2>
+              </div>
+            </a><a href="/doc-explorer/document/An670T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Oaxaca de Juárez, 1670***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/An740" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Oaxaca de Juárez, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/An740T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Oaxaca de Juárez, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Ay718" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Ayoquezco, 1718</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Ay718T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Ayoquezco, 1718</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Ay800" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish with some Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Spanish Testament from Ayoquezco, 1708***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Co721" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Bartholomé Coyotepec, 1721</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Co721T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Bartholomé Coyotepec, 1721***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Fr720" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Francisco del Valle, 1720</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Fr720T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Francisco del Valle, 1720</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Ma733" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Mateo Macuilxóchitl, 1733</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Ma733T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of testament from San Mateo Macuilxochitl, 1733</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Oc111" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Document from San Antonio Ocotlán,***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Oc731" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Antonio Ocotlán, 1731</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Oc750" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Land Deed from San Antonio Ocotlán, 1750</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Oc753" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Antonio Ocotlán, 1753</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Oc753T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Antonio Ocotlán, 1753</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Qu708" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Santa Catarina Quiané, 1708</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Qu708T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Santa Catarina Quiané, 1708</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Ri832" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish with some Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Spanish Testament from San Juan del Río, 1832***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Sa716" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Santiago Ixtaltepec? Santiago de los Angel?, 1716</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SAE718" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santa María la Asunción Etla, 1718</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Sd725" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Complaint from Santo Domingo del Valle, 1725</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Sd725T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Complaint from Santo Domingo del Valle, 1725</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE660" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1660</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE670" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale? from Santo Domingo Etla, 1670</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE677" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1677</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE677T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1677</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE679" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1679</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE688" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1688</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE693a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1693</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE693b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1693</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE700a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1700</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE700aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translations of Bills of Sale from Santo Domingo Etla, 1700 and 1701</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE700b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1700</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE701a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1701</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE701b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1701</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE702a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1702</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE702aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1702</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE702b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1702</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE702c" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1702</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE702cT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1702</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE705" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1705</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE707" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1707</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE714" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1714</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE715a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1715</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE715aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1715</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE715b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1715</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE716" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Santo Domingo Etla, 1716</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE716T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Santo Domingo Etla, 1716</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE720" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1720</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE721" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1721</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE724a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1724</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE724aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1724</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE724b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1724</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE724bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1724</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE724c" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1724</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE725a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1725</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE725aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1725</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE725b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1725</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE725c" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1725</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE726" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1726</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE726T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1726</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE727" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1727</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE728" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1728</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE732" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1732</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE734" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Santo Domingo Etla, 1734</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE734T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Santo Domingo Etla, 1734</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE736" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1736</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE736T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1736</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE737a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1737</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE737aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1737</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE737b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1737</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE737bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1737</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE737c" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1737</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE737cT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1737</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE738a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1738</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE738aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1738</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE738b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1738</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE738bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1738</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740c" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740cT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740d" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740dT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740e" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740eT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740f" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740fT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740g" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740gT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740h" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740hT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740i" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740iT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740j" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE740jT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1740</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE741a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE741aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE741b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE741bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE741c" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE741cT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE741d" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE741dT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1741</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746c" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746cT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746d" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746dT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746e" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE746eT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from Santo Domingo Etla, 1746</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SDE789" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from Santo Domingo Etla, 1789</h2>
+              </div>
+            </a><a href="/doc-explorer/document/SME666" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Miguel Etla, 1666</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Ta656" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Miguel Talistaca, 1656</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Ta656T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale? from San Miguel Talistaca, 1656***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Ta672" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Unknown Town, 1672***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Te744" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Sebastián Teitipac, 1744***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Te744T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Sebastián Teitipac, 1744</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Th687" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Theozapotlan, 1687</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Th687T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Theozapotlan, 1687</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tl675a" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Bill of Sale from San Jerónimo Tlacochahuaya, 1675</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tl675aT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Bill of Sale from San Jerónimo Tlacochahuaya, 1675</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tl675b" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Jerónimo Tlacochahuaya, 1675</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tl675bT" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Jerónimo Tlacochahuaya, 1675</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tl694" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from San Jerónimo Tlacochahuaya, 1694</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tl694T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from San Jerónimo Tlacochahuaya, 1694</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tl732" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Document from San Jerónimo Tlacochahuaya,***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tm731" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Land Description? from Tlacolula de Matamoros, 1731***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tv716" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Teotitlán del Valle, 1716</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tv716T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Teotitlán del Valle, 1716</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tv758" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Teotitlán del Valle?, 1758</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tv758T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Teotitlán del Valle?, 1758</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tv786" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Teotitlán del Valle?, 1786</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Tv786T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Teotitlán del Valle?, 1786</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Xx633" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Guaxolotitlan? Santo Domingo?, 1633***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Xx633T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Guaxolotitlan? Santo Domingo?, 1633***</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Xx643" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Santo Domingo, 1643</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Za687" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Villa de Zaachila, 1687</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Za687T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Villa de Zaachila, 1687</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Za719" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Zapotec Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Testament from Villa de Zaachila, 1719</h2>
+              </div>
+            </a><a href="/doc-explorer/document/Za719T" class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full transition duration-250 ease-in-out hover:scale-105">
+              <div class="block relative h-48 rounded overflow-hidden">
+                <img alt="" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+              </div>
+              <div class="mt-4">
+                <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">Spanish Language</h3>
+                <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">Translation of Testament from Villa de Zaachila, 1719</h2>
+              </div>
+            </a></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+    </main>
+    <footer class="text-gray-600 body-font bg-[#dbd2bd] mt-16">
+  <div class="lg:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <span class="ml-3 text-xl">Ticha</span>
+    </a>
+    <p class="text-sm text-gray-800 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-600 sm:py-2 sm:mt-0 mt-4">© 2025 Ticha — Lorem ipsum citation etc.
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a class="text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+        </svg>
+      </a>
+      <a class="ml-3 text-gray-500">
+        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </span>
+  </div>
+</footer>
+<!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
+    <script src="/doc-explorer/static/dropdown.js"></script>
+
+  </body>
+</html>
