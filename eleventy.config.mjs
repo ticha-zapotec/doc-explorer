@@ -4,7 +4,7 @@ import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 export default function (eleventyConfig) {
   // minify css filter
   eleventyConfig.addFilter('cssmin', function(code) {
-    return new cleancss({}).minify(code).styles;
+    return new cleancss({}).minify(code).styles
   })
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -15,13 +15,16 @@ export default function (eleventyConfig) {
   })  
 
   eleventyConfig.addFilter('uri_encode', function(str) {
-    return encodeURIComponent(str);
+    return encodeURIComponent(str)
   })
 
   eleventyConfig.addLayoutAlias('base', 'layouts/base.html')
   eleventyConfig.addLayoutAlias('document', 'layouts/document.html')
 
   eleventyConfig.addPassthroughCopy('static', 'static')
+  eleventyConfig.addPassthroughCopy({ 'src/_data/documents.json': 'documents.json'})
+  eleventyConfig.addPassthroughCopy({  'src/js': 'js' })
+
   
   return {
     pathPrefix: '/doc-explorer',

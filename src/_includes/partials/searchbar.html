@@ -1,0 +1,56 @@
+<script src="https://unpkg.com/itemsjs@2.1.24/dist/index.umd.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+  async function fetchData(dataFile) {
+    const response = await fetch(dataFile);
+    const data = await response.json();
+    return data;
+  }
+  window.prefixUrl    = "{{ '/' | url }}";
+  window.promisedData = fetchData("{{ '/documents.json' | url }}"); 
+  console.log("Search data promise:", window.promisedData);
+</script>
+
+<div class="w-full mb-12">
+  <div class="join relative mt-2 flex justify-between items-center w-full border rounded-md">
+
+    <select id="search-limit-select" class="flex-none min-w-[150px] w-fit z-10 px-2 active:border-transparent focus:border-transparent focus:ring-0 focus:outline-none text-sm bg-transparent border-none cursor-pointer">
+      <option disabled>Search Within</option>
+      <option>All Fields</option>
+      <option>Title</option>
+      <option>Language</option>
+      <option>Document Type</option>
+      <option>Archive</option>
+      <option>Transcription</option>
+      <option>Translation</option>
+      <option>Witnesses</option>
+      <option>Year</option>
+      <option>Collection</option>
+    </select>
+
+    <div class="ml-4 border-r h-10"></div>
+
+    <div class="grow ml-2">
+      <input
+        id="search-input"
+        type="text"
+        class="w-full text-sm p-2 transition duration-300 ease focus:outline-none font-mono"
+        placeholder="Search"
+      />
+    </div>
+
+    <div class="border-r h-10"></div>
+    
+    <a href="/explore/documents.html">
+      <button class="focus:outline-none flex-none cursor-pointer py-1.5 px-2 align-middle hover:text-black">X</button>
+    </a>
+
+    <div class="border-r h-10"></div>
+
+    <button id="search-submit" class="focus:outline-none flex-none cursor-pointer py-1.5 px-2 hover:text-black" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"/>
+      </svg>
+    </button> 
+  </div>   
+</div>
