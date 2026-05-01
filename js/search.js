@@ -51,12 +51,15 @@ window.addEventListener("load", (event) => {
     results.forEach(function (res) {
       let item = resultsLookupMap[res.ref];
       let resultDiv = document.createElement('div');
-      let thumbnail = `https://ticha.haverford.edu/static/img/levanto_arte_example.JPG`;
+      let randomHex = Math.floor(Math.random() * 256).toString(16).padStart(2, '0') + 
+                      Math.floor(Math.random() * 128).toString(16).padStart(2, '0') + 
+                      Math.floor(Math.random() * 64).toString(16).padStart(2, '0'); 
+      let thumbnail = `https://dummyimage.com/300x600/${randomHex}/fff&text=%20%20${item.slug}%20%20`;
       resultDiv.classList.add("xl:w-1/6", "lg:w-1/5", "md:w-1/3", "w-full", "transition", "duration-250", "ease-in-out", "hover:scale-105");
       resultDiv.innerHTML = `
         <a href="${prefixUrl}document/${ item.slug }.html">
           <div class="block relative h-48 rounded overflow-hidden">
-            <img alt="" class="object-cover object-center w-full h-full block" src="${ thumbnail }">
+            <img alt="" class="object-cover object-center w-full h-full block saturate-50" src="${ thumbnail }">
           </div>
           <div class="mt-4">
             <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">${ item.language } Language</h3>
