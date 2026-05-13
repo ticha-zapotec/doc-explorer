@@ -54,19 +54,28 @@ window.addEventListener("load", (event) => {
       let randomHex = Math.floor(Math.random() * 256).toString(16).padStart(2, '0') + 
                       Math.floor(Math.random() * 128).toString(16).padStart(2, '0') + 
                       Math.floor(Math.random() * 64).toString(16).padStart(2, '0'); 
-      let thumbnail = `https://dummyimage.com/300x600/${randomHex}/fff&text=%20%20${item.slug}%20%20`;
-      resultDiv.classList.add("xl:w-1/6", "lg:w-1/5", "md:w-1/3", "w-full", "transition", "duration-250", "ease-in-out", "hover:scale-105");
+      resultDiv.classList.add("group", "xl:w-1/6", "lg:w-1/5", "md:w-1/3", "sm:-1/2", "w-full", "transition", "duration-350", "ease-in-out", "hover:scale-110");
       resultDiv.innerHTML = `
-        <a href="${prefixUrl}document/${ item.slug }.html">
-          <div class="block relative h-48 rounded overflow-hidden">
-            <img alt="" class="object-cover object-center w-full h-full block saturate-50" src="${ thumbnail }">
+        <a href="${prefixUrl}document/${ item.slug }.html">          
+          <div class="block relative h-32 w-full rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
+            ${ item.language && item.language.startsWith("Zapotec") ? 
+              `<div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>` 
+            : 
+            `<div class="absolute top-0 right-0 bg-red-800 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Spanish</div>` 
+            }
+            <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #${randomHex};"></div>
           </div>
           <div class="mt-4">
-            <h3 class="text-red-700 text-xs tracking-widest title-font mb-1 uppercase">${ item.language } Language</h3>
-            <h2 class="text-gray-900 title-font text-lg font-bold leading-tight">${ item.title }</h2>
+            ${ item.title.startsWith("Translation") ? 
+              `<h2 class="text-gray-900 title-font text-lg font-bold leading-tight">
+                <span class="border-b-2 group-hover:text-red-800 ease-in-out duration-350">${ item.title.substring(0, 11) }</span>
+                ${ item.title.substring(11) }
+              </h2>`
+            :
+              `<h2 class="text-gray-900 title-font text-lg font-bold leading-tight">${ item.title }</h2>`
+            }
           </div>
         </a>`;
-      // <div class="my-4 h-full transition-all duration-500 hover:scale-105"><a href="${prefixUrl}item/${item.ID}.html"><img loading="lazy" src="${ thumbnail }" alt="thumbnail for ${truncateString(item.Title)}" class="max-w-full h-auto"><div class="mt-2 leading-snug md:text-sm text-xs">${truncateString(item.Title)}</div></a></div>`;
       resultsContainer.appendChild(resultDiv);
     })
   }
