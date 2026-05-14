@@ -12,7 +12,7 @@
 </head>
 
   <body class="flex flex-col min-h-screen overflow-x-clip">
-    <header class="text-gray-600 body-font bg-[#dbd2bd] py-4">
+    <section class="text-gray-700 body-font bg-[#dbd2bd] py-4">
   <div class="xl:container mx-auto flex p-5 md:flex-row justify-between items-center gap-4">
     <nav class="flex flex-wrap text-base items-center justify-between gap-4 leading-tight w-full">
       <div class="justify-start flex flex-wrap items-center gap-4">
@@ -71,7 +71,7 @@
                 
               
                 
-                <a href="/doc-explorer/explore/statistics" class="block pb-2 leading-tight text-sm hover:text-gray-900">Visualizations and Statistics</a>
+                <a href="/doc-explorer/explore/personography" class="block pb-2 leading-tight text-sm hover:text-gray-900">Personography</a>
                 
               
             </div>
@@ -132,24 +132,68 @@
     </nav>
     
   </div>
-</header>
-    <main class="flex-1">
-      <section class="text-gray-600 body-font">
-  <div class="xl:container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap w-full mb-20">
-      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+</section>
+    <header class="bg-[#dbd2bd]">
+  <div class="xl:container px-5 pt-24 mx-auto">
+    <div class="flex md:flex-nowrap flex-wrap gap-12 w-full items-baseline-last min-h-24 justify-between mb-20">
+      <div class="basis-full md:basis-1/3 xl:basis-1/4 lg:pr-12 sm:pr-4">
         <h3 class="text-xs text-red-700 tracking-widest font-medium title-font mb-1 uppercase">Explore</h3>
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Find and Access Ticha Documents</h1>
         <div class="h-1 w-20 bg-red-700 rounded mt-4"></div>
       </div>
-      <div class="lg:w-1/2 w-full"></div>
+      <div class="basis-full md:basis-2/3 xl:basis-3/4">
+        <script src="https://unpkg.com/itemsjs@2.1.24/dist/index.umd.js"></script>
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+  async function fetchData(dataFile) {
+    const response = await fetch(dataFile);
+    const data = await response.json();
+    return data;
+  }
+  window.prefixUrl    = "/doc-explorer/";
+  window.promisedData = fetchData("/doc-explorer/documents.json"); 
+  console.log("Search data promise:", window.promisedData);
+</script>
+<div class="w-full mb-12 align-middle">
+  <div class="join relative mt-2 flex justify-between items-center w-full shadow rounded-md bg-[#f8f4ea]">
+<p><select id="search-limit-select" class="flex-none min-w-[150px] w-fit z-10 px-2 active:border-transparent focus:border-transparent focus:ring-0 focus:outline-none bg-transparent border-none cursor-pointer">
+<option disabled="">Search Within</option>
+<option>All Fields</option>
+<option>Title</option>
+<option>Language</option>
+<option>Document Type</option>
+<option>Archive</option>
+<option>Transcription</option>
+<option>Translation</option>
+<option>Witnesses</option>
+<option>Year</option>
+<option>Collection</option>
+</select></p>
+<p></p><div class="ml-4 border-r h-10"></div><p></p>
+<p></p><div class="grow ml-2">
+<input id="search-input" type="text" class="w-full p-2 transition duration-300 ease focus:outline-none font-mono" placeholder="Search">
+</div><p></p>
+<p></p><div class="border-r h-10"></div><p></p>
+<p><button id="search-submit" class="focus:outline-none flex-none cursor-pointer py-1.5 px-2 hover:text-black" type="button">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+<path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"></path>
+</svg>
+</button></p>
+  </div>   
+</div>
+      </div>
     </div>
-    <div class="flex flex-wrap w-full">
-      <div class="lg:basis-1/4 md:basis-1/3 basis-full pr-12">
-        <ul><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
-            <div class="text-xl font-bold my-3 px-2 ">
-              Language 
-            </div>
+  </div>
+</header>
+<main class="flex-1">
+  <section class="text-gray-600 body-font">
+    <div class="xl:container px-5 py-12 mx-auto">
+      <div class="flex md:flex-nowrap gap-12 flex-wrap w-full">
+        <div class="basis-full md:basis-1/3 xl:basis-1/4">
+          <ul><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
+              <div class="text-xl font-bold my-3 px-2 ">
+                Language 
+              </div>
 <p></p><ul><li>
 <label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
 <input type="checkbox" data-facet="Language" data-value="Zapotec" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
@@ -267,59 +311,16 @@ Collection
 </li></ul><p></p>
 <p></p></li></ul>
 </div>
-<div class="lg:basis-3/4 md:basis-2/3 basis-full">
-<script src="https://unpkg.com/itemsjs@2.1.24/dist/index.umd.js"></script><p></p>
-<script src="https://unpkg.com/lunr/lunr.js"></script>
-<script>
-  async function fetchData(dataFile) {
-    const response = await fetch(dataFile);
-    const data = await response.json();
-    return data;
-  }
-  window.prefixUrl    = "/doc-explorer/";
-  window.promisedData = fetchData("/doc-explorer/documents.json"); 
-  console.log("Search data promise:", window.promisedData);
-</script>
-<div class="w-full mb-12">
-  <div class="join relative mt-2 text-2xl flex justify-between items-center w-full shadow rounded-md bg-[#f8f4ea]">
-<p><select id="search-limit-select" class="flex-none min-w-[150px] w-fit z-10 px-2 active:border-transparent focus:border-transparent focus:ring-0 focus:outline-none text-sm bg-transparent border-none cursor-pointer">
-<option disabled="">Search Within</option>
-<option>All Fields</option>
-<option>Title</option>
-<option>Language</option>
-<option>Document Type</option>
-<option>Archive</option>
-<option>Transcription</option>
-<option>Translation</option>
-<option>Witnesses</option>
-<option>Year</option>
-<option>Collection</option>
-</select></p>
-<p></p><div class="ml-4 border-r h-10"></div><p></p>
-<p></p><div class="grow ml-2">
-<input id="search-input" type="text" class="w-full text-sm p-2 transition duration-300 ease focus:outline-none font-mono" placeholder="Search">
-</div><p></p>
-<p></p><div class="border-r h-10"></div><p></p>
-<p><!-- <a href="/explore/documents.html">
-      <button class="focus:outline-none flex-none cursor-pointer py-1.5 px-2 align-middle hover:text-black">X</button>
-    </a> --></p>
-<p></p><div class="border-r h-10"></div><p></p>
-<p><button id="search-submit" class="focus:outline-none flex-none cursor-pointer py-1.5 px-2 hover:text-black" type="button">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-<path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"></path>
-</svg>
-</button></p>
-  </div>   
+<div class="basis-full md:basis-2/3 xl:basis-3/4">
+<div id="results-info" class="mb-6 font-bold"></div>
+<div id="active-facets" class="flex flex-wrap gap-2 mb-12"></div>
+<div id="results" class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 flex-wrap justify-between w-full"></div>
 </div>
-        <div id="results-info" class="my-6"></div>
-         <div id="active-facets" class="mb-4 flex flex-wrap gap-2"></div>
-        <div id="results" class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 flex-wrap justify-between w-full"></div>
-    </div>
-  </div>
-</div></section>
+</div><p></p>
+  </div></section>
+</main>
 <script src="/doc-explorer/js/search.js"></script>
 
-    </main>
     <footer class="text-gray-600 body-font bg-[#dbd2bd] mt-16">
   <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">

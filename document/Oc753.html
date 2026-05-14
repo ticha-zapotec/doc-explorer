@@ -12,7 +12,7 @@
 </head>
 
   <body class="flex flex-col min-h-screen overflow-x-clip">
-    <header class="text-gray-600 body-font bg-[#dbd2bd] py-4">
+    <section class="text-gray-700 body-font bg-[#dbd2bd] py-4">
   <div class="xl:container mx-auto flex p-5 md:flex-row justify-between items-center gap-4">
     <nav class="flex flex-wrap text-base items-center justify-between gap-4 leading-tight w-full">
       <div class="justify-start flex flex-wrap items-center gap-4">
@@ -71,7 +71,7 @@
                 
               
                 
-                <a href="/doc-explorer/explore/statistics" class="block pb-2 leading-tight text-sm hover:text-gray-900">Visualizations and Statistics</a>
+                <a href="/doc-explorer/explore/personography" class="block pb-2 leading-tight text-sm hover:text-gray-900">Personography</a>
                 
               
             </div>
@@ -132,32 +132,34 @@
     </nav>
     
   </div>
-</header>
-    <main class="flex-1">
-      
-<section class="text-gray-600 body-font">
+</section>
+    
+<header class="bg-[#dbd2bd]">
   <div class="xl:container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap w-full mb-20">
+    <div class="flex flex-wrap w-full">
       <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
         <h3 class="text-xs text-red-700 tracking-widest font-medium title-font mb-1 uppercase">Document</h3>
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Testament from San Antonio Ocotlán, 1753</h1>
         <div class="h-1 w-20 bg-red-700 rounded mt-4"></div>
       </div>
       <div class="lg:w-1/2 w-full lg:pl-6">
-        <div class="basis-1/6 h-10 md:h-12 text-right flex justify-end">
-          <a aria-label="navigate previous page" href="/doc-explorer/document/Oc750.html" class="-mr-1 hover:text-neutral-content text-accent tooltip tooltip-bottom" data-tip="Previous item">
-            Previous Item
+        <div class="basis-1/6 h-10 md:h-12 text-right text-xl font-bold">
+          
+          <a aria-label="navigate to translation document" href="Oc753T.html" class="block text-red-700 hover:text-red-900 -mr-1 tooltip tooltip-bottom" data-tip="Translation Document">
+            View Translation Document
           </a>
-          <span class="mx-2 text-gray-400">|</span>
-          <a aria-label="navigate next page" href="/doc-explorer/document/Oc753T.html" class="hover:text-neutral-content text-accent tooltip tooltip-bottom" data-tip="Next item">
-            Next Item
-          </a>
+          
         </div>
       </div>
     </div> 
+  </div>
+</header>
+
+<main>
+  <div class="xl:container px-5 py-24 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+        <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
           <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Document Viewer</h2>
           <p class="leading-relaxed mb-3">TO DO</p>
         </div>
@@ -268,9 +270,8 @@
         </div>
       </div> 
   </div>
-</div></section>
+</div></main>
 
-    </main>
     <footer class="text-gray-600 body-font bg-[#dbd2bd] mt-16">
   <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
