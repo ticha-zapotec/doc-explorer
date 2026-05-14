@@ -12,9 +12,8 @@
 </head>
 
   <body class="flex flex-col min-h-screen overflow-x-clip">
-    <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x mb-13"></div> -->
-<header class="text-gray-600 body-font mt-13">
-  <div class="lg:container mx-auto flex p-5 md:flex-row justify-between items-center gap-4">
+    <header class="text-gray-600 body-font bg-[#dbd2bd] py-4">
+  <div class="xl:container mx-auto flex p-5 md:flex-row justify-between items-center gap-4">
     <nav class="flex flex-wrap text-base items-center justify-between gap-4 leading-tight w-full">
       <div class="justify-start flex flex-wrap items-center gap-4">
         <a href="/doc-explorer/" class="text-red-700 hover:text-red-800 flex title-font font-medium items-center justify-self-start">
@@ -136,7 +135,7 @@
 </header>
     <main class="flex-1">
       <section class="text-gray-600 body-font">
-  <div class="lg:container px-5 py-24 mx-auto">
+  <div class="xl:container px-5 py-24 mx-auto">
     <div class="flex flex-wrap w-full mb-20">
       <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
         <h3 class="text-xs text-red-700 tracking-widest font-medium title-font mb-1 uppercase">Explore</h3>
@@ -145,71 +144,131 @@
       </div>
       <div class="lg:w-1/2 w-full"></div>
     </div>
-    <div class="container mx-0">
-      <div class="flex flex-wrap w-full">
-        <div class="xl:w-1/6 lg:w-1/5 md:w-1/3 w-full">
-          <h2 class="font-bold text-2xl tracking-tight mb-4">Filter</h2>
-          <ul>
-            <li class="pb-6 pr-6">
-              <div class="text-xl tracking-tight my-1 text-red-700">Limit [WiP!]</div>
-              <ul>
-                <li class="py-1 pl-2">
-                  <input type="checkbox">
-                  <a data="" class="link hover:text-accent" href="#">Is Primary Document</a>
-                </li>
-                <li class="py-1 pl-2">
-                  <input type="checkbox">
-                  <a data="" class="link hover:text-accent" href="#">Is Translation Document</a>
-                </li>
-                <li class="py-1 pl-2">
-                  <input type="checkbox">
-                  <a data="" class="link hover:text-accent" href="#">Has Translation Document</a>
-                </li>
-                <li class="py-1 pl-2">
-                  <input type="checkbox">
-                  <a data="" class="link hover:text-accent" href="#">Has Linguistic Analysis</a>
-                </li>
-                <li class="py-1 pl-2">
-                  <input type="checkbox">
-                  <a data="" class="link hover:text-accent" href="#">Has Full Text Transcription</a>
-                </li>
-                <li class="py-1 pl-2">
-                  <input type="checkbox">
-                  <a data="" class="link hover:text-accent" href="#">Has Modern Spanish Translation</a>
-                </li>
-              </ul>
-            </li>
-            <!-- <li class="pb-6 pr-6">
-              <div class="text-xl tracking-tight my-1 text-red-700">Date</div>
-              <ul>
-                <li class="py-1 pl-2">
-                  <input type="checkbox" />
-                  <a data="" class="link hover:text-accent" href="#">Has Translation Document</a>
-                </li>
-              </ul>
-            </li> --><li class="pb-6 pr-6">
-              <div class="text-xl tracking-tight my-1 ">Language </div>
-              <ul><li class="py-1 pl-2"><a data="Zapotec" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Language&query=Zapotec">Zapotec</a></li><li class="py-1 pl-2"><a data="Spanish" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Language&query=Spanish">Spanish</a></li></ul>
-            </li><li class="pb-6 pr-6">
-              <div class="text-xl tracking-tight my-1 ">Document Type </div>
-              <ul><li class="py-1 pl-2"><a data="Bill of Sale" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Document%20Type&query=Bill%20of%20Sale">Bill of Sale</a></li><li class="py-1 pl-2"><a data="Testament" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Document%20Type&query=Testament">Testament</a></li><li class="py-1 pl-2"><a data="Land Deed" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Document%20Type&query=Land%20Deed">Land Deed</a></li><li class="py-1 pl-2"><a data="Receipt" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Document%20Type&query=Receipt">Receipt</a></li><li class="py-1 pl-2"><a data="Petition" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Document%20Type&query=Petition">Petition</a></li><li class="py-1 pl-2"><a data="Complaint" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Document%20Type&query=Complaint">Complaint</a></li></ul>
-            </li><li class="pb-6 pr-6">
-              <div class="text-xl tracking-tight my-1 text-red-700">Year [WiP!]</div>
-              <ul><li class="py-1 pl-2"><a data="16**" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=16**">16**</a></li><li class="py-1 pl-2"><a data="170*" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=170*">170*</a></li><li class="py-1 pl-2"><a data="171*" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=171*">171*</a></li><li class="py-1 pl-2"><a data="172*" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=172*">172*</a></li><li class="py-1 pl-2"><a data="173*" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=173*">173*</a></li><li class="py-1 pl-2"><a data="174*" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=174*">174*</a></li><li class="py-1 pl-2"><a data="175*" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=175*">175*</a></li><li class="py-1 pl-2"><a data="176*" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=176*">176*</a></li><li class="py-1 pl-2"><a data="178*" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=178*">178*</a></li><li class="py-1 pl-2"><a data="179*" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=179*">179*</a></li><li class="py-1 pl-2"><a data="18**" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Year&query=18**">18**</a></li></ul>
-            </li><li class="pb-6 pr-6">
-              <div class="text-xl tracking-tight my-1 ">Archive </div>
-              <ul><li class="py-1 pl-2"><a data="Archivo General de la Nación" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Archive&query=Archivo%20General%20de%20la%20Naci%C3%B3n">Archivo General de la Nación</a></li><li class="py-1 pl-2"><a data="Archivo General del Poder Ejecutivo del Estado de Oaxaca" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Archive&query=Archivo%20General%20del%20Poder%20Ejecutivo%20del%20Estado%20de%20Oaxaca">Archivo General del Poder Ejecutivo del Estado de Oaxaca</a></li><li class="py-1 pl-2"><a data="Archivo Histórico de Notarias del Estado de Oaxaca" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Archive&query=Archivo%20Hist%C3%B3rico%20de%20Notarias%20del%20Estado%20de%20Oaxaca">Archivo Histórico de Notarias del Estado de Oaxaca</a></li><li class="py-1 pl-2"><a data="Archivo Histórico de Tlacolula de Matamoros Oaxaca" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Archive&query=Archivo%20Hist%C3%B3rico%20de%20Tlacolula%20de%20Matamoros%20Oaxaca">Archivo Histórico de Tlacolula de Matamoros Oaxaca</a></li></ul>
-            </li><li class="pb-6 pr-6">
-              <div class="text-xl tracking-tight my-1 ">Collection </div>
-              <ul><li class="py-1 pl-2"><a data="Rodriguez Joseph" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Collection&query=Rodriguez%2C%20Joseph">Rodriguez, Joseph</a></li><li class="py-1 pl-2"><a data="Real Intendencia" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Collection&query=Real%20Intendencia">Real Intendencia</a></li><li class="py-1 pl-2"><a data="Alcaldias Mayores" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Collection&query=Alcaldias%20Mayores">Alcaldias Mayores</a></li><li class="py-1 pl-2"><a data="Joachin de Amador" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Collection&query=Joachin%20de%20Amador">Joachin de Amador</a></li><li class="py-1 pl-2"><a data="Tierras" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=Collection&query=Tierras">Tierras</a></li></ul>
-            </li><li class="pb-6 pr-6">
-              <div class="text-xl tracking-tight my-1 text-red-700">People [WiP!]</div>
-              <ul><li class="py-1 pl-2"><a data="Marcos de los Angeles Lopez" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=People&query=Marcos%20de%20los%20Angeles%20Lopez">Marcos de los Angeles Lopez</a></li><li class="py-1 pl-2"><a data="Geronimo Mendes" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=People&query=Geronimo%20Mendes">Geronimo Mendes</a></li><li class="py-1 pl-2"><a data="Sebastiana de Mendosa" class="link hover:text-accent" href="/doc-explorer/explore/documents.html?limit=People&query=Sebastiana%20de%20Mendosa">Sebastiana de Mendosa</a></li></ul>
-            </li></ul>
-        </div>
-        <div class="xl:w-5/6 lg:w-4/5 md:w-2/3 w-full px-4">
-          <h2 class="font-bold text-2xl tracking-tight mb-4">Search</h2>
-          <script src="https://unpkg.com/itemsjs@2.1.24/dist/index.umd.js"></script>
+    <div class="flex flex-wrap w-full">
+      <div class="lg:basis-1/4 md:basis-1/3 basis-full pr-12">
+        <ul><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
+            <div class="text-xl font-bold my-3 px-2 ">
+              Language 
+            </div>
+<p></p><ul><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Language" data-value="Zapotec" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Zapotec</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Language" data-value="Spanish" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Spanish</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Language" data-value="Spanish with some Zapotec" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Spanish with some Zapotec</span>
+</label>
+</li></ul><p></p>
+<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
+<div class="text-xl font-bold my-3 px-2 ">
+Document Type
+</div><p></p>
+<p></p><ul><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Document Type" data-value="Bill of Sale" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Bill of Sale</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Document Type" data-value="Testament" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Testament</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Document Type" data-value="Land Deed" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Land Deed</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Document Type" data-value="Receipt" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Receipt</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Document Type" data-value="Petition" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Petition</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Document Type" data-value="Complaint" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Complaint</span>
+</label>
+</li></ul><p></p>
+<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
+<div class="text-xl font-bold my-3 px-2 text-red-700">
+Year <span class="text-sm">[WiP!]</span>
+</div><p></p>
+<p></p><div class="pl-2 flex flex-row w-full gap-2 items-center justify-start">
+<input type="number" data-facet="Year-min" value="1633" data-value="1633" class="border rounded-md px-2 focus-visible:ring focus-visible:ring-gray-700 max-w-24">
+<span class="text-center">—</span>
+<input type="number" data-facet="Year-max" data-value="1832" value="1832" class="border rounded-md px-2 focus:ring focus:ring-gray-700 max-w-24">
+</div><p></p>
+<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
+<div class="text-xl font-bold my-3 px-2 ">
+Archive
+</div><p></p>
+<p></p><ul><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Archive" data-value="Archivo General de la Nación, Mexico" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Archivo General de la Nación, Mexico</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Archive" data-value="Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Archive" data-value="Archivo Histórico de Notarias del Estado de Oaxaca, Mexico" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Archivo Histórico de Notarias del Estado de Oaxaca, Mexico</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Archive" data-value="Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</span>
+</label>
+</li></ul><p></p>
+<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
+<div class="text-xl font-bold my-3 px-2 ">
+Collection
+</div><p></p>
+<p></p><ul><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Collection" data-value="Rodriguez, Joseph" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Rodriguez, Joseph</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Collection" data-value="Real Intendencia" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Real Intendencia</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Collection" data-value="Alcaldias Mayores" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Alcaldias Mayores</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Collection" data-value="Joachin de Amador" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Joachin de Amador</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Collection" data-value="Tierras" class="w-4 h-4 rounded border-gray-300 text-red-700 focus:ring-gray-700 focus:ring cursor-pointer">
+<span class="ml-2 text-gray-700 hover:text-red-700">Tierras</span>
+</label>
+</li></ul><p></p>
+<p></p></li></ul>
+</div>
+<div class="lg:basis-3/4 md:basis-2/3 basis-full">
+<script src="https://unpkg.com/itemsjs@2.1.24/dist/index.umd.js"></script><p></p>
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script>
   async function fetchData(dataFile) {
@@ -222,7 +281,7 @@
   console.log("Search data promise:", window.promisedData);
 </script>
 <div class="w-full mb-12">
-  <div class="join relative mt-2 flex justify-between items-center w-full border rounded-md">
+  <div class="join relative mt-2 text-2xl flex justify-between items-center w-full shadow rounded-md bg-[#f8f4ea]">
 <p><select id="search-limit-select" class="flex-none min-w-[150px] w-fit z-10 px-2 active:border-transparent focus:border-transparent focus:ring-0 focus:outline-none text-sm bg-transparent border-none cursor-pointer">
 <option disabled="">Search Within</option>
 <option>All Fields</option>
@@ -241,9 +300,9 @@
 <input id="search-input" type="text" class="w-full text-sm p-2 transition duration-300 ease focus:outline-none font-mono" placeholder="Search">
 </div><p></p>
 <p></p><div class="border-r h-10"></div><p></p>
-<p><a href="/doc-explorer/explore/documents.html">
-<button class="focus:outline-none flex-none cursor-pointer py-1.5 px-2 align-middle hover:text-black">X</button>
-</a></p>
+<p><!-- <a href="/explore/documents.html">
+      <button class="focus:outline-none flex-none cursor-pointer py-1.5 px-2 align-middle hover:text-black">X</button>
+    </a> --></p>
 <p></p><div class="border-r h-10"></div><p></p>
 <p><button id="search-submit" class="focus:outline-none flex-none cursor-pointer py-1.5 px-2 hover:text-black" type="button">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
@@ -252,9 +311,9 @@
 </button></p>
   </div>   
 </div>
-          <div id="results-info" class="my-6"></div>
-          <div id="results" class="flex flex-wrap gap-12 justify-start"></div>
-      </div>
+        <div id="results-info" class="my-6"></div>
+         <div id="active-facets" class="mb-4 flex flex-wrap gap-2"></div>
+        <div id="results" class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 flex-wrap justify-between w-full"></div>
     </div>
   </div>
 </div></section>
@@ -262,7 +321,7 @@
 
     </main>
     <footer class="text-gray-600 body-font bg-[#dbd2bd] mt-16">
-  <div class="lg:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
