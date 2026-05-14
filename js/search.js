@@ -127,18 +127,18 @@ window.addEventListener("load", (event) => {
             ${ item.language && item.language.startsWith("Zapotec") ? 
               `<div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>` 
             : 
-            `<div class="absolute top-0 right-0 bg-red-800 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Spanish</div>` 
+            `<div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Spanish</div>` 
             }
             <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #${hexColor};"></div>
           </div>
           <div class="mt-4">
             ${ item.title.startsWith("Translation") ? 
-              `<h2 class="text-gray-900 title-font text-lg font-bold leading-tight">
-                <span class="border-b-2 group-hover:text-red-800 ease-in-out duration-350">${ item.title.substring(0, 11) }</span>
+              `<h2 class="text-text-dark title-font text-lg font-bold leading-tight">
+                <span class="border-b-2 group-hover:text-accent-dark ease-in-out duration-350">${ item.title.substring(0, 11) }</span>
                 ${ item.title.substring(11) }
               </h2>`
             :
-              `<h2 class="text-gray-900 title-font text-lg font-bold leading-tight">${ item.title }</h2>`
+              `<h2 class="text-text-dark title-font text-lg font-bold leading-tight">${ item.title }</h2>`
             }
           </div>
         </a>`;
@@ -159,10 +159,12 @@ window.addEventListener("load", (event) => {
     // Add search query tag if present
     if (searchInput.value) {
       const queryTag = document.createElement('div');
-      queryTag.className = 'inline-flex items-center gap-2 bg-red-100 text-red-900 px-3 py-1 rounded-full text-sm';
+      queryTag.className = 'inline-flex items-center gap-2 bg-accent-alt-light text-accent-alt-dark px-3 py-1 rounded-full text-sm';
       queryTag.innerHTML = `
-        <span>Search (${selectedSearchField}): ${searchInput.value}</span>
-        <button class="ml-1 font-bold hover:text-red-600 cursor-pointer" data-query-tag="true">×</button>
+      <button class="hover:text-accent-light cursor-pointer" data-query-tag="true">
+        <span class="font-mono"><b>Search (${selectedSearchField}):</b> ${searchInput.value}</span>
+        <span class="ml-1 font-bold"> × </span>
+      </button>
       `;
       
       const removeQueryBtn = queryTag.querySelector('button');
@@ -179,10 +181,12 @@ window.addEventListener("load", (event) => {
     Object.entries(selectedFacets).forEach(([facetKey, values]) => {
       values.forEach((value) => {
         const tag = document.createElement('div');
-        tag.className = 'inline-flex items-center gap-2 bg-red-100 text-red-900 px-3 py-1 rounded-full text-sm';
+        tag.className = 'inline-flex items-center gap-2 bg-accent-alt-light text-accent-alt-dark px-3 py-1 rounded-full text-xs hover:shadow ';
         tag.innerHTML = `
-          <span>${facetKey}: ${value}</span>
-          <button class="ml-1 font-bold hover:text-red-600 cursor-pointer" data-facet="${facetKey}" data-value="${value}">×</button>
+        <button class="hover:text-accent-light cursor-pointer" data-facet="${facetKey}" data-value="${value}">
+          <span class="font-mono"><b>${facetKey}:</b> ${value}</span>
+          <span class="ml-1 font-bold"> × </span>
+        </button>
         `;
         
         const removeBtn = tag.querySelector('button');
