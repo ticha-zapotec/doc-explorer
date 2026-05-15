@@ -146,6 +146,93 @@
     const data = await response.json();
     return data;
   }
+</script>
+<!-- Embed searchConfig as JSON to avoid Markdown/html reflow issues -->
+<script id="search-config" type="application/json">{
+	"defaultSearchField": "All Fields",
+	"searchFields": [
+		"All Fields",
+		"Title",
+		"Language",
+		"Document Type",
+		"Year",
+		"Town",
+		"Archive",
+		"Transcription",
+		"Translation"
+	],
+	"refField": "Slug",
+	"lunrFields": [
+		"Slug",
+		"Title",
+		"Town",
+		"Language",
+		"Transcription",
+		"Translation",
+		"Archive",
+		"Document_Type",
+		"Year"
+	],
+	"lunrFieldMap": {
+		"Title": "Title",
+		"Language": "Language",
+		"Document Type": "Document_Type",
+		"Archive": "Archive",
+		"Transcription": "Transcription",
+		"Translation": "Translation",
+		"Year": "Year",
+		"Town": "Town"
+	},
+	"facetKeyToProperty": {
+		"Language": "language",
+		"Document Type": "document_type",
+		"Year": "year",
+		"Archive": "archive",
+		"Town": "town_short"
+	},
+	"facets": [
+		{
+			"key": "Language",
+			"type": "multiselect",
+			"values": [
+				"Zapotec",
+				"Spanish",
+				"Spanish with some Zapotec"
+			]
+		},
+		{
+			"key": "Document Type",
+			"type": "multiselect",
+			"values": [
+				"Bill of Sale",
+				"Testament",
+				"Land Deed",
+				"Receipt",
+				"Petition",
+				"Complaint"
+			]
+		},
+		{
+			"key": "Year",
+			"type": "numrange",
+			"values": [
+				1633,
+				1832
+			]
+		},
+		{
+			"key": "Archive",
+			"type": "multiselect",
+			"values": [
+				"Archivo General de la Nación, Mexico",
+				"Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico",
+				"Archivo Histórico de Notarias del Estado de Oaxaca, Mexico",
+				"Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico"
+			]
+		}
+	]
+}</script>
+<script>
   window.prefixUrl    = "/doc-explorer/";
   window.promisedData = fetchData("/doc-explorer/documents.json"); 
   console.log("Search data promise:", window.promisedData);
@@ -153,17 +240,7 @@
 <div class="w-full mb-12 align-middle">
   <div class="join relative mt-2 flex justify-between items-center w-full shadow rounded-md bg-[#f8f4ea]">
 <p><select id="search-limit-select" class="flex-none min-w-[150px] w-fit z-10 px-2 active:border-transparent focus:border-transparent focus:ring-0 focus:outline-none bg-transparent border-none cursor-pointer">
-<option disabled="">Search Within</option>
-<option>All Fields</option>
-<option>Title</option>
-<option>Language</option>
-<option>Document Type</option>
-<option>Year</option>
-<option>Town</option>
-<option>Archive</option>
-<option>Transcription</option>
-<option>Translation</option>
-</select></p>
+<option disabled="">Search Within</option><option>All Fields</option><option>Title</option><option>Language</option><option>Document Type</option><option>Year</option><option>Town</option><option>Archive</option><option>Transcription</option><option>Translation</option></select></p>
 <p></p><div class="ml-4 border-r h-10"></div><p></p>
 <p></p><div class="grow ml-2">
 <input id="search-input" type="text" class="w-full p-2 transition duration-300 ease focus:outline-none font-mono" placeholder="Search">
@@ -284,7 +361,7 @@ Archive
 </div><p></p>
   </div></section>
 </main>
-<script src="/doc-explorer/js/search.js"></script>
+<script type="module" src="/doc-explorer/js/search.js"></script>
 
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
   <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
