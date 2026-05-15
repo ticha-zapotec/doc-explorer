@@ -161,7 +161,7 @@ window.addEventListener("load", (event) => {
     // Add search query tag if present
     if (searchInput.value) {
       const queryTag = document.createElement('div');
-      queryTag.className = 'inline-flex items-center gap-2 bg-accent-alt-light text-accent-alt-dark px-3 py-1 rounded-full text-sm';
+      queryTag.className = 'inline-flex items-center gap-2 bg-accent-alt-light text-accent-alt-dark px-3 py-1 rounded-full text-xs';
       queryTag.innerHTML = `
       <button class="hover:text-accent-light cursor-pointer" data-query-tag="true">
         <span class="font-mono"><b>Search (${selectedSearchField}):</b> ${searchInput.value}</span>
