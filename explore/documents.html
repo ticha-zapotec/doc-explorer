@@ -158,13 +158,11 @@
 <option>Title</option>
 <option>Language</option>
 <option>Document Type</option>
+<option>Year</option>
 <option>Town</option>
 <option>Archive</option>
 <option>Transcription</option>
 <option>Translation</option>
-<option>Witnesses</option>
-<option>Year</option>
-<option>Collection</option>
 </select></p>
 <p></p><div class="ml-4 border-r h-10"></div><p></p>
 <p></p><div class="grow ml-2">
@@ -243,13 +241,13 @@ Document Type
 </label>
 </li></ul><p></p>
 <p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
-<div class="text-xl font-bold my-3 px-2 text-accent-light">
-Year <span class="text-sm">[WiP!]</span>
+<div class="text-xl font-bold my-3 px-2 ">
+Year
 </div><p></p>
 <p></p><div class="pl-2 flex flex-row w-full gap-2 items-center justify-start">
-<input type="number" data-facet="Year-min" value="1633" data-value="1633" class="border rounded-md px-2 focus-visible:ring focus-visible:ring-text-light max-w-24">
+<input required="" min="1633" max="1832" type="number" data-facet="Year" data-range="min" value="1633" class="border rounded-md px-2 focus-visible:ring focus-visible:ring-text-light max-w-24">
 <span class="text-center">—</span>
-<input type="number" data-facet="Year-max" data-value="1832" value="1832" class="border rounded-md px-2 focus:ring focus:ring-text-light max-w-24">
+<input required="" min="1633" max="1832" type="number" data-facet="Year" data-range="max" value="1832" class="border rounded-md px-2 focus:ring focus:ring-text-light max-w-24">
 </div><p></p>
 <p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
 <div class="text-xl font-bold my-3 px-2 ">
@@ -274,36 +272,6 @@ Archive
 <label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
 <input type="checkbox" data-facet="Archive" data-value="Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
 <span class="ml-2 text-text-dark hover:text-accent-light">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</span>
-</label>
-</li></ul><p></p>
-<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
-<div class="text-xl font-bold my-3 px-2 ">
-Collection
-</div><p></p>
-<p></p><ul><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Collection" data-value="Rodriguez, Joseph" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Rodriguez, Joseph</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Collection" data-value="Real Intendencia" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Real Intendencia</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Collection" data-value="Alcaldias Mayores" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Alcaldias Mayores</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Collection" data-value="Joachin de Amador" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Joachin de Amador</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Collection" data-value="Tierras" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Tierras</span>
 </label>
 </li></ul><p></p>
 <p></p></li></ul>

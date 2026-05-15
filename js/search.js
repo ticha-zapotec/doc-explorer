@@ -7,8 +7,9 @@ window.addEventListener("load", (event) => {
   var searchSubmit      = document.getElementById("search-submit");
   var urlParams         = new URLSearchParams(window.location.search);
 
-  // State for selected facets and search field
+  // State for selected facets, ranged facets, and search field
   const selectedFacets = {};
+  const selectedRanges = {};
   let selectedSearchField = 'All Fields';
 
   function facetKeyToProperty(facetKey) {
@@ -17,7 +18,6 @@ window.addEventListener("load", (event) => {
       'Document Type': 'document_type',
       'Year': 'year',
       'Archive': 'archive',
-      'Collection': 'collection',
       'Town': 'town_short'
     };
     return map[facetKey] || facetKey.toLowerCase().replaceAll(' ', '_');
@@ -31,9 +31,7 @@ window.addEventListener("load", (event) => {
       'Archive': 'Archive',
       'Transcription': 'Transcription',
       'Translation': 'Translation',
-      'Witnesses': 'Witnesses',
       'Year': 'Year',
-      'Collection': 'Collection',
       'Town': 'Town'
     };
     return map[fieldName] || fieldName;
@@ -65,34 +63,47 @@ window.addEventListener("load", (event) => {
     
     let results = idx.search(query) || [];
 
-    // Filter by selected facets
+    // Filter by selected facets and ranges
     const activeFacets = Object.entries(selectedFacets).filter(([_, values]) => values.length > 0);
-    
-    if (activeFacets.length > 0) {
+    const activeRanges = Object.entries(selectedRanges).filter(([_key, range]) => range.min !== '' || range.max !== '');
+
+    if (activeFacets.length > 0 || activeRanges.length > 0) {
       results = results.filter((res) => {
         const item = resultsLookupMap[res.ref];
-        
-        return activeFacets.every(([facetKey, selectedValues]) => {
+
+        const facetMatch = activeFacets.every(([facetKey, selectedValues]) => {
           const propName = facetKeyToProperty(facetKey);
-          // remove punctuation and diacritics for matching
           const itemValue = pruneDiacritics(item[propName] || '');
           if (!itemValue) return false;
-          
-          // For Year, check if the year matches ANY selected value (OR logic within facet)
+
           if (propName === 'year') {
             return selectedValues.some(selected => {
               if (selected.includes('*')) {
-                // Wildcard matching for year ranges like "16**", "170*"
                 const pattern = selected.replaceAll('*', '\\d');
                 return new RegExp(`^${pattern}$`).test(itemValue);
               }
               return selected === itemValue;
             });
           }
-          
-          // For other facets, check if the item matches ANY selected value (OR logic within facet)
+
           return selectedValues.some(selected => selected === itemValue);
         });
+
+        const rangeMatch = activeRanges.every(([facetKey, range]) => {
+          const propName = facetKeyToProperty(facetKey);
+          if (propName !== 'year') {
+            return true;
+          }
+
+          const itemYear = Number(item[propName]);
+          if (Number.isNaN(itemYear)) return false;
+
+          const min = range.min !== '' ? Number(range.min) : -Infinity;
+          const max = range.max !== '' ? Number(range.max) : Infinity;
+          return itemYear >= min && itemYear <= max;
+        });
+
+        return facetMatch && rangeMatch;
       });
     }
 
@@ -213,6 +224,36 @@ window.addEventListener("load", (event) => {
         activeFacetsContainer.appendChild(tag);
       });
     });
+
+    // Add range facet tags
+    Object.entries(selectedRanges).forEach(([facetKey, range]) => {
+      if (!range.min && !range.max) return;
+      const rangeValue = range.min && range.max ? `${range.min}–${range.max}` : range.min ? `≥${range.min}` : `≤${range.max}`;
+      const tag = document.createElement('div');
+      tag.className = 'inline-flex items-center gap-2 bg-accent-alt-light text-accent-alt-dark px-3 py-1 rounded-full text-xs hover:shadow ';
+      tag.innerHTML = `
+        <button class="hover:text-accent-light cursor-pointer" data-range-facet="${facetKey}">
+          <span class="font-mono"><b>${facetKey}:</b> ${rangeValue}</span>
+          <span class="ml-1 font-bold"> × </span>
+        </button>
+      `;
+
+      const removeBtn = tag.querySelector('button');
+      removeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const facetKeyToRemove = this.getAttribute('data-range-facet');
+        selectedRanges[facetKeyToRemove] = {min: '', max: ''};
+
+        const rangeInputs = document.querySelectorAll(`input[data-facet="${facetKeyToRemove}"][data-range]`);
+        rangeInputs.forEach((input) => {
+          input.value = '';
+        });
+
+        handleSearchBehavior(idx, resultsLookupMap);
+      });
+
+      activeFacetsContainer.appendChild(tag);
+    });
   }
 
   function updateUrlParams() {
@@ -226,6 +267,15 @@ window.addEventListener("load", (event) => {
         newUrlParams.set(facetKey, values.join('|'));
       }
     });
+
+    Object.entries(selectedRanges).forEach(([facetKey, range]) => {
+      if (range.min) {
+        newUrlParams.set(`${facetKey.toLowerCase()}-min`, range.min);
+      }
+      if (range.max) {
+        newUrlParams.set(`${facetKey.toLowerCase()}-max`, range.max);
+      }
+    });
     
     const newUrl = `${window.location.pathname}?${newUrlParams.toString()}`;
     window.history.replaceState({}, '', newUrl);
@@ -236,12 +286,26 @@ window.addEventListener("load", (event) => {
       searchInput.value = urlParams.get('query');
     }
 
-    // Load facets from URL params
+    // Load facets and range filters from URL params
     urlParams.forEach((value, key) => {
-      console.log('URL param:', key, ";", value);
-      if (key !== 'query') {
-        selectedFacets[key] = pruneDiacritics(value).split('|');
+      if (key === 'query') {
+        return;
       }
+
+      const normalizedKey = key.toLowerCase();
+      if (normalizedKey.endsWith('-min') || normalizedKey.endsWith('-max')) {
+        const facetKey = key.slice(0, key.lastIndexOf('-'));
+        const normalizedFacetKey = facetKey.charAt(0).toUpperCase() + facetKey.slice(1);
+        const bound = normalizedKey.endsWith('-min') ? 'min' : 'max';
+
+        if (!selectedRanges[normalizedFacetKey]) {
+          selectedRanges[normalizedFacetKey] = {min: '', max: ''};
+        }
+        selectedRanges[normalizedFacetKey][bound] = value;
+        return;
+      }
+
+      selectedFacets[key] = pruneDiacritics(value).split('|');
     });
   }
 
@@ -263,9 +327,7 @@ window.addEventListener("load", (event) => {
       'Transcription': pruneDiacritics(doc.transcription) || '',
       'Translation': pruneDiacritics(doc.translation) || '',
       'Archive': pruneDiacritics(doc.archive) || '',
-      'Witnesses': pruneDiacritics(doc.witnesses) || '',
-      'Year': doc.year || '',
-      'Collection': doc.collection || ''
+      'Year': doc.year || ''
     };
   }
 
@@ -301,6 +363,27 @@ window.addEventListener("load", (event) => {
     });
   }
 
+  function setupFacetRangeInputs(resultsLookupMap) {
+    const rangeInputs = document.querySelectorAll('input[type="number"][data-facet][data-range]');
+    rangeInputs.forEach((input) => {
+      const facetKey = input.getAttribute('data-facet');
+      const rangeType = input.getAttribute('data-range');
+
+      if (!selectedRanges[facetKey]) {
+        selectedRanges[facetKey] = {min: '', max: ''};
+      }
+
+      const currentValue = selectedRanges[facetKey][rangeType] || input.value;
+      input.value = currentValue;
+      selectedRanges[facetKey][rangeType] = currentValue;
+
+      input.addEventListener('change', function() {
+        selectedRanges[facetKey][rangeType] = this.value;
+        handleSearchBehavior(window.idx, resultsLookupMap);
+      });
+    });
+  }
+
   promisedData.then(function(data) {
     const resultsLookupMap = data.reduce(function (memo, doc) {
       memo[doc.slug] = doc
@@ -316,10 +399,8 @@ window.addEventListener("load", (event) => {
       this.field('Transcription');
       this.field('Translation');
       this.field('Archive');
-      this.field('Witnesses');
       this.field('Document_Type');
       this.field('Year');
-      this.field('Collection');
 
       this.pipeline.remove(lunr.stemmer);
       this.searchPipeline.remove(lunr.stemmer);
@@ -336,6 +417,7 @@ window.addEventListener("load", (event) => {
 
     inferUrlParams();
     setupFacetCheckboxes(resultsLookupMap);
+    setupFacetRangeInputs(resultsLookupMap);
     handleSearchBehavior(idx, resultsLookupMap);
 
     document.body.addEventListener('keypress', function(e) {
