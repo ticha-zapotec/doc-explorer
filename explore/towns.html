@@ -256,12 +256,33 @@
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <div id="map" class="h-[80vh] shadow rounded-2xl"></div>
 <script>
-  window.map = L.map('map').setView([16.87, -97], 8);
+  const initialView = { center: [16.87, -97], zoom: 8 };
+  window.map = L.map('map').setView(initialView.center, initialView.zoom);
   window.townMarkers = {};
 
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri'
   }).addTo(window.map);
+
+  // Custom reset view control
+  L.Control.ResetView = L.Control.extend({
+    options: {
+      position: 'topleft'
+    },
+    onAdd: function(map) {
+      const btn = L.DomUtil.create('button', 'leaflet-control-reset-view');
+      btn.innerHTML = '⟲';
+      btn.style.cssText = 'width: 36px; height: 36px; background-color: white; border: 2px solid rgba(0,0,0,0.2); border-radius: 4px; cursor: pointer; font-size: 22px; line-height: 1; display: flex; align-items: center; justify-content: center;';
+      btn.addEventListener('click', () => {
+        map.setView(initialView.center, initialView.zoom);
+      });
+      return btn;
+    }
+  });
+  L.control.resetView = function(opts) {
+    return new L.Control.ResetView(opts);
+  };
+  L.control.resetView().addTo(window.map);
 
   // Add markers for each town
   var towns = [
@@ -406,38 +427,93 @@
 		"gps_coordinates": "[-96.7529926, 16.944817]"
 	}
 ];
+  window.townData = {};
   towns.forEach(town => {
     const coords = JSON.parse(town.gps_coordinates);
     const marker = L.marker([coords[1], coords[0]]).addTo(window.map);
     const popupHTML = `<div class="font-bold" style="max-width:8rem"><a style="color: var(--color-accent-light);" href="documents?query=${encodeURIComponent(town.town_short)}">See Documents from ${town.town_short}</a></div>`;
     marker.bindPopup(popupHTML);
     window.townMarkers[town.id] = marker;
+    window.townData[town.id] = { lat: coords[1], lng: coords[0], name: town.town_short };
+    
+    // Update URL when popup opens
+    marker.on('popupopen', () => {
+      const state = { town: town.id, center: window.map.getCenter(), zoom: window.map.getZoom() };
+      const url = `towns?town=${town.id}`;
+      window.history.pushState(state, '', url);
+    });
+    
+    marker.on('popupclose', () => {
+      const url = `towns`;
+      window.history.replaceState(null, '', url);
+    });
   });
+
+  // Handle browser back button
+  window.addEventListener('popstate', (e) => {
+    if (e.state && e.state.town && window.townMarkers[e.state.town]) {
+      window.map.setView(e.state.center, e.state.zoom);
+      window.townMarkers[e.state.town].openPopup();
+    } else {
+      window.map.setView(initialView.center, initialView.zoom);
+    }
+  });
+
+  // Signal that map is ready for initialization
+  window.mapReady = true;
 </script>
 <p></p></div>
 </div><p></p>
   </div>
 </main>
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
+  function setupTownClickHandlers() {
+    if (!window.map || !window.townMarkers) {
+      setTimeout(setupTownClickHandlers, 100);
+      return;
+    }
+
     const townLinks = document.querySelectorAll('a[data-gps]');
     townLinks.forEach(link => {
       link.addEventListener('click', event => {
         event.preventDefault();
         const coords = JSON.parse(link.dataset.gps);
-        if (window.map && Array.isArray(coords) && coords.length === 2) {
+        if (Array.isArray(coords) && coords.length === 2) {
           const [lng, lat] = coords;
-          window.map.setView([lat, lng], 13);
+          
+          // Calculate distance for smoother animation
+          const currentCenter = window.map.getCenter();
+          const distance = Math.sqrt(
+            Math.pow(lat - currentCenter.lat, 2) + Math.pow(lng - currentCenter.lng, 2)
+          );
+          const duration = Math.min(1 + (distance * 0.5), 3);
+          
+          window.map.flyTo([lat, lng], 13, { duration: duration });
 
           const townId = link.id ? link.id.replace(/-link$/, '') : null;
-          const marker = townId && window.townMarkers ? window.townMarkers[townId] : null;
-          if (marker) {
-            marker.openPopup();
+          if (townId && window.townMarkers[townId]) {
+            const marker = window.townMarkers[townId];
+            setTimeout(() => {
+              marker.openPopup();
+            }, duration * 500);
           }
         }
       });
     });
-  });
+    
+    // Check for town query parameter on page load
+    const urlParams = new URLSearchParams(window.location.search);
+    const townParam = urlParams.get('town');
+    if (townParam && window.townMarkers[townParam] && window.townData[townParam]) {
+      const townInfo = window.townData[townParam];
+      window.map.flyTo([townInfo.lat, townInfo.lng], 13, { duration: 0.5 });
+      setTimeout(() => {
+        window.townMarkers[townParam].openPopup();
+      }, 500);
+    }
+  }
+
+  setupTownClickHandlers();
 </script>
 
     </div>
