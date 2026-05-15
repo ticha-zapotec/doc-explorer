@@ -17,7 +17,8 @@ window.addEventListener("load", (event) => {
       'Document Type': 'document_type',
       'Year': 'year',
       'Archive': 'archive',
-      'Collection': 'collection'
+      'Collection': 'collection',
+      'Town': 'town_short'
     };
     return map[facetKey] || facetKey.toLowerCase().replaceAll(' ', '_');
   }
@@ -32,7 +33,8 @@ window.addEventListener("load", (event) => {
       'Translation': 'Translation',
       'Witnesses': 'Witnesses',
       'Year': 'Year',
-      'Collection': 'Collection'
+      'Collection': 'Collection',
+      'Town': 'Town'
     };
     return map[fieldName] || fieldName;
   }
@@ -256,6 +258,7 @@ window.addEventListener("load", (event) => {
       'Slug': doc.slug,
       'Title': pruneDiacritics(doc.title),
       'Language': pruneDiacritics(doc.language),
+      'Town': pruneDiacritics(doc.town_short),
       'Document_Type': pruneDiacritics(doc.document_type) || '',
       'Transcription': pruneDiacritics(doc.transcription) || '',
       'Translation': pruneDiacritics(doc.translation) || '',
@@ -308,6 +311,7 @@ window.addEventListener("load", (event) => {
       this.ref('Slug');
       this.field('Slug');
       this.field('Title');
+      this.field('Town');
       this.field('Language');
       this.field('Transcription');
       this.field('Translation');
