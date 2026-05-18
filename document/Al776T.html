@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Translation of Testament from San Pedro el Alto, 1776 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Spanish Document</h3>
@@ -254,7 +255,7 @@
            
             <a class="group" aria-label="navigate to primary document" href="Al776.html">          
               <div class="relative h-20 w-48 rounded-tl-[2rem] rounded-br-[2rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
-                <div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
+                <div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
                 <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #a46136;"></div>
               </div>
               <div class="mt-2">
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,86 +282,173 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Spanish</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo General de la Nación, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Spanish" class="text-accent-light hover:text-accent-dark">Spanish</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Tierras</dd>
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Oaxaca de Juárez" class="text-accent-light hover:text-accent-dark">Oaxaca de Juárez</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo General de la Nación, Mexico" class="text-accent-light hover:text-accent-dark">Archivo General de la Nación, Mexico</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Volumen 1877, Exp 12</dd>
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1790&year-max=1790" class="text-accent-light hover:text-accent-dark">1790</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">June 30</dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">23r-24v</dd>
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Tierras" class="text-accent-light hover:text-accent-dark">Tierras</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Volumen 1877, Exp 12</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1790</dd>
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">23r-24v</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">María García (testator)</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">June 30</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Juan Martín (alcalde), Marcos de Zarate (regidor), Pascual López (fiscal)</dd>
+                
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Oaxaca de Juárez</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">María García (testator)</dd>
+              
             
-          
+              
             
-          
+              
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Juan Martín (alcalde), Marcos de Zarate (regidor), Pascual López (fiscal)</dd>
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-          
+              <p style="margin-bottom:.11in;line-height:108%;">Translation of Testament from San Pedro el Alto 1776</p><p style="margin-bottom:.11in;line-height:108%;">Vaya P<sup>a</sup> el Reynado del Sn Dn Carlos quarto [<em>flourish</em>]</p><p style="margin-bottom:.11in;line-height:108%;"> </p><p style="margin-bottom:.11in;line-height:108%;">Yo el interprete del Jusgado del Señor Don An</p><p style="margin-bottom:.11in;line-height:108%;">tonio de M[<em>illegible</em>] Rexidor perpetuo de</p><p style="margin-bottom:.11in;line-height:108%;">la Ciudad de [<em>HOLE</em>]ga Comisario Ordenador y</p><p style="margin-bottom:.11in;line-height:108%;">correxidor Yntendencia por su Magestad de esta</p><p style="margin-bottom:.11in;line-height:108%;">ciudad y su provincia C[<em>illegible</em> l/t]era en virtud el uno</p><p style="margin-bottom:.11in;line-height:108%;">que Antesede el Lisensiando Don Ygnacio Jphe</p><p style="margin-bottom:.11in;line-height:108%;">Villa Señor y Cerviente Abogado de la Real</p><p style="margin-bottom:.11in;line-height:108%;">Audiencia de este KE [probably Kyrie Eleison] y del preso del Santo</p><p style="margin-bottom:.11in;line-height:108%;">Oficio de la Ynquisision de este Reyno de pobres de</p><p style="margin-bottom:.11in;line-height:108%;">los tribunales seculares de la Corte de Mexico Yn</p><p style="margin-bottom:.11in;line-height:108%;">dividuo Matriculado en el Muy Ytt<sup>e</sup> Real</p><p style="margin-bottom:.11in;line-height:108%;">colegio de Abogado Examinador sino del del </p><p style="margin-bottom:.11in;line-height:108%;">theniente Letrado de este Correximiento y Asesor</p><p style="margin-bottom:.11in;line-height:108%;">Ordinario de la Yntendencia de este provincio -- tra</p><p style="margin-bottom:.11in;line-height:108%;">duzco este testamento al Castellano lo cual este</p><p style="margin-bottom:.11in;line-height:108%;">testamento que Original en la Ydioma zapo</p><p style="margin-bottom:.11in;line-height:108%;">[<em>End page 1</em>]</p><p style="margin-bottom:.11in;line-height:108%;"> </p><p style="margin-bottom:.11in;line-height:108%;">theco se me entrego cuyo thenor es como sosigue</p><p style="margin-bottom:.11in;line-height:108%;">el que se llama Amoroso Nuestro Señor Jesu</p><p style="margin-bottom:.11in;line-height:108%;">Christo hijo de Dios el que se murio en la cruz</p><p style="margin-bottom:.11in;line-height:108%;">que nos Redimio todo nosotro de aquí en el mu</p><p style="margin-bottom:.11in;line-height:108%;">ndo es Verdad Yo me yamo Maria Garcia</p><p style="margin-bottom:.11in;line-height:108%;">Creo Solo Santisima trinidad, Dios Padre, Dios</p><p style="margin-bottom:.11in;line-height:108%;">hijo, Dios espiritu santo [HOLE] son tres perzon</p><p style="margin-bottom:.11in;line-height:108%;">as que Un solo Dios el que hizo el Cielo</p><p style="margin-bottom:.11in;line-height:108%;">en la tierra y todo nosotros de aquí en el mun</p><p style="margin-bottom:.11in;line-height:108%;">do el que hiso todo los Angeles del Cielo tan</p><p style="margin-bottom:.11in;line-height:108%;">bien Creo Articulo de la fee: que son Catorse</p><p style="margin-bottom:.11in;line-height:108%;">y los Siete Oracion de Dios por Divino tanbien</p><p style="margin-bottom:.11in;line-height:108%;">los Dies Orasion de Dios tanbien Creo los man</p><p style="margin-bottom:.11in;line-height:108%;">damiento, los Sinco Orasion Nuestra Santa</p><p style="margin-bottom:.11in;line-height:108%;">Madre Yglesia los Siete sacramentos y los quarto [sic]</p><p style="margin-bottom:.11in;line-height:108%;">oracion el que se reza del Rosario los Dias</p><p style="margin-bottom:.11in;line-height:108%;">Domingo y los Dias Zabado todo los misterio--</p><p style="margin-bottom:.11in;line-height:108%;">Crey los Dias mi bida de aqui en el mundo</p><p style="margin-bottom:.11in;line-height:108%;">solo esta se acava mi testamento mio: Oy Dia</p><p style="margin-bottom:.11in;line-height:108%;">[tho--margin note] Dos del mes de Marzo mil setesiento senten</p><p style="margin-bottom:.11in;line-height:108%;">[End page 2]</p><p style="margin-bottom:.11in;line-height:108%;"> </p><p style="margin-bottom:.11in;line-height:108%;">ta y seis año a Dia se acaba mi vida mia Yo Maria</p><p style="margin-bottom:.11in;line-height:108%;">Garcia hasi de Un pedaso de tierra la de Nuestra</p><p style="margin-bottom:.11in;line-height:108%;">tiahuelo [probably tía abuelo] de Nosotro la dejo en mano mi hijo--</p><p style="margin-bottom:.11in;line-height:108%;">Domingo Peres tanbien Miguel Peres que se le</p><p style="margin-bottom:.11in;line-height:108%;">queda este tierra del aRoyo que le disen en len</p><p style="margin-bottom:.11in;line-height:108%;">gua <span style="text-decoration:underline;">juiniaquecolos tierra del Yano que le dicen</span></p><p style="margin-bottom:.11in;line-height:108%;">en Lengua <span style="text-decoration:underline;">quiniotachineeqie tierra del aRo</span></p><p style="margin-bottom:.11in;line-height:108%;">[ojo--margin note] yo que le disen en Lengua <span style="text-decoration:underline;">quiniaquecoritaliu</span></p><p style="margin-bottom:.11in;line-height:108%;">del aRoyo que le disen en Lengua <span style="text-decoration:underline;">quiniaqueco-</span></p><p style="margin-bottom:.11in;line-height:108%;"><span style="text-decoration:underline;">reyotierra que le dicen en Lengua <span style="text-decoration:underline;">xajuicala-</span></span></p><p style="margin-bottom:.11in;line-height:108%;"><span style="text-decoration:underline;">nnaa y en Castilla quiere desir tierra Royo</span></p><p style="margin-bottom:.11in;line-height:108%;">de la piedra tisnada tierra que le disen en lengua</p><p style="margin-bottom:.11in;line-height:108%;"><span style="text-decoration:underline;">quiniaquelatie y en Castilla quiere desir tierra de</span></p><p style="margin-bottom:.11in;line-height:108%;">la jondura tierra del aRoyo que la disen en len</p><p style="margin-bottom:.11in;line-height:108%;">gua <span style="text-decoration:underline;">quiniaquecoyojilapaya en Castilla desir</span></p><p style="margin-bottom:.11in;line-height:108%;">tierra del camino de aRiva y tanbien la tierra del</p><p style="margin-bottom:.11in;line-height:108%;">aRoyo que le disen en lengua <span style="text-decoration:underline;">quimiraquecoocha</span></p><p style="margin-bottom:.11in;line-height:108%;"><span style="text-decoration:underline;">alapaquete y en Castilla quiere desir tierra del ca</span></p><p style="margin-bottom:.11in;line-height:108%;">mino de aBajo la dejo en mano mi Nieta</p><p style="margin-bottom:.11in;line-height:108%;">Jphe Peres la del poso, tierra del Yano queda</p><p style="margin-bottom:.11in;line-height:108%;">[<em>End page 3</em>]</p><p style="margin-bottom:.11in;line-height:108%;"> </p><p style="margin-bottom:.11in;line-height:108%;">todo lo qual esta fielmente traDusido y con</p><p style="margin-bottom:.11in;line-height:108%;">sertado del Ydioma zapotheco segun co</p><p style="margin-bottom:.11in;line-height:108%;">mo se me demostro el testamento Original</p><p style="margin-bottom:.11in;line-height:108%;">O Como esta en que se halla en Castellano</p><p style="margin-bottom:.11in;line-height:108%;">al que la debuelvo, a todo segun mi leal</p><p style="margin-bottom:.11in;line-height:108%;">saver y entender, y por ser hási Verdad lo</p><p style="margin-bottom:.11in;line-height:108%;">Juro en toda forma de Derecho, y es [j]echo</p><p style="margin-bottom:.11in;line-height:108%;">tradusido y lo firme En esta Ciudad de</p><p style="margin-bottom:.11in;line-height:108%;">Antequera Valle de Oaxaca en</p><p style="margin-bottom:.11in;line-height:108%;">treynta Dias del mes de Junio del a</p><p style="margin-bottom:.11in;line-height:108%;">ño de Mil Setesiento y Nobenta--</p><p style="margin-bottom:.11in;line-height:108%;"> Marcos de los Ang. Lopez</p><p style="margin-bottom:.11in;line-height:108%;"> Ynterprete</p>
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><p style="margin-bottom:.11in;line-height:108%;">Translation of Testament from San Pedro el Alto 1776</p><p style="margin-bottom:.11in;line-height:108%;">Vaya P<sup>a</sup> el Reynado del Sn Dn Carlos quarto [<em>flourish</em>]</p><p style="margin-bottom:.11in;line-height:108%;"> </p><p style="margin-bottom:.11in;line-height:108%;">Yo el interprete del Jusgado del Señor Don An</p><p style="margin-bottom:.11in;line-height:108%;">tonio de M[<em>illegible</em>] Rexidor perpetuo de</p><p style="margin-bottom:.11in;line-height:108%;">la Ciudad de [<em>HOLE</em>]ga Comisario Ordenador y</p><p style="margin-bottom:.11in;line-height:108%;">correxidor Yntendencia por su Magestad de esta</p><p style="margin-bottom:.11in;line-height:108%;">ciudad y su provincia C[<em>illegible</em> l/t]era en virtud el uno</p><p style="margin-bottom:.11in;line-height:108%;">que Antesede el Lisensiando Don Ygnacio Jphe</p><p style="margin-bottom:.11in;line-height:108%;">Villa Señor y Cerviente Abogado de la Real</p><p style="margin-bottom:.11in;line-height:108%;">Audiencia de este KE [probably Kyrie Eleison] y del preso del Santo</p><p style="margin-bottom:.11in;line-height:108%;">Oficio de la Ynquisision de este Reyno de pobres de</p><p style="margin-bottom:.11in;line-height:108%;">los tribunales seculares de la Corte de Mexico Yn</p><p style="margin-bottom:.11in;line-height:108%;">dividuo Matriculado en el Muy Ytt<sup>e</sup> Real</p><p style="margin-bottom:.11in;line-height:108%;">colegio de Abogado Examinador sino del del </p><p style="margin-bottom:.11in;line-height:108%;">theniente Letrado de este Correximiento y Asesor</p><p style="margin-bottom:.11in;line-height:108%;">Ordinario de la Yntendencia de este provincio -- tra</p><p style="margin-bottom:.11in;line-height:108%;">duzco este testamento al Castellano lo cual este</p><p style="margin-bottom:.11in;line-height:108%;">testamento que Original en la Ydioma zapo</p><p style="margin-bottom:.11in;line-height:108%;">[<em>End page 1</em>]</p><p style="margin-bottom:.11in;line-height:108%;"> </p><p style="margin-bottom:.11in;line-height:108%;">theco se me entrego cuyo thenor es como sosigue</p><p style="margin-bottom:.11in;line-height:108%;">el que se llama Amoroso Nuestro Señor Jesu</p><p style="margin-bottom:.11in;line-height:108%;">Christo hijo de Dios el que se murio en la cruz</p><p style="margin-bottom:.11in;line-height:108%;">que nos Redimio todo nosotro de aquí en el mu</p><p style="margin-bottom:.11in;line-height:108%;">ndo es Verdad Yo me yamo Maria Garcia</p><p style="margin-bottom:.11in;line-height:108%;">Creo Solo Santisima trinidad, Dios Padre, Dios</p><p style="margin-bottom:.11in;line-height:108%;">hijo, Dios espiritu santo [HOLE] son tres perzon</p><p style="margin-bottom:.11in;line-height:108%;">as que Un solo Dios el que hizo el Cielo</p><p style="margin-bottom:.11in;line-height:108%;">en la tierra y todo nosotros de aquí en el mun</p><p style="margin-bottom:.11in;line-height:108%;">do el que hiso todo los Angeles del Cielo tan</p><p style="margin-bottom:.11in;line-height:108%;">bien Creo Articulo de la fee: que son Catorse</p><p style="margin-bottom:.11in;line-height:108%;">y los Siete Oracion de Dios por Divino tanbien</p><p style="margin-bottom:.11in;line-height:108%;">los Dies Orasion de Dios tanbien Creo los man</p><p style="margin-bottom:.11in;line-height:108%;">damiento, los Sinco Orasion Nuestra Santa</p><p style="margin-bottom:.11in;line-height:108%;">Madre Yglesia los Siete sacramentos y los quarto [sic]</p><p style="margin-bottom:.11in;line-height:108%;">oracion el que se reza del Rosario los Dias</p><p style="margin-bottom:.11in;line-height:108%;">Domingo y los Dias Zabado todo los misterio--</p><p style="margin-bottom:.11in;line-height:108%;">Crey los Dias mi bida de aqui en el mundo</p><p style="margin-bottom:.11in;line-height:108%;">solo esta se acava mi testamento mio: Oy Dia</p><p style="margin-bottom:.11in;line-height:108%;">[tho--margin note] Dos del mes de Marzo mil setesiento senten</p><p style="margin-bottom:.11in;line-height:108%;">[End page 2]</p><p style="margin-bottom:.11in;line-height:108%;"> </p><p style="margin-bottom:.11in;line-height:108%;">ta y seis año a Dia se acaba mi vida mia Yo Maria</p><p style="margin-bottom:.11in;line-height:108%;">Garcia hasi de Un pedaso de tierra la de Nuestra</p><p style="margin-bottom:.11in;line-height:108%;">tiahuelo [probably tía abuelo] de Nosotro la dejo en mano mi hijo--</p><p style="margin-bottom:.11in;line-height:108%;">Domingo Peres tanbien Miguel Peres que se le</p><p style="margin-bottom:.11in;line-height:108%;">queda este tierra del aRoyo que le disen en len</p><p style="margin-bottom:.11in;line-height:108%;">gua <span style="text-decoration:underline;">juiniaquecolos tierra del Yano que le dicen</span></p><p style="margin-bottom:.11in;line-height:108%;">en Lengua <span style="text-decoration:underline;">quiniotachineeqie tierra del aRo</span></p><p style="margin-bottom:.11in;line-height:108%;">[ojo--margin note] yo que le disen en Lengua <span style="text-decoration:underline;">quiniaquecoritaliu</span></p><p style="margin-bottom:.11in;line-height:108%;">del aRoyo que le disen en Lengua <span style="text-decoration:underline;">quiniaqueco-</span></p><p style="margin-bottom:.11in;line-height:108%;"><span style="text-decoration:underline;">reyotierra que le dicen en Lengua <span style="text-decoration:underline;">xajuicala-</span></span></p><p style="margin-bottom:.11in;line-height:108%;"><span style="text-decoration:underline;">nnaa y en Castilla quiere desir tierra Royo</span></p><p style="margin-bottom:.11in;line-height:108%;">de la piedra tisnada tierra que le disen en lengua</p><p style="margin-bottom:.11in;line-height:108%;"><span style="text-decoration:underline;">quiniaquelatie y en Castilla quiere desir tierra de</span></p><p style="margin-bottom:.11in;line-height:108%;">la jondura tierra del aRoyo que la disen en len</p><p style="margin-bottom:.11in;line-height:108%;">gua <span style="text-decoration:underline;">quiniaquecoyojilapaya en Castilla desir</span></p><p style="margin-bottom:.11in;line-height:108%;">tierra del camino de aRiva y tanbien la tierra del</p><p style="margin-bottom:.11in;line-height:108%;">aRoyo que le disen en lengua <span style="text-decoration:underline;">quimiraquecoocha</span></p><p style="margin-bottom:.11in;line-height:108%;"><span style="text-decoration:underline;">alapaquete y en Castilla quiere desir tierra del ca</span></p><p style="margin-bottom:.11in;line-height:108%;">mino de aBajo la dejo en mano mi Nieta</p><p style="margin-bottom:.11in;line-height:108%;">Jphe Peres la del poso, tierra del Yano queda</p><p style="margin-bottom:.11in;line-height:108%;">[<em>End page 3</em>]</p><p style="margin-bottom:.11in;line-height:108%;"> </p><p style="margin-bottom:.11in;line-height:108%;">todo lo qual esta fielmente traDusido y con</p><p style="margin-bottom:.11in;line-height:108%;">sertado del Ydioma zapotheco segun co</p><p style="margin-bottom:.11in;line-height:108%;">mo se me demostro el testamento Original</p><p style="margin-bottom:.11in;line-height:108%;">O Como esta en que se halla en Castellano</p><p style="margin-bottom:.11in;line-height:108%;">al que la debuelvo, a todo segun mi leal</p><p style="margin-bottom:.11in;line-height:108%;">saver y entender, y por ser hási Verdad lo</p><p style="margin-bottom:.11in;line-height:108%;">Juro en toda forma de Derecho, y es [j]echo</p><p style="margin-bottom:.11in;line-height:108%;">tradusido y lo firme En esta Ciudad de</p><p style="margin-bottom:.11in;line-height:108%;">Antequera Valle de Oaxaca en</p><p style="margin-bottom:.11in;line-height:108%;">treynta Dias del mes de Junio del a</p><p style="margin-bottom:.11in;line-height:108%;">ño de Mil Setesiento y Nobenta--</p><p style="margin-bottom:.11in;line-height:108%;"> Marcos de los Ang. Lopez</p><p style="margin-bottom:.11in;line-height:108%;"> Ynterprete</p></dd>
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
+            
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -394,6 +482,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

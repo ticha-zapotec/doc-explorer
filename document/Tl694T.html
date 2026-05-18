@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Translation of Testament from San Jerónimo Tlacochahuaya, 1694 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Spanish Document</h3>
@@ -254,7 +255,7 @@
            
             <a class="group" aria-label="navigate to primary document" href="Tl694.html">          
               <div class="relative h-20 w-48 rounded-tl-[2rem] rounded-br-[2rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
-                <div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
+                <div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
                 <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #a46136;"></div>
               </div>
               <div class="mt-2">
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,86 +282,173 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Spanish</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Spanish" class="text-accent-light hover:text-accent-dark">Spanish</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Real Intendencia</dd>
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Oaxaca de Juárez" class="text-accent-light hover:text-accent-dark">Oaxaca de Juárez</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Legajo 39, Exp 06, 1790</dd>
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1787&year-max=1787" class="text-accent-light hover:text-accent-dark">1787</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">June 30</dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">03r-05r</dd>
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Real Intendencia" class="text-accent-light hover:text-accent-dark">Real Intendencia</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Legajo 39, Exp 06, 1790</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1787</dd>
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">03r-05r</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Ignacio de San Miguel (testator)</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">June 30</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Oaxaca de Juárez</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Ignacio de San Miguel (testator)</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+                
+              
             
-          
+              
             
-          
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><strong>(1)</strong><br>Yo el Ynterprete de el Jusgado del Señor<br>Capithan de Exersito Don Jph<sup>e</sup>. Mariano de<br>Llano, Ayudante Mayor, del Reximiento, de Dra<br>gones, de Guathemala, del Orden de Calatrava, Corre<br>xidor desta ciudad, y en ella, y su Jurisdision Jues<br>de Agravio, Apelacion, Rexistro, Reales, Quinto Visi<br>tador de Yngenio y trapriche, Jues de Obrafe, panaderia<br>y fabrica de lana SS<sup>a </sup>su merced ha tendiendo a la su<br>ma miseria de Thomas San Miguel de San Geronimo<br>Tlacochaguaya de esta Jurisdision, paresio berualmente<br>para tradusido este testamento al castellano; Lo qual Con<br>presendente de mandato berual de V<sup>ssa</sup>traDurgo este dho<br>testamento que Original en la YDioma Zapotheco se me<br>entrego cuyo thenor es Como se sigue - Yo Ygnacio<br>de San Miguel, enfermo, me hâllo con la enfermedad<br> <br><strong>(2)</strong><br>el que me â enbiado Dios mi entendimiento, hasi mi hijo<br>Geronimo de San Miguel yamô las Justisia, y Alca<br>lde Pedro Martin; y Marcial Garcia escriuano<br>Nombrado por mandado dellos bino - quando quiere<br>Dios meyama Como suyo, aora que me muero, de claro<br>fue bueno dehaser mi testamento, el que hiso Alcalde y<br>Justisia, porque Siempre tengo este emfermedad, hasidigo si<br>Dios quiere de esta emfermedad me muero, Obedesco todo lo<br>que manda Dios hasi de claro seguarde y cumpla todo<br>lo que hiso las Justisia entonse; creo Un Solo Dios Di<br>vino el ques delas tres perzona de Dios Padre, Dios hijo<br>Dios espiritu Santo es Un Solo Dios Diuino, hasi creo<br>Catorse Articulo que es Verdadero de la fee, hasi los Dies<br>mandamiento de la Ley de Dios, y sinco misterio, y los<br>siete sacramento de la Santa Madre Yglesia, hasi creo<br>que Nuestro Señor Jesu Chisto a debenir, de Jusgarnos a<br>los biuo y a los muerto, heneste mundo: y mando de Li<br>mosna a todos los altares tres Reales Ytt<sup>n</sup>. mando de Li<br>mosna Derecho de la Sepultura quatro Reales: Ytt<sup>n</sup><br>mano de Limosna Derecho dela Misa Vigilia tres<br> <br><strong>(3)</strong><br>pesos: Ytt<sup>n</sup> mando Derecho dela Campana quatro<br>Reales Ytt<sup>n</sup> mando de Limosna dentro dela Caxa de<br>Nuestro Señora Dos Reales. Ytt<sup>n</sup> mando hâsi Como<br>esta Dentro demi casa y todo entero el solar y la casa<br>que la toma Geronimo de San Miguel Como mi hijo<br>ques. Ytt<sup>n</sup>. mando le doy la tierra mio Antonio dela<br>Serna mi Yerrno. Ytt<sup>n</sup>. mando la tierra questa adonde<br>le disen en la YDioma Zapotheca quelatiaa por<br>donde Sale el Sol que esta enpeñado Con Juan<br>delos Angeles que lo desempeñe mi hijo. Ytt<sup>n</sup>. mando -<br>que la tierra que esta adonde le disen en la YDioma<br>Zapotheco, Ruaquibechoohallies lindero con el<br>Defunto Geronimo mendes, tan bien colindante con <br>su hermano Manuel de San Miguel delo Ancho<br>son Diesi Nuebe palo (aqui es ahonde encontre<br>un baron esta mendado lape, pasieron Disiseis, no era<br>hasi sino Disi Nuebe palo) que se la toma Geronimo de<br>San Miguel mi hijo. Ytt<sup>n</sup>. otro pedaso de tierra el que es<br>ta aRiua, adonde le yaman en la YDioma Zapotheco<br>Lobitoo son Dies palo que tiene, que la compra y que to<br> <br><strong>(4)</strong><br>ma mi hijo Geronimo de San Miguel = Ytt<sup>n</sup> mando la<br>tierra que bendi el que esta de bajo del palo que le Di<br>zen en la YDioma Zapotheco yagalachio en cas<br>tilla se yama palo de perû. Compro Marcial Garcia<br>quando tengan Dinero que los Desenpeñan, (aqui sesi<br>gue otro boron dentro del testamento, origuinal enpiesa<br>el boron porla y se acaua porenne, y Dise del apropio)<br>hâsi tambien ARiua compre bendio Mathias, saco<br>despues sela tomo. Ytt<sup>n</sup>. mando que le debo Dos pesos -<br>Antonio mexio jente que le llaman en la YDioma<br>zapotheco bene San Pablo Guilaa que lo page Gero<br>nimo, mi hijo hasi de claro. Ytt<sup>n</sup>. le deuo a Jph<sup>e</sup>. pa<br>cho de Macoxuchil, que lo pague Geronimo, hasi Dise<br>y de Clara el emfermo en el testamento suyo Ante<br>mi testigo, y Ante su hermano Mathias de San Mi<br>guel: Oy Dia Lunes a Veinte y seis de Abril<br> <br><strong>(5)</strong><br>de Nobenta y quatro año - este son Resiuoo de Misa y Dise<br>Reseui una Misa Vigilia por Ygnacio de San Miguel<br>y para que Consta lo firme Frey Jph<sup>e</sup>de Andrada<br>todo Lo qual esta fielmente tradusido, y consertado del Y<br>Dioma Zapotheco, segun como se me demostro el testa<br>mento Origuinal O como esta enque sealla en Cas<br>tellano, de boluiendo uno y otro y por ser hasi Verdad<br>lo juro, en toda forma segun mi leal sauer y enten<br>der y es fecho tradusido y lo firme en esta Ciudad de<br>Ante quera Valle de Oaxaca en treynta de Ju<br>nio, de mil setesesiento Ochenta y siete año<br>Marcos de los An<em>g</em>. Lopez<br>Ynterprete</dd>
+              <strong>(1)</strong><br>Yo el Ynterprete de el Jusgado del Señor<br>Capithan de Exersito Don Jph<sup>e</sup>. Mariano de<br>Llano, Ayudante Mayor, del Reximiento, de Dra<br>gones, de Guathemala, del Orden de Calatrava, Corre<br>xidor desta ciudad, y en ella, y su Jurisdision Jues<br>de Agravio, Apelacion, Rexistro, Reales, Quinto Visi<br>tador de Yngenio y trapriche, Jues de Obrafe, panaderia<br>y fabrica de lana SS<sup>a </sup>su merced ha tendiendo a la su<br>ma miseria de Thomas San Miguel de San Geronimo<br>Tlacochaguaya de esta Jurisdision, paresio berualmente<br>para tradusido este testamento al castellano; Lo qual Con<br>presendente de mandato berual de V<sup>ssa</sup>traDurgo este dho<br>testamento que Original en la YDioma Zapotheco se me<br>entrego cuyo thenor es Como se sigue - Yo Ygnacio<br>de San Miguel, enfermo, me hâllo con la enfermedad<br> <br><strong>(2)</strong><br>el que me â enbiado Dios mi entendimiento, hasi mi hijo<br>Geronimo de San Miguel yamô las Justisia, y Alca<br>lde Pedro Martin; y Marcial Garcia escriuano<br>Nombrado por mandado dellos bino - quando quiere<br>Dios meyama Como suyo, aora que me muero, de claro<br>fue bueno dehaser mi testamento, el que hiso Alcalde y<br>Justisia, porque Siempre tengo este emfermedad, hasidigo si<br>Dios quiere de esta emfermedad me muero, Obedesco todo lo<br>que manda Dios hasi de claro seguarde y cumpla todo<br>lo que hiso las Justisia entonse; creo Un Solo Dios Di<br>vino el ques delas tres perzona de Dios Padre, Dios hijo<br>Dios espiritu Santo es Un Solo Dios Diuino, hasi creo<br>Catorse Articulo que es Verdadero de la fee, hasi los Dies<br>mandamiento de la Ley de Dios, y sinco misterio, y los<br>siete sacramento de la Santa Madre Yglesia, hasi creo<br>que Nuestro Señor Jesu Chisto a debenir, de Jusgarnos a<br>los biuo y a los muerto, heneste mundo: y mando de Li<br>mosna a todos los altares tres Reales Ytt<sup>n</sup>. mando de Li<br>mosna Derecho de la Sepultura quatro Reales: Ytt<sup>n</sup><br>mano de Limosna Derecho dela Misa Vigilia tres<br> <br><strong>(3)</strong><br>pesos: Ytt<sup>n</sup> mando Derecho dela Campana quatro<br>Reales Ytt<sup>n</sup> mando de Limosna dentro dela Caxa de<br>Nuestro Señora Dos Reales. Ytt<sup>n</sup> mando hâsi Como<br>esta Dentro demi casa y todo entero el solar y la casa<br>que la toma Geronimo de San Miguel Como mi hijo<br>ques. Ytt<sup>n</sup>. mando le doy la tierra mio Antonio dela<br>Serna mi Yerrno. Ytt<sup>n</sup>. mando la tierra questa adonde<br>le disen en la YDioma Zapotheca quelatiaa por<br>donde Sale el Sol que esta enpeñado Con Juan<br>delos Angeles que lo desempeñe mi hijo. Ytt<sup>n</sup>. mando -<br>que la tierra que esta adonde le disen en la YDioma<br>Zapotheco, Ruaquibechoohallies lindero con el<br>Defunto Geronimo mendes, tan bien colindante con <br>su hermano Manuel de San Miguel delo Ancho<br>son Diesi Nuebe palo (aqui es ahonde encontre<br>un baron esta mendado lape, pasieron Disiseis, no era<br>hasi sino Disi Nuebe palo) que se la toma Geronimo de<br>San Miguel mi hijo. Ytt<sup>n</sup>. otro pedaso de tierra el que es<br>ta aRiua, adonde le yaman en la YDioma Zapotheco<br>Lobitoo son Dies palo que tiene, que la compra y que to<br> <br><strong>(4)</strong><br>ma mi hijo Geronimo de San Miguel = Ytt<sup>n</sup> mando la<br>tierra que bendi el que esta de bajo del palo que le Di<br>zen en la YDioma Zapotheco yagalachio en cas<br>tilla se yama palo de perû. Compro Marcial Garcia<br>quando tengan Dinero que los Desenpeñan, (aqui sesi<br>gue otro boron dentro del testamento, origuinal enpiesa<br>el boron porla y se acaua porenne, y Dise del apropio)<br>hâsi tambien ARiua compre bendio Mathias, saco<br>despues sela tomo. Ytt<sup>n</sup>. mando que le debo Dos pesos -<br>Antonio mexio jente que le llaman en la YDioma<br>zapotheco bene San Pablo Guilaa que lo page Gero<br>nimo, mi hijo hasi de claro. Ytt<sup>n</sup>. le deuo a Jph<sup>e</sup>. pa<br>cho de Macoxuchil, que lo pague Geronimo, hasi Dise<br>y de Clara el emfermo en el testamento suyo Ante<br>mi testigo, y Ante su hermano Mathias de San Mi<br>guel: Oy Dia Lunes a Veinte y seis de Abril<br> <br><strong>(5)</strong><br>de Nobenta y quatro año - este son Resiuoo de Misa y Dise<br>Reseui una Misa Vigilia por Ygnacio de San Miguel<br>y para que Consta lo firme Frey Jph<sup>e</sup>de Andrada<br>todo Lo qual esta fielmente tradusido, y consertado del Y<br>Dioma Zapotheco, segun como se me demostro el testa<br>mento Origuinal O como esta enque sealla en Cas<br>tellano, de boluiendo uno y otro y por ser hasi Verdad<br>lo juro, en toda forma segun mi leal sauer y enten<br>der y es fecho tradusido y lo firme en esta Ciudad de<br>Ante quera Valle de Oaxaca en treynta de Ju<br>nio, de mil setesesiento Ochenta y siete año<br>Marcos de los An<em>g</em>. Lopez<br>Ynterprete
             
-          
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
+            
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -394,6 +482,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

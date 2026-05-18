@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Testament from Villa de Zaachila, 1719 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Zapotec Document</h3>
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,86 +282,173 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Zapotec</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Zapotec" class="text-accent-light hover:text-accent-dark">Zapotec</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Alcaldias Mayores</dd>
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Villa de Zaachila" class="text-accent-light hover:text-accent-dark">Villa de Zaachila</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Legajo 41, Exp 22, 1719-1729</dd>
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1719&year-max=1719" class="text-accent-light hover:text-accent-dark">1719</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">December 29</dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">01r-02v</dd>
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Alcaldias Mayores" class="text-accent-light hover:text-accent-dark">Alcaldias Mayores</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Legajo 41, Exp 22, 1719-1729</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1719</dd>
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">01r-02v</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Pedro Martín (testator)</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">December 29</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Villa de Zaachila</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Pedro Martín (testator)</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+                
+              
             
-          
+              
             
-          
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light">[1r] la dios Bixose Dios xijni Dios Espiritu Santo<br>Thuarijni Gueche Cauesera Saachillatoo anna<br>Chij biernes Golaauiga Gobicha Xijchij Beo de<br>disiembre leya yeba de 1719 Años guienijni Sijca<br>Naa Pedro Martin Benniguicha roniya yee<br>quijchij testamento xijteniya Nijteni Richibia<br>guelaguicha guelagotij xitenia calacaa Gocuesa<br>B[ejuana]na Dios anima xijtenia Chigatija laguelacani<br>Yobini Besalachinij Naa gorobanisaya cocaa<br>ya Christiano xillanni B[ejuana]na Dios rielijlachija tho<br>bisica Dios hualijca bitoo Nilani Dios bixose Dios<br>xijni Dios espiritu Santo chonna personas ganithoui<br>Sijca Dios hualijca bitoo huane Rielij lachija xona<br>xijthoo Santa Maria xiña Nachij goropa persona<br>xiteni Santicima trinidad lacacijca Rielij lachia quisa<br>Xibanayona xiteni B[ejuana]na Dios Chela rionija lachij<br>Bixose copabijtoo Nijateni goca chij Sijganij xipe<br>lalatija lanij yhoo chij gatija amen Jusus<br>Alarijni thobi Pesos lesaca layoo laayoo late guigachij<br>xipelalatija chigatija<br>Alarini tiopa p[eso]s guica bixoce gopabitoo nijateni guini<br>ni thobi Misa roo xiteni Anima xitenia chigatia<br>Alarini toui Medio gona lo Vecogo Roo = Alarini M[edi]o<br>gona lo Vecogo xiteni xonaxij = Alarini M[edi]o gona<br>lo Vecogo xiteni Santo christo = Alarini M[edi]o gona lo<br>Vecogo xiteni San Nicolas anima<br>Alarini Solar Seheyoo lichia Sijcasij Soba Yoobij<br>cijña Rijgoya lachina xijagaya M[ari]a de la rosa<br>[1v] Xini chapa quetoo xij[roto]<br>Sijcani loo biobij xiteniya Nacanij layo Solar<br>Nirini bichaga bisa layo Solar xiteni Juana<br>Cortes Nise Soçijlla bichaga bisa layo xite[ni, cortado]<br>Christhobal Martin Nise Sotiola bichaga<br>bisa layo Solar xiteni Melchor de los Reyes<br>Nise Sochij Bichaga bisa layoo Solar xin[i, cortado]<br>Domingo basques Nisa Socahuij = Alarini tho[bi, cortado]<br>Cuee layoo xiteniya Rijgoya lachijña xijn[i, cortado]<br>Chapa goxanaya Magdalena Maria huan[e, cortado]<br>xini yochija Saluador Martin Nija xijten[i, cortado]<br>bechenij Naa goalabigayo p[eso]s tomines laguela<br>cani Roniya yee quijchij Nila graçia donaçio[n, cortado]<br>Rijgoya lachiña xinij yochija huane xij<br>nij chapaya Magdalena Maria cacaa<br>xijtenijni Nachij Natija layoonirini bicha[ga, cortado]<br>bisa layo xiteni Juan Matias Nise Soçijlla<br>bichaga bisa layoo xiteni Benni layox[cortado]<br>Nise Sotiola bichaga bisa layoo xiteni xona[xi, cortado]<br>Santa cathalina Nise Sochij bichaga bisa<br>layoo xiteni Maria belista Nise cochuij<br>Alarini Sethobij ticha Racaa Nij naca Sehey[oo, cortado]<br>lichija Ricabiya loo chana coquij gouernador<br>huane quiropani chana Coquij alcaldes hor[di, cortado]<br>nario guecherini Sijcanij Seheyoo cijchij<br>huarijanañe xijaga goxanaya Marcia<br>de la rosa huinij xijni quetoo xijni ganay<br>[2r] Pedro Martin Sijcanij thebela huarena Dios hua<br>gayij Maria de la rosa huijni huarijana nee gaca<br>xijni chapaya nicolasa Maria seheyoo<br>Niri Sijcarij ticha Rijcabiaya lanij yee<br>quijchij testamento xijteniya<br>Alarijni Sethobij ticha rijcabia Nalija hua<br>loo Justiçia Ninaca Nosabiya tapatomin<br>loo catalina Simon laguelacanij ana<br>huarijana lechelaya quijxijni thomin niri<br>ganij xijlalacanij ticha gonabea Banni gui<br>Pedro Martin laanij yee quijchij testamento<br>xitenijni hualoo chana coquij gouernador<br>huanee loo quiropanij chana coquij alcal<br>des ordinario guecherini Pienitiaga testi<br>gos Nipienilonij chela Nipienijni Sijca<br>ticha Nigonabea Benniguicha pedro<br>Martin lanij testamento xijtenijni, Benij<br>Nalij Sijcasij Noonaguela quela chris<br>tiano besellaa Nalij anima xijtenij ni<br>nija xijtenij gaca Naxohuij Nalabij, la<br>guelacanij rochijba chana coquij gouernador<br>lanij huane Rochijba Na escribano laa qui<br>ropanij chana coquij alcaldes nija quijchij tes<br>tamento nirini huane rochiua testigos laani<br>Andres de la trini[da]d    Pas[cua]l de la cruz y Juares<br>Gobernador    Ju[an]o Baup[tis]ta Canzeco t[estig]o<br>[2v] Raphael garçia testigo    [roto, J]asintho [roto]<br>Diego Martin R[egid]or    Diego Martin<br>    Jasintho lasaro<br>    Galuan ess[criba]no<br><br>R[eci]ui una Missa de vigilia por el alma de este difunto y declaro que [la, cortado]<br>cassa y solar que le dexa a su nieta Maria Rosa, presto Nicolasa Maria [en, cortado]<br>treinta pesos, que gago [sic] el difunto por su hijo que los debia quando se murio<br>los presto sobre la cassa, y esta sircunstansia no la pusso el escribano [en el, cortado]<br>testamento, y porque conste la firme en 19 de enero de 1720 años<br>[rúbrica] fr[ay] Joseph de Vergara<br>Cura<br><br></dd>
+              [1r] la dios Bixose Dios xijni Dios Espiritu Santo<br>Thuarijni Gueche Cauesera Saachillatoo anna<br>Chij biernes Golaauiga Gobicha Xijchij Beo de<br>disiembre leya yeba de 1719 Años guienijni Sijca<br>Naa Pedro Martin Benniguicha roniya yee<br>quijchij testamento xijteniya Nijteni Richibia<br>guelaguicha guelagotij xitenia calacaa Gocuesa<br>B[ejuana]na Dios anima xijtenia Chigatija laguelacani<br>Yobini Besalachinij Naa gorobanisaya cocaa<br>ya Christiano xillanni B[ejuana]na Dios rielijlachija tho<br>bisica Dios hualijca bitoo Nilani Dios bixose Dios<br>xijni Dios espiritu Santo chonna personas ganithoui<br>Sijca Dios hualijca bitoo huane Rielij lachija xona<br>xijthoo Santa Maria xiña Nachij goropa persona<br>xiteni Santicima trinidad lacacijca Rielij lachia quisa<br>Xibanayona xiteni B[ejuana]na Dios Chela rionija lachij<br>Bixose copabijtoo Nijateni goca chij Sijganij xipe<br>lalatija lanij yhoo chij gatija amen Jusus<br>Alarijni thobi Pesos lesaca layoo laayoo late guigachij<br>xipelalatija chigatija<br>Alarini tiopa p[eso]s guica bixoce gopabitoo nijateni guini<br>ni thobi Misa roo xiteni Anima xitenia chigatia<br>Alarini toui Medio gona lo Vecogo Roo = Alarini M[edi]o<br>gona lo Vecogo xiteni xonaxij = Alarini M[edi]o gona<br>lo Vecogo xiteni Santo christo = Alarini M[edi]o gona lo<br>Vecogo xiteni San Nicolas anima<br>Alarini Solar Seheyoo lichia Sijcasij Soba Yoobij<br>cijña Rijgoya lachina xijagaya M[ari]a de la rosa<br>[1v] Xini chapa quetoo xij[roto]<br>Sijcani loo biobij xiteniya Nacanij layo Solar<br>Nirini bichaga bisa layo Solar xiteni Juana<br>Cortes Nise Soçijlla bichaga bisa layo xite[ni, cortado]<br>Christhobal Martin Nise Sotiola bichaga<br>bisa layo Solar xiteni Melchor de los Reyes<br>Nise Sochij Bichaga bisa layoo Solar xin[i, cortado]<br>Domingo basques Nisa Socahuij = Alarini tho[bi, cortado]<br>Cuee layoo xiteniya Rijgoya lachijña xijn[i, cortado]<br>Chapa goxanaya Magdalena Maria huan[e, cortado]<br>xini yochija Saluador Martin Nija xijten[i, cortado]<br>bechenij Naa goalabigayo p[eso]s tomines laguela<br>cani Roniya yee quijchij Nila graçia donaçio[n, cortado]<br>Rijgoya lachiña xinij yochija huane xij<br>nij chapaya Magdalena Maria cacaa<br>xijtenijni Nachij Natija layoonirini bicha[ga, cortado]<br>bisa layo xiteni Juan Matias Nise Soçijlla<br>bichaga bisa layoo xiteni Benni layox[cortado]<br>Nise Sotiola bichaga bisa layoo xiteni xona[xi, cortado]<br>Santa cathalina Nise Sochij bichaga bisa<br>layoo xiteni Maria belista Nise cochuij<br>Alarini Sethobij ticha Racaa Nij naca Sehey[oo, cortado]<br>lichija Ricabiya loo chana coquij gouernador<br>huane quiropani chana Coquij alcaldes hor[di, cortado]<br>nario guecherini Sijcanij Seheyoo cijchij<br>huarijanañe xijaga goxanaya Marcia<br>de la rosa huinij xijni quetoo xijni ganay<br>[2r] Pedro Martin Sijcanij thebela huarena Dios hua<br>gayij Maria de la rosa huijni huarijana nee gaca<br>xijni chapaya nicolasa Maria seheyoo<br>Niri Sijcarij ticha Rijcabiaya lanij yee<br>quijchij testamento xijteniya<br>Alarijni Sethobij ticha rijcabia Nalija hua<br>loo Justiçia Ninaca Nosabiya tapatomin<br>loo catalina Simon laguelacanij ana<br>huarijana lechelaya quijxijni thomin niri<br>ganij xijlalacanij ticha gonabea Banni gui<br>Pedro Martin laanij yee quijchij testamento<br>xitenijni hualoo chana coquij gouernador<br>huanee loo quiropanij chana coquij alcal<br>des ordinario guecherini Pienitiaga testi<br>gos Nipienilonij chela Nipienijni Sijca<br>ticha Nigonabea Benniguicha pedro<br>Martin lanij testamento xijtenijni, Benij<br>Nalij Sijcasij Noonaguela quela chris<br>tiano besellaa Nalij anima xijtenij ni<br>nija xijtenij gaca Naxohuij Nalabij, la<br>guelacanij rochijba chana coquij gouernador<br>lanij huane Rochijba Na escribano laa qui<br>ropanij chana coquij alcaldes nija quijchij tes<br>tamento nirini huane rochiua testigos laani<br>Andres de la trini[da]d    Pas[cua]l de la cruz y Juares<br>Gobernador    Ju[an]o Baup[tis]ta Canzeco t[estig]o<br>[2v] Raphael garçia testigo    [roto, J]asintho [roto]<br>Diego Martin R[egid]or    Diego Martin<br>    Jasintho lasaro<br>    Galuan ess[criba]no<br><br>R[eci]ui una Missa de vigilia por el alma de este difunto y declaro que [la, cortado]<br>cassa y solar que le dexa a su nieta Maria Rosa, presto Nicolasa Maria [en, cortado]<br>treinta pesos, que gago [sic] el difunto por su hijo que los debia quando se murio<br>los presto sobre la cassa, y esta sircunstansia no la pusso el escribano [en el, cortado]<br>testamento, y porque conste la firme en 19 de enero de 1720 años<br>[rúbrica] fr[ay] Joseph de Vergara<br>Cura<br><br>
             
-          
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
+            
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -394,6 +482,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

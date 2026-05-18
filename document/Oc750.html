@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Land Deed from San Antonio Ocotlán, 1750 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Zapotec Document</h3>
@@ -260,7 +261,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -269,89 +270,179 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Zapotec</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Land Deed</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Zapotec" class="text-accent-light hover:text-accent-dark">Zapotec</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Land Deed" class="text-accent-light hover:text-accent-dark">Land Deed</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Real Intendencia</dd>
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=San Antonio Ocotlán" class="text-accent-light hover:text-accent-dark">San Antonio Ocotlán</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Legajo 42, Exp 35, 1696-1804</dd>
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1750&year-max=1750" class="text-accent-light hover:text-accent-dark">1750</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">July 1</dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">10r-10v</dd>
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Real Intendencia" class="text-accent-light hover:text-accent-dark">Real Intendencia</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Legajo 42, Exp 35, 1696-1804</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1750</dd>
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">10r-10v</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Sebastián Sánchez (owner)</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">July 1</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Sebastián Sánchez, Antonio Santiago, Antonio Martín, Juan Ambrosio, Domingo Santiago, Martin Sánchez, Cristóbal Alonzo, Pascual Ramírez, Pascual Godines, Pedro Riaga, Martín Sánchez (Juez de Sementera)</dd>
+                
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">San Antonio Ocotlán</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Sebastián Sánchez (owner)</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Sebastián Sánchez, Antonio Santiago, Antonio Martín, Juan Ambrosio, Domingo Santiago, Martin Sánchez, Cristóbal Alonzo, Pascual Ramírez, Pascual Godines, Pedro Riaga, Martín Sánchez (Juez de Sementera)</dd>
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-          
+              <p><strong>[10r]</strong></p><p>Ana chi lunes – gode[.]i xichi beo Julio ysa de 1750 a(ño)<sup>s</sup></p><p>nachoo tono Justisia Alcalde R(egid)ores es(criba)<sup>no</sup> lani yoolay</p><p>late nachiba Curona Xitini D[io]<sup>s</sup> huane Rey xibexoa</p><p>na tono bida Sebastian Sanches xinigana geto</p><p>manuel Sanches gonabani gededetono Justisia</p><p>nibichini tono lau layo Solar nigoxi queto</p><p>bixioseni manuel Sanches layo nirini ni</p><p>betoo Nicolas blas nia xitini goxi Xini Xiaga</p><p>ni Juseph de Aguillar tobi giaa mojoneras to</p><p>bi esquinia Cue late nachabissa Xilayo So</p><p>lar Antonio Santt[iago] Cue xia [th]egobicha hua</p><p>ne esquinia late nachaga bissa xilayo Solar</p><p>gaca nicolas blas cue xua niza nali birechetono</p><p>giropa relau bisine Antonio Santiago huane</p><p>nicolas blas bene nibetoo layoo Solar sica</p><p>siro lani gichi escriptura huane gichi pose</p><p>cion nirapa xinigana que<sup>to</sup> manuel Sanches</p><p>nibi tono lau tono Justisia ni bireche tono nico</p><p>las blas tobi ticha chaij nibe Sobage saca</p><p>tono Justisia giaa mojoneras esquinia late</p><p>biaxio gia mojoneras nigona lau nicolas blas</p><p>nali bitixee bea g[el]a ca tono layoo Solar sica ci</p><p>xola gichi posesion sigolaga layono tobi</p><p>bea nochona ba[..] huane tobi goda<br><br></p><p><strong>[10v]</strong></p><p>Xigotoni layo noxi Chona bea nali bea cage sa</p><p>ca Sebastian Sanches Xinigana queto manuel Sanc(hes)</p><p>posecion layo nirini ni betetege Saca tono Jus</p><p>tisia lau ysa Xiteni tono sica sinali bitixee</p><p>Jues layoo niriri[..] ni rilaqui firma xititon[o]</p><p>lani gichi posecion xitini Sebastian Sanches</p><p>Domingo de Santiago              Antonio Santiago</p><p>Alcalde                                   testigo</p><p>M(a)r(ti)n Sanches R(egid)<sup>or</sup>   Antonio m(a)r(ti)ñ testigo</p><p>Christobal Alonzo R(egid)<sup>or</sup>     Jua(n) Ambrocio</p><p>testigo</p><p>pasqual ramires                      pasqual godines R(egid)<sup>or</sup></p><p>R(egid)<sup>or</sup>                                pedro xiagas R(egid)<sup>or</sup></p><p>M(a)r(ti)ñ Sanches Juez de […] entera</p><p>                                             fran(cis)<sup>co</sup> Alonzo</p><p>                                             es(criba)<sup>no</sup></p>
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><p><strong>[10r]</strong></p><p>Ana chi lunes – gode[.]i xichi beo Julio ysa de 1750 a(ño)<sup>s</sup></p><p>nachoo tono Justisia Alcalde R(egid)ores es(criba)<sup>no</sup> lani yoolay</p><p>late nachiba Curona Xitini D[io]<sup>s</sup> huane Rey xibexoa</p><p>na tono bida Sebastian Sanches xinigana geto</p><p>manuel Sanches gonabani gededetono Justisia</p><p>nibichini tono lau layo Solar nigoxi queto</p><p>bixioseni manuel Sanches layo nirini ni</p><p>betoo Nicolas blas nia xitini goxi Xini Xiaga</p><p>ni Juseph de Aguillar tobi giaa mojoneras to</p><p>bi esquinia Cue late nachabissa Xilayo So</p><p>lar Antonio Santt[iago] Cue xia [th]egobicha hua</p><p>ne esquinia late nachaga bissa xilayo Solar</p><p>gaca nicolas blas cue xua niza nali birechetono</p><p>giropa relau bisine Antonio Santiago huane</p><p>nicolas blas bene nibetoo layoo Solar sica</p><p>siro lani gichi escriptura huane gichi pose</p><p>cion nirapa xinigana que<sup>to</sup> manuel Sanches</p><p>nibi tono lau tono Justisia ni bireche tono nico</p><p>las blas tobi ticha chaij nibe Sobage saca</p><p>tono Justisia giaa mojoneras esquinia late</p><p>biaxio gia mojoneras nigona lau nicolas blas</p><p>nali bitixee bea g[el]a ca tono layoo Solar sica ci</p><p>xola gichi posesion sigolaga layono tobi</p><p>bea nochona ba[..] huane tobi goda<br><br></p><p><strong>[10v]</strong></p><p>Xigotoni layo noxi Chona bea nali bea cage sa</p><p>ca Sebastian Sanches Xinigana queto manuel Sanc(hes)</p><p>posecion layo nirini ni betetege Saca tono Jus</p><p>tisia lau ysa Xiteni tono sica sinali bitixee</p><p>Jues layoo niriri[..] ni rilaqui firma xititon[o]</p><p>lani gichi posecion xitini Sebastian Sanches</p><p>Domingo de Santiago              Antonio Santiago</p><p>Alcalde                                   testigo</p><p>M(a)r(ti)n Sanches R(egid)<sup>or</sup>   Antonio m(a)r(ti)ñ testigo</p><p>Christobal Alonzo R(egid)<sup>or</sup>     Jua(n) Ambrocio</p><p>testigo</p><p>pasqual ramires                      pasqual godines R(egid)<sup>or</sup></p><p>R(egid)<sup>or</sup>                                pedro xiagas R(egid)<sup>or</sup></p><p>M(a)r(ti)ñ Sanches Juez de […] entera</p><p>                                             fran(cis)<sup>co</sup> Alonzo</p><p>                                             es(criba)<sup>no</sup></p></dd>
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
             
-          
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -385,6 +476,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

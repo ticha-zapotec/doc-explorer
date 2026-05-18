@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Translation of Bill of Sale from Santo Domingo Etla, 1725 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Spanish Document</h3>
@@ -254,7 +255,7 @@
            
             <a class="group" aria-label="navigate to primary document" href="SDE725a.html">          
               <div class="relative h-20 w-48 rounded-tl-[2rem] rounded-br-[2rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
-                <div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
+                <div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
                 <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #a46136;"></div>
               </div>
               <div class="mt-2">
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,83 +282,171 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Spanish</dd>
+             
             
-          
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Bill of Sale</dd>
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-          
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Spanish" class="text-accent-light hover:text-accent-dark">Spanish</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo Histórico de Notarias del Estado de Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Bill of Sale" class="text-accent-light hover:text-accent-dark">Bill of Sale</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Oaxaca de Juárez" class="text-accent-light hover:text-accent-dark">Oaxaca de Juárez</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Joachin de Amador</dd>
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo Histórico de Notarias del Estado de Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo Histórico de Notarias del Estado de Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1749&year-max=1749" class="text-accent-light hover:text-accent-dark">1749</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Libro 101, Exp. 2</dd>
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">November</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Joachin de Amador" class="text-accent-light hover:text-accent-dark">Joachin de Amador</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">454-457</dd>
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Libro 101, Exp. 2</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">454-457</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1749</dd>
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Nicolas Méndez and Michaela Mendéz (sellers) and Joseph de Silva and Jerónima de Silva (buyers)</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">November</dd>
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Antonio Nunes (alcalde), Luca de la Cruz, Sebastián Méndez (witness), Marcial Méndez (witness), Antonio de Santiago y Velasco (witness), Antonio Hipólito Juárez (witness)</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Oaxaca de Juárez</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Nicolas Méndez and Michaela Mendéz (sellers) and Joseph de Silva and Jerónima de Silva (buyers)</dd>
+              
             
-          
+              
             
-          
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Antonio Nunes (alcalde), Luca de la Cruz, Sebastián Méndez (witness), Marcial Méndez (witness), Antonio de Santiago y Velasco (witness), Antonio Hipólito Juárez (witness)</dd>
+              <p class="text-text-light">Transcription is not available for this document.</p>
             
-          
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
+            
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -391,6 +480,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

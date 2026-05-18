@@ -14,6 +14,8 @@ function toDoc(doc) {
     'Transcription': pruneDiacritics(doc.transcription) || '',
     'Translation': pruneDiacritics(doc.translation) || '',
     'Archive': pruneDiacritics(doc.archive) || '',
+    'Collection': pruneDiacritics(doc.collection) || '',
+    'Date': pruneDiacritics(doc.date) || '',
     'Year': doc.year || ''
   };
 }

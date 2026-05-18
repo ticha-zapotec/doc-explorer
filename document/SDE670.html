@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Bill of Sale? from Santo Domingo Etla, 1670 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Zapotec Document</h3>
@@ -260,7 +261,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -269,86 +270,173 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Zapotec</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Bill of Sale?</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo Histórico de Notarias del Estado de Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Zapotec" class="text-accent-light hover:text-accent-dark">Zapotec</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Bill of Sale" class="text-accent-light hover:text-accent-dark">Bill of Sale</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Joachin de Amador</dd>
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Santo Domingo Etla" class="text-accent-light hover:text-accent-dark">Santo Domingo Etla</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo Histórico de Notarias del Estado de Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo Histórico de Notarias del Estado de Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Libro 101, Exp. 2</dd>
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1670&year-max=1670" class="text-accent-light hover:text-accent-dark">1670</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">October 9</dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">776</dd>
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Joachin de Amador" class="text-accent-light hover:text-accent-dark">Joachin de Amador</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Libro 101, Exp. 2</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1670</dd>
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">776</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Dominga Martín and Florentina García (from Santa María Asunción)</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">October 9</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Francisco López, Pedro Ruiz, Diego de Lesca, Domingo Pérez</dd>
+                
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Santo Domingo Etla</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Dominga Martín and Florentina García (from Santa María Asunción)</dd>
+              
             
-          
+              
             
-          
+              
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Francisco López, Pedro Ruiz, Diego de Lesca, Domingo Pérez</dd>
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-          
+              <p style="margin-bottom:0in;line-height:100%;"><strong>776</strong></p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">[Ana] chij Juebes 9 de otobre chela yza 1670 año nij cachi</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">nayo n#li chi xoana miguel Regino beni hualachi de los reyes</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">naa villa queche luana zelatenaya domingo martin quiropale</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">chelata florentina garcia beni huachi santa maria ansumpcion</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">laani canaa billa gueche luana retita queya yatito bicuelao</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">yoo nonaca xilaayta nonaa tua estancia lahij yooninaca</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">yoomisa chela naca yootao yoo gueche santo domingo naca</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">chij peya tao cica tenaa quichi escritura noco xiguetao xi</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ti collata ggaspar de la toreno coxini lao yoo ni calao gaa</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">laniaca ni retica sacata lao yoo niti zij xoana ni guel regino</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">coca quela huexia chahuij ronani cale pesos tomines tecaa</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">la chinaa quiropa lechelata pesos queni chela tecaani es</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">critura nococa lao yza de 1601 año laniaca ni tozoo lee</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ya cica naca bizaa zetilla nico bichi cocha gayoo que gaspar</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">de los reyes zee quiya glla cocha gayoo queni guel de san</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">tiago huazoo yasa rao naca bizaa zeetiya zico bicha</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">cochaga laa tolao yoo que miguel de santiago laa to hua</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">zoo yasa rao naca bizaa zeelolaa cocha gayoo quehij</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">chela huazoba quela chi xaabaa tenani naca bizaa cica</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ni naca cabij laoyo nitizij xoana miguel regino tiechiño</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">yza guela caca que xini xiyagani loo gee logita aroti</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">xiniala xiya gaya guenaba bilaoyoo nieto biliyasa nia</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ni huarapa xij##cue lao yoo nocaca quexini xiya gaya</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">loo geelogita chela lao yoo ni naa zijto #rala cozooya</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">canaya conia chijna nizito naa lao yooni chela tonia to</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">la toxa xinia la xiya gaya guena babilaoyooni late la hua</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">quiyeni lao quichi escritura quetani lao totila Jus<sup>a</sup> late la</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">hua guetixeta pena cale pesos ca gasto gue Jus<sup>a</sup> la nia cani</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">tocaa escribano xitichata chela firma queta niani ane toni</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ta guecaata quichi cicani tyaalao quiichi escritura que xo</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">huana nigl rexino aña tonanaga testigos</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">Domingo florentina tto fran<sup>co</sup> lopes P<sup>o</sup> ruiz lao tenaya</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">mrñ garcia</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">tt<sup>o </sup>diego de ylesca</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">Domingo peres</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">Gaspar de Los Reyes escribano</p>
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><p style="margin-bottom:0in;line-height:100%;"><strong>776</strong></p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">[Ana] chij Juebes 9 de otobre chela yza 1670 año nij cachi</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">nayo n#li chi xoana miguel Regino beni hualachi de los reyes</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">naa villa queche luana zelatenaya domingo martin quiropale</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">chelata florentina garcia beni huachi santa maria ansumpcion</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">laani canaa billa gueche luana retita queya yatito bicuelao</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">yoo nonaca xilaayta nonaa tua estancia lahij yooninaca</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">yoomisa chela naca yootao yoo gueche santo domingo naca</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">chij peya tao cica tenaa quichi escritura noco xiguetao xi</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ti collata ggaspar de la toreno coxini lao yoo ni calao gaa</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">laniaca ni retica sacata lao yoo niti zij xoana ni guel regino</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">coca quela huexia chahuij ronani cale pesos tomines tecaa</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">la chinaa quiropa lechelata pesos queni chela tecaani es</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">critura nococa lao yza de 1601 año laniaca ni tozoo lee</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ya cica naca bizaa zetilla nico bichi cocha gayoo que gaspar</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">de los reyes zee quiya glla cocha gayoo queni guel de san</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">tiago huazoo yasa rao naca bizaa zeetiya zico bicha</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">cochaga laa tolao yoo que miguel de santiago laa to hua</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">zoo yasa rao naca bizaa zeelolaa cocha gayoo quehij</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">chela huazoba quela chi xaabaa tenani naca bizaa cica</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ni naca cabij laoyo nitizij xoana miguel regino tiechiño</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">yza guela caca que xini xiyagani loo gee logita aroti</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">xiniala xiya gaya guenaba bilaoyoo nieto biliyasa nia</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ni huarapa xij##cue lao yoo nocaca quexini xiya gaya</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">loo geelogita chela lao yoo ni naa zijto #rala cozooya</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">canaya conia chijna nizito naa lao yooni chela tonia to</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">la toxa xinia la xiya gaya guena babilaoyooni late la hua</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">quiyeni lao quichi escritura quetani lao totila Jus<sup>a</sup> late la</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">hua guetixeta pena cale pesos ca gasto gue Jus<sup>a</sup> la nia cani</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">tocaa escribano xitichata chela firma queta niani ane toni</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">ta guecaata quichi cicani tyaalao quiichi escritura que xo</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">huana nigl rexino aña tonanaga testigos</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">Domingo florentina tto fran<sup>co</sup> lopes P<sup>o</sup> ruiz lao tenaya</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">mrñ garcia</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">tt<sup>o </sup>diego de ylesca</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">Domingo peres</p><p style="margin-bottom:0in;font-weight:normal;line-height:100%;">Gaspar de Los Reyes escribano</p></dd>
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
+            
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -382,6 +470,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Testament from San Mateo Macuilxóchitl, 1733 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Zapotec Document</h3>
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,89 +282,175 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Zapotec</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Zapotec" class="text-accent-light hover:text-accent-dark">Zapotec</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=San Mateo Macuilxóchitl" class="text-accent-light hover:text-accent-dark">San Mateo Macuilxóchitl</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Caja 72 Dtos. Justicia 1704-1897, Documento 607 1892-93 Vários Pueblos</dd>
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1733&year-max=1733" class="text-accent-light hover:text-accent-dark">1733</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">01r-01v</dd>
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">July 12</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1733</dd>
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Caja 72 Dtos. Justicia 1704-1897, Documento 607 1892-93 Vários Pueblos</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">01r-01v</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">July 12</dd>
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Francisco Jim̩nez</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">San Mateo Macuilxóchitl</dd>
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Marcos Pérez, Ignacio Martn (alcalde), Lorenzo Guti̩rrez (alcalde)</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Francisco Jim̩nez</dd>
+              
             
-          
+              
             
-          
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Tlacolula_permissions.pdf</dd>
+                
+              
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Marcos Pérez, Ignacio Martn (alcalde), Lorenzo Guti̩rrez (alcalde)</dd>
+              
+                
+                <dt class="font-bold">Acknowledgements</dt>
+                
+                <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.  Support for morphological analysis and translation of this document was provided to Lillehaugen through fellowships from the NEH (AY 2015-2016) and the ACLS (2016). Lillehaugen is grateful for the support and must note that all opinions, findings, conclusions or recommendations expressed in this project do not necessarily represent those of the National Endowment for the Humanities.</dd>
+                
+              
             
-          
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><p><strong>[1r]</strong></p><p>Rinij naa Beni gichij fran(cis)<sup>co</sup> Ximenes Venij hualachi tuarenij</p><p>lo geche San Matheo quiahuixijtao sica benij nalij christiano</p><p>ni nacaya nia esteni corobaya ni salaya exteni Dios =</p><p>ne hua relijlachia ni nacanij misterio extenij sanssima</p><p>trinidad ni nacanij Dios vixoçe Dios xinij Dios espiritu</p><p>santo chona Personas tovi sica Dios nali bitoo – chela hua</p><p>relilachia quitapa sula yaa extenij coquij xonaxij s(an)<sup>t</sup><sup>a</sup></p><p>maria chela hua relijlachia quijchij taa xibaa ni la harti</p><p>colo de la fee extenij xiniana santa ygleçia</p><p>chela rinia tapa Domines leçaca layoo laaya rua qui gachi</p><p>belaa latia renia chana 4 r(eales)</p><p>tiopa Domines gona becogoo extenij xunaxij 2 r(eales)</p><p>tiopa domines gona becogoo xteni Bexuhuano en</p><p>tierro 2 r(eales)</p><p>becogoo exteni San Matheo tiopa domines 2 r(eales)</p><p>ni naca yoo lichiya rosanaya Domingo ximenes xinijyaa</p><p>ne sular = huane layoo ginia nina rua estacia quecaa</p><p>Dom(ing)<sup>o</sup> garola segarola queca Manuel layoo nachaga bisa</p><p>quetao christobal ximenes nesa xilianij gobicha nachaga</p><p>bisaa Mithias de Morales nesa sucahui nachaga bisa Pe(dr)<sup>o</sup> de sar</p><p>te nesa suchij nachaga bisa Phelipe torres nesaa sutiula</p><p>setobi cue layoo nina rua nesa risaa benij bacaa nacha</p><p>gaa bisa salbador Mendosa nesa xilanij gobichia nachaga</p><p>bisa Phelipe torres nesa sucaui nacha bisa Pasqual Hernan(de)<sup>s</sup></p><p>nesa suchij riana ne Nicolas xinia layoo renij = hualica</p><p>ca setobi cue layo nicoxia betoo D(o)<sup>n</sup> Domingo pacho loo quiro</p><p>pa bechini D(o)<sup>n</sup> Phelipe ni nacalaya chinigapa ni chi vi</p><p>chiña ni beteta layo reni chi peso sica nali conalao</p><p>testigo Bar(tolo)<sup>me</sup> Hernandes – layo reni naa cue gego xana</p><p>tani quie huixij rianane Pasqual garola segarola ri[..]nan[...]<br><br></p><p><strong>[1v]</strong></p><p>salbador = hualica setobi cue layo na xana tanij quichij</p><p>queca xinia santiago nachaga bisa lucas de Cruz</p><p>hualica garola layo renij cuxia beto quetao Pasqual de</p><p>la Cruz segaro lanijni na calayo xilaa exteni ni besa</p><p>lachij quetao Pasqual de Cruz gol - - hualica setobi cue</p><p>solar rianane cuee horno Manuel setobi cue solar que</p><p>ca sabador = setobi cue solar queca Nicolas setobi cue</p><p>solar quecaa Santiago = hualica tobi nesa telar exteni rote</p><p>teya xinia Domingo = tobi mesa nee tobi escanio queca xinia</p><p>Pasqual = setobi escanio quecaa xinia sabador = tobi yaga</p><p>siya rao netobi siya hui queca santiago setioabichij xa</p><p>na toba queca sabador setiua bichi queca Xana que</p><p>ca santiago Xiarua = = cani lati sicani riariloxe</p><p>testamento xiteni naa Beni gichia fran(cis)<sup>co</sup> ximenes</p><p>anachi Juebes gochij bitopa gobichia nari xi [...]</p><p>chij beo Julio ysa de 175(6) = Nalij gona lao na Gouernador</p><p>                                  Marcos Peres</p><p>lorenzo Gutierres         ygnacio Martin</p><p>Alcalde                        Alcalde</p><p>Joseph Mar(ti)<sup>n</sup></p><p>ss(criban)<sup>o</sup> nunbrado</p><p> </p><p>Passe al Ynterprete p(ar)<sup>a</sup> su traducion y</p><p>prober en su vista lo conven(ien)<sup>te</sup></p></dd>
+              <p><strong>[1r]</strong></p><p>Rinij naa Beni gichij fran(cis)<sup>co</sup> Ximenes Venij hualachi tuarenij</p><p>lo geche San Matheo quiahuixijtao sica benij nalij christiano</p><p>ni nacaya nia esteni corobaya ni salaya exteni Dios =</p><p>ne hua relijlachia ni nacanij misterio extenij sanssima</p><p>trinidad ni nacanij Dios vixoçe Dios xinij Dios espiritu</p><p>santo chona Personas tovi sica Dios nali bitoo – chela hua</p><p>relilachia quitapa sula yaa extenij coquij xonaxij s(an)<sup>t</sup><sup>a</sup></p><p>maria chela hua relijlachia quijchij taa xibaa ni la harti</p><p>colo de la fee extenij xiniana santa ygleçia</p><p>chela rinia tapa Domines leçaca layoo laaya rua qui gachi</p><p>belaa latia renia chana 4 r(eales)</p><p>tiopa Domines gona becogoo extenij xunaxij 2 r(eales)</p><p>tiopa domines gona becogoo xteni Bexuhuano en</p><p>tierro 2 r(eales)</p><p>becogoo exteni San Matheo tiopa domines 2 r(eales)</p><p>ni naca yoo lichiya rosanaya Domingo ximenes xinijyaa</p><p>ne sular = huane layoo ginia nina rua estacia quecaa</p><p>Dom(ing)<sup>o</sup> garola segarola queca Manuel layoo nachaga bisa</p><p>quetao christobal ximenes nesa xilianij gobicha nachaga</p><p>bisaa Mithias de Morales nesa sucahui nachaga bisa Pe(dr)<sup>o</sup> de sar</p><p>te nesa suchij nachaga bisa Phelipe torres nesaa sutiula</p><p>setobi cue layoo nina rua nesa risaa benij bacaa nacha</p><p>gaa bisa salbador Mendosa nesa xilanij gobichia nachaga</p><p>bisa Phelipe torres nesa sucaui nacha bisa Pasqual Hernan(de)<sup>s</sup></p><p>nesa suchij riana ne Nicolas xinia layoo renij = hualica</p><p>ca setobi cue layo nicoxia betoo D(o)<sup>n</sup> Domingo pacho loo quiro</p><p>pa bechini D(o)<sup>n</sup> Phelipe ni nacalaya chinigapa ni chi vi</p><p>chiña ni beteta layo reni chi peso sica nali conalao</p><p>testigo Bar(tolo)<sup>me</sup> Hernandes – layo reni naa cue gego xana</p><p>tani quie huixij rianane Pasqual garola segarola ri[..]nan[...]<br><br></p><p><strong>[1v]</strong></p><p>salbador = hualica setobi cue layo na xana tanij quichij</p><p>queca xinia santiago nachaga bisa lucas de Cruz</p><p>hualica garola layo renij cuxia beto quetao Pasqual de</p><p>la Cruz segaro lanijni na calayo xilaa exteni ni besa</p><p>lachij quetao Pasqual de Cruz gol - - hualica setobi cue</p><p>solar rianane cuee horno Manuel setobi cue solar que</p><p>ca sabador = setobi cue solar queca Nicolas setobi cue</p><p>solar quecaa Santiago = hualica tobi nesa telar exteni rote</p><p>teya xinia Domingo = tobi mesa nee tobi escanio queca xinia</p><p>Pasqual = setobi escanio quecaa xinia sabador = tobi yaga</p><p>siya rao netobi siya hui queca santiago setioabichij xa</p><p>na toba queca sabador setiua bichi queca Xana que</p><p>ca santiago Xiarua = = cani lati sicani riariloxe</p><p>testamento xiteni naa Beni gichia fran(cis)<sup>co</sup> ximenes</p><p>anachi Juebes gochij bitopa gobichia nari xi [...]</p><p>chij beo Julio ysa de 175(6) = Nalij gona lao na Gouernador</p><p>                                  Marcos Peres</p><p>lorenzo Gutierres         ygnacio Martin</p><p>Alcalde                        Alcalde</p><p>Joseph Mar(ti)<sup>n</sup></p><p>ss(criban)<sup>o</sup> nunbrado</p><p> </p><p>Passe al Ynterprete p(ar)<sup>a</sup> su traducion y</p><p>prober en su vista lo conven(ien)<sup>te</sup></p>
             
-          
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Tlacolula_permissions.pdf</dd>
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Acknowledgements</dt>
-              <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.  Support for morphological analysis and translation of this document was provided to Lillehaugen through fellowships from the NEH (AY 2015-2016) and the ACLS (2016). Lillehaugen is grateful for the support and must note that all opinions, findings, conclusions or recommendations expressed in this project do not necessarily represent those of the National Endowment for the Humanities.</dd>
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
             
-          
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -397,6 +484,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

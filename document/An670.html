@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Testament from Oaxaca de Juárez, 1670 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Zapotec Document</h3>
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,89 +282,179 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Zapotec</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo Histórico de Notarias del Estado de Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Zapotec" class="text-accent-light hover:text-accent-dark">Zapotec</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Rodriguez, Joseph</dd>
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Oaxaca de Juárez" class="text-accent-light hover:text-accent-dark">Oaxaca de Juárez</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo Histórico de Notarias del Estado de Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo Histórico de Notarias del Estado de Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">No. 443, 1690-1691</dd>
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1670&year-max=1670" class="text-accent-light hover:text-accent-dark">1670</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">March 25</dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">8r-8v</dd>
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Rodriguez, Joseph" class="text-accent-light hover:text-accent-dark">Rodriguez, Joseph</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">No. 443, 1690-1691</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1670</dd>
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">8r-8v</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Melchor de los Reyes (testator)</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">March 25</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Oaxaca de Juárez</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Melchor de los Reyes (testator)</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_Notarias_permissions_2015.pdf</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Acknowledgements</dt>
+                
+                <dd class="pb-4 text-text-light">Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.  Support for morphological analysis and translation of this document was provided to Lillehaugen through fellowships from the NEH (AY 2015-2016) and the ACLS (2016). Lillehaugen is grateful for the support and must note that all opinions, findings, conclusions or recommendations expressed in this project do not necessarily represent those of the National Endowment for the Humanities.</dd>
+                
+              
             
-          
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><p><strong>[8r]</strong></p><p>Anachihi miercoles 25 cobicha beo de marsos 1670 años</p><p>√ nala melchiyor de los reys tonia guichi dectamento tinia</p><p>guela nihuatichi biya guelacoti tinia calaca coni sabi</p><p>bd nalachi catia guelani yobini besalachini nah[a]</p><p>corobanisa guegueya cocaya xpiaño chela hua tielij</p><p>lachiya ni naca 3 personas dios pisose dios xini dios</p><p>hepirito santo ni rini cani tobi cica dios huahalica</p><p>pito chela huatielilachiya yobi [......] jeso xpo</p><p>xini dios pesalachini nachelah[...]a tieliilachiya yobi xona</p><p>naxidoho santa mari[a...]i naca xiñahalji dios lani ci</p><p>cani teonia lachij xi[ni...]olia dios chapi ciga aa tinia gue</p><p>hui gueba chicatia chela teonia lachi bisose cobabido coca</p><p>chi cigani pelala[ti]a yo doho chicatia lani cica hua tieli</p><p>lachia guiraha [...]iticha xiñahana santa yglençia</p><p>√ Alarini 1 p(es)<sup>o</sup>s t(omine)<sup>s</sup> guini ciga bisose copabidoho tobi misa can</p><p>tadas ctini aa ctinia chica tia Alarini 2 t(omine)<sup>s</sup> chi saca yoho</p><p>leya ro h[...]anigui gachi pelalatia yodoho chicatia 2 t(omine)<sup>s</sup> xi</p><p>laa can[...]r coca chini pelalatia yodoho chicatia Ala</p><p>rini ronia cona lo pecogo sandres m(edi)<sup>o</sup> loo coguihi guipa so</p><p>naxi rosarios m(edi)<sup>o</sup> loo santa crus m(edi)<sup>o</sup> Alarini 1 t(omine)<sup>s</sup> yaga ton</p><p>pras santa crus ni guita caha pelalatia m(edi)<sup>o </sup>--------</p><p>√ Alarini yo lichija chela solar chiña ni beni cheguira</p><p>sohuana colas rohuarini lo becogo s(a)ndres guiaba xini [...]</p><p>na cosanaya juan joeres hua neheni liche lani [...]</p><p>chijoras chicatia chela 2 xiniya guiapa xi[...] g[...]</p><p>juan p<sup>e</sup>res cica choco lesaya hue sani chi[ca...]lari[...]</p><p>topa guiapa xinia [...] huini granbiel rohua so[...]</p><p>bo huihi guicahani chicatia [...] rini 2 guehe topa p[...]</p><p>chapaya margarita chicatia 1 lari guicha tiyoha[...]</p><p>ya xinia granbiel chicatia Alarini guira [...] nico [...]</p><p>bini guicha pini ni guichi testament[o...]oo guira dom[...]</p><p>cia Ague cacani tila guila do[...]o [...] guichi rini</p><p>loo naha</p><p>p(edr)<sup>o</sup> sa miguel         [...]o de me         don felipe bas</p><p>hescriuaño                   dinas fiscal          gues regidor</p><p> </p><p>                                    geronimo de</p><p>                                    medinas</p><p>                                    alcuacil mayor</p><p>R(eci)<sup>ui</sup> una misa cantada</p><p>Joseph Bornojo<br><br></p><p><strong>[8v]</strong></p><p>guichi testamen</p><p>to tini melchi</p><p>yor de la crus</p></dd>
+              <p><strong>[8r]</strong></p><p>Anachihi miercoles 25 cobicha beo de marsos 1670 años</p><p>√ nala melchiyor de los reys tonia guichi dectamento tinia</p><p>guela nihuatichi biya guelacoti tinia calaca coni sabi</p><p>bd nalachi catia guelani yobini besalachini nah[a]</p><p>corobanisa guegueya cocaya xpiaño chela hua tielij</p><p>lachiya ni naca 3 personas dios pisose dios xini dios</p><p>hepirito santo ni rini cani tobi cica dios huahalica</p><p>pito chela huatielilachiya yobi [......] jeso xpo</p><p>xini dios pesalachini nachelah[...]a tieliilachiya yobi xona</p><p>naxidoho santa mari[a...]i naca xiñahalji dios lani ci</p><p>cani teonia lachij xi[ni...]olia dios chapi ciga aa tinia gue</p><p>hui gueba chicatia chela teonia lachi bisose cobabido coca</p><p>chi cigani pelala[ti]a yo doho chicatia lani cica hua tieli</p><p>lachia guiraha [...]iticha xiñahana santa yglençia</p><p>√ Alarini 1 p(es)<sup>o</sup>s t(omine)<sup>s</sup> guini ciga bisose copabidoho tobi misa can</p><p>tadas ctini aa ctinia chica tia Alarini 2 t(omine)<sup>s</sup> chi saca yoho</p><p>leya ro h[...]anigui gachi pelalatia yodoho chicatia 2 t(omine)<sup>s</sup> xi</p><p>laa can[...]r coca chini pelalatia yodoho chicatia Ala</p><p>rini ronia cona lo pecogo sandres m(edi)<sup>o</sup> loo coguihi guipa so</p><p>naxi rosarios m(edi)<sup>o</sup> loo santa crus m(edi)<sup>o</sup> Alarini 1 t(omine)<sup>s</sup> yaga ton</p><p>pras santa crus ni guita caha pelalatia m(edi)<sup>o </sup>--------</p><p>√ Alarini yo lichija chela solar chiña ni beni cheguira</p><p>sohuana colas rohuarini lo becogo s(a)ndres guiaba xini [...]</p><p>na cosanaya juan joeres hua neheni liche lani [...]</p><p>chijoras chicatia chela 2 xiniya guiapa xi[...] g[...]</p><p>juan p<sup>e</sup>res cica choco lesaya hue sani chi[ca...]lari[...]</p><p>topa guiapa xinia [...] huini granbiel rohua so[...]</p><p>bo huihi guicahani chicatia [...] rini 2 guehe topa p[...]</p><p>chapaya margarita chicatia 1 lari guicha tiyoha[...]</p><p>ya xinia granbiel chicatia Alarini guira [...] nico [...]</p><p>bini guicha pini ni guichi testament[o...]oo guira dom[...]</p><p>cia Ague cacani tila guila do[...]o [...] guichi rini</p><p>loo naha</p><p>p(edr)<sup>o</sup> sa miguel         [...]o de me         don felipe bas</p><p>hescriuaño                   dinas fiscal          gues regidor</p><p> </p><p>                                    geronimo de</p><p>                                    medinas</p><p>                                    alcuacil mayor</p><p>R(eci)<sup>ui</sup> una misa cantada</p><p>Joseph Bornojo<br><br></p><p><strong>[8v]</strong></p><p>guichi testamen</p><p>to tini melchi</p><p>yor de la crus</p>
             
-          
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_Notarias_permissions_2015.pdf</dd>
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Acknowledgements</dt>
-              <dd class="pb-4 text-text-light">Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.  Support for morphological analysis and translation of this document was provided to Lillehaugen through fellowships from the NEH (AY 2015-2016) and the ACLS (2016). Lillehaugen is grateful for the support and must note that all opinions, findings, conclusions or recommendations expressed in this project do not necessarily represent those of the National Endowment for the Humanities.</dd>
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
             
-          
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -397,6 +488,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

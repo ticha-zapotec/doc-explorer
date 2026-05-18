@@ -205,7 +205,7 @@ export function initUI({ idx, resultsLookupMap }) {
     Object.entries(state.selectedRanges).forEach(([facetKey, range]) => {
       if (!range.min && !range.max) return;
 
-      const rangeValue = range.min && range.max ? `${range.min}–${range.max}` : range.min ? `≥${range.min}` : `≤${range.max}`;
+      const rangeValue = range.min && range.max ? `${range.min}–${range.max}` : range.min ? `≥${range.min}` : `≤${range.max}` ;
       const tag = document.createElement('div');
       tag.className = 'inline-flex items-center gap-2 bg-accent-alt-light text-accent-alt-dark px-3 py-1 rounded-full text-xs hover:shadow ';
       tag.innerHTML = `

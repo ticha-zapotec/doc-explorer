@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Translation of Testament from Teotitlán del Valle?, 1786 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Spanish Document</h3>
@@ -254,7 +255,7 @@
            
             <a class="group" aria-label="navigate to primary document" href="Tv786.html">          
               <div class="relative h-20 w-48 rounded-tl-[2rem] rounded-br-[2rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
-                <div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
+                <div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
                 <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #a46136;"></div>
               </div>
               <div class="mt-2">
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,89 +282,175 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Spanish</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Spanish" class="text-accent-light hover:text-accent-dark">Spanish</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Teotitlán del Valle" class="text-accent-light hover:text-accent-dark">Teotitlán del Valle</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Caja 72 Dtos. Justicia 1704-1897, Documento 175 Teotitlan del Valle 1802</dd>
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1802&year-max=1802" class="text-accent-light hover:text-accent-dark">1802</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">11r-11v</dd>
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">July 20</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1802</dd>
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Caja 72 Dtos. Justicia 1704-1897, Documento 175 Teotitlan del Valle 1802</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">11r-11v</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">July 20</dd>
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Verónica Manuel (testator)</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Teotitlán del Valle</dd>
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Manuel de la Cruz (spouse of the testator), Toms Hernández (governador), Agostn de Sales (alcalde), Domingo Cuevas (alcalde), Francisco Lazaro (regidor), Domingo Martín (regidor), Pedro Vicente (regidor), Pedro Sosa (regidor), Juan Santo (regidor), Miguel Martín (regidor)</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Verónica Manuel (testator)</dd>
+              
             
-          
+              
             
-          
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Tlacolula_permissions.pdf</dd>
+                
+              
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Manuel de la Cruz (spouse of the testator), Toms Hernández (governador), Agostn de Sales (alcalde), Domingo Cuevas (alcalde), Francisco Lazaro (regidor), Domingo Martín (regidor), Pedro Vicente (regidor), Pedro Sosa (regidor), Juan Santo (regidor), Miguel Martín (regidor)</dd>
+              
+                
+                <dt class="font-bold">Acknowledgements</dt>
+                
+                <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.</dd>
+                
+              
             
-          
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><strong>(11r)</strong><br>Oy dia Jueves siete dias del mes de Diciembre años<br>de mil setecientos ochente y seis años =<br>yo el enfermo Bernoica Manuel y mi marido Manu<br>el de la cruz digo que vaya llamar todo el Govierno La<br>republica para que ãgo memoria Testamento mio<br>por que me ayo malisimo esta enfermedad que ma<br>ndo Dios dentro mio carne creo la S.S. ma Trinidad<br>ques Dios padre Dios hijo Dios Espiritu Santo Creo los<br>mandamientos de Lay de Dios y tambien creo los<br>mandamientos de la Santa Madre Yglecia que son cinco<br>dig señores Justicia =<br>yd n un p s le doy el padre para la tierra sepultura donde<br>me entierra mi cuerpo =<br>yd n un rr s y medio le doy la limosna tres Altares la SS. ma<br>Trinidad y Santo lugares Jerosalen y maria S.S. ma del<br>Rosario =<br>yd n un pedaso solar todo y dos casa que linda por oriente<br>con ne el solar de Diego vasques por el poniente linda<br>con la calle por el Sur linda con ne el Solar de Mig l<br>Luis por el Norte linda con ne el solar del comun<br>digo señores Justicia<br>yd n digo la verdad mi palabra Ante Dios Tambien<br>todos los señores Justicia poreso estoy enfermo por<br>que mando Dios dentro mi carne<br>yd n digo aqui viene Maria de la Cruz Donsella le dejo<br>los dos mi casa todo el solar por que lo compro S[torn]<br><strong>(11v)</strong><br>cavo mi palabra en treinta cinco p s quando tube<br>un Necedidad que tuvimos yo y mi marido en-<br>tonces pedimos dies p s ã Magdalena de la Cruz<br>madre de maria de la cruz medio dies p s entonces<br>tiene mi marido el oficio de fiscal donde Gas-<br>te los dies ps el dinero de la ofrenda del padre -<br>ahora quede enfermo lo que Dios manda estoy: ã-<br>qui fray einte cinco p s para Juntar las cuen-<br>ta: entonces se dijo otro palabra ãblo mi marido<br>y mi hija pasquala que no esta bueno que mi -<br>casa todo el solar en treinta y cinco p s si das qua-<br>renta p s nos ã Juntamos Valle fray: si maria -<br>da otro cinco p s que a Junta quarenta p s seño-<br>res Justicia nada mas mi palabra =<br>Gov. r Thomas hernandes Alcaldes Agustin de Sales =<br>Domingo Cuevas = Regidores fran co Sasaro = Dom. o<br>mrn = pedro vicente pedro sosa = Juan santo = y -<br>Miguel mrñ Regidores Esc. no Thomas mrñ Gab. l =En pueblo y covesera de Teutitlan del Valle ã veinte -<br>dias del mes de Julio de mil ochocientos y dos saque<br>este copia en castillano esfielm te sacada de su ori<br>ginal que se halla en sapoteca y esfielmente corri<br>gida y con sertada de su original para qe conste lo fir<br>me como Ynterprete del Jusgado =<br>Pedro vicente</dd>
+              <strong>(11r)</strong><br>Oy dia Jueves siete dias del mes de Diciembre años<br>de mil setecientos ochente y seis años =<br>yo el enfermo Bernoica Manuel y mi marido Manu<br>el de la cruz digo que vaya llamar todo el Govierno La<br>republica para que ãgo memoria Testamento mio<br>por que me ayo malisimo esta enfermedad que ma<br>ndo Dios dentro mio carne creo la S.S. ma Trinidad<br>ques Dios padre Dios hijo Dios Espiritu Santo Creo los<br>mandamientos de Lay de Dios y tambien creo los<br>mandamientos de la Santa Madre Yglecia que son cinco<br>dig señores Justicia =<br>yd n un p s le doy el padre para la tierra sepultura donde<br>me entierra mi cuerpo =<br>yd n un rr s y medio le doy la limosna tres Altares la SS. ma<br>Trinidad y Santo lugares Jerosalen y maria S.S. ma del<br>Rosario =<br>yd n un pedaso solar todo y dos casa que linda por oriente<br>con ne el solar de Diego vasques por el poniente linda<br>con la calle por el Sur linda con ne el Solar de Mig l<br>Luis por el Norte linda con ne el solar del comun<br>digo señores Justicia<br>yd n digo la verdad mi palabra Ante Dios Tambien<br>todos los señores Justicia poreso estoy enfermo por<br>que mando Dios dentro mi carne<br>yd n digo aqui viene Maria de la Cruz Donsella le dejo<br>los dos mi casa todo el solar por que lo compro S[torn]<br><strong>(11v)</strong><br>cavo mi palabra en treinta cinco p s quando tube<br>un Necedidad que tuvimos yo y mi marido en-<br>tonces pedimos dies p s ã Magdalena de la Cruz<br>madre de maria de la cruz medio dies p s entonces<br>tiene mi marido el oficio de fiscal donde Gas-<br>te los dies ps el dinero de la ofrenda del padre -<br>ahora quede enfermo lo que Dios manda estoy: ã-<br>qui fray einte cinco p s para Juntar las cuen-<br>ta: entonces se dijo otro palabra ãblo mi marido<br>y mi hija pasquala que no esta bueno que mi -<br>casa todo el solar en treinta y cinco p s si das qua-<br>renta p s nos ã Juntamos Valle fray: si maria -<br>da otro cinco p s que a Junta quarenta p s seño-<br>res Justicia nada mas mi palabra =<br>Gov. r Thomas hernandes Alcaldes Agustin de Sales =<br>Domingo Cuevas = Regidores fran co Sasaro = Dom. o<br>mrn = pedro vicente pedro sosa = Juan santo = y -<br>Miguel mrñ Regidores Esc. no Thomas mrñ Gab. l =En pueblo y covesera de Teutitlan del Valle ã veinte -<br>dias del mes de Julio de mil ochocientos y dos saque<br>este copia en castillano esfielm te sacada de su ori<br>ginal que se halla en sapoteca y esfielmente corri<br>gida y con sertada de su original para qe conste lo fir<br>me como Ynterprete del Jusgado =<br>Pedro vicente
             
-          
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Tlacolula_permissions.pdf</dd>
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Acknowledgements</dt>
-              <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.</dd>
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
             
-          
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -397,6 +484,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

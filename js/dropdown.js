@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // Toggle open state on the parent group; CSS handles visibility via group-open
       const isOpen = parentGroup.classList.toggle('group-open')
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
-      updateSpacer()
     })
   })
 
@@ -63,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!e.target.matches(".dropdown-toggle") && !e.target.closest(".dropdown-menu")) {
       document.querySelectorAll('.group.group-open').forEach((g) => g.classList.remove('group-open'))
       document.querySelectorAll('.dropdown-toggle').forEach((t) => t.setAttribute('aria-expanded', 'false'))
-      updateSpacer()
     }
   })
 
@@ -71,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === 'Escape') {
       document.querySelectorAll('.group.group-open').forEach((g) => g.classList.remove('group-open'))
       document.querySelectorAll('.dropdown-toggle').forEach((t) => t.setAttribute('aria-expanded', 'false'))
-      updateSpacer()
     }
   })
 
@@ -82,10 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (parentGroup) parentGroup.classList.remove('group-open')
       const toggle = parentGroup?.querySelector('.dropdown-toggle')
       if (toggle) toggle.setAttribute('aria-expanded', 'false')
-      updateSpacer()
     })
   })
-
-  window.addEventListener("resize", updateSpacer)
-  updateSpacer()
 })

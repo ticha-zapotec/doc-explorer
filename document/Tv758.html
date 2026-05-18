@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Testament from Teotitlán del Valle?, 1758 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Zapotec Document</h3>
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,89 +282,175 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Zapotec</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Zapotec" class="text-accent-light hover:text-accent-dark">Zapotec</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Teotitlán del Valle?" class="text-accent-light hover:text-accent-dark">Teotitlán del Valle?</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Caja 72 Dtos. Justicia 1704-1897, Documento 175 Teotitlan del Valle 1802</dd>
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1758&year-max=1758" class="text-accent-light hover:text-accent-dark">1758</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">3r-3v</dd>
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">August 29</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1758</dd>
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Caja 72 Dtos. Justicia 1704-1897, Documento 175 Teotitlan del Valle 1802</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">3r-3v</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">August 29</dd>
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">María Manuel (testator)</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Teotitlán del Valle?</dd>
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Pascual Martín (alcalde), Pedro González (alcalde), Martín Jiménez (regidor), Antonio Martín (regidor), Manuel Méndez, Josef Hernández, Jerónimo Contreras, Tomás Méndez</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">María Manuel (testator)</dd>
+              
             
-          
+              
             
-          
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Tlacolula_permissions.pdf</dd>
+                
+              
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Pascual Martín (alcalde), Pedro González (alcalde), Martín Jiménez (regidor), Antonio Martín (regidor), Manuel Méndez, Josef Hernández, Jerónimo Contreras, Tomás Méndez</dd>
+              
+                
+                <dt class="font-bold">Acknowledgements</dt>
+                
+                <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.  Support for morphological analysis and translation of this document was provided to Lillehaugen through fellowships from the NEH (AY 2015-2016) and the ACLS (2016). Lillehaugen is grateful for the support and must note that all opinions, findings, conclusions or recommendations expressed in this project do not necessarily represent those of the National Endowment for the Humanities.</dd>
+                
+              
             
-          
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><p><strong>(3r)</strong></p><p>Aanaa chij Martes Cale Bijga Nari chij Beo de</p><p>Agusto yza Ana de 1758 Naa benij guicha Maria</p><p>Manuel Rijzenia Justisia Alc[alde]s Rexidores nia</p><p>xtenij racalachija Conia Memoria testamentos</p><p>xtenis laguelanij hua seni xotete risa cayaa quela</p><p>guichaa ni rena Bea Bejuanna D[io]s lani xpela</p><p>latia hua rilijlachija quichijnio misterio xtenij San</p><p>tissima trinijdad D[io]s Vixoce D[io]s Xijnij D[io]s espiri</p><p>to santo chela hua rielijlachia quichij xiba manda</p><p>mientos xtenij Dios laa nij sicaa = hua rielijlachia se</p><p>cayoo xijbaa xteni xijnia lina santa yglecia rij</p><p>cabia loo testamento chaana Justisia = tobij pesos sij</p><p>bijxoce Copavijtoo lezaca layoo rua guiga chij xij</p><p>pelalatia chaana Justisias = setobij pesos sibijxoce</p><p>Copauitoo lezaca canij nij tobij misa huini lezaca anima</p><p>xtenia chana tomines medio ruonia gona loo D[io]s chonaa</p><p>Justisias = yoo lichaa quitobijnia solar riana nee</p><p>llerno xitenia Manuel de la Cruz quiropa lechielanij</p><p>Ala solar rinachaga Vijsaa Gueronimo Vasque nesa</p><p>Sosila nachaga vissaa Manuel garsia nesa sochij</p><p>nesa socahui nachaaga vijza quetoo Jasinto hernan[de]s</p><p>nesa sotiolla Nachaa Vijzaa Miguel luis chaanaa</p><p>Jostisias = setobij que solar ni naa rua guego Ala solar ri</p><p>Nachaaga Viza xiteni Juan montanio nesa so<br><br></p><p><strong>(3v)</strong></p><p>sijlla nesa sochij Nachaaga Viza Matheas de Agui</p><p>lar nesa socahui Nacha Viza Beronica Visente</p><p>nesa sotiola Nachaaga Viza xitenij Manuel</p><p>montanio riana nee laaca llerno xitenia guee [cortado]</p><p>lechielaani, chaana Jostisias sicanij layoo quin[cortado]</p><p>bijnij ni nalachi xobij rianaa nijga layoo chaana Josti</p><p>sias setobij banco setobi neza guiba gala riaane xia[cortado]</p><p>Beronica xilatisina xitichaana Beni guichaa [cortado]</p><p>Jostisias ricabij lo testamento = Alc[alde]s pasq[ua]l m[cortado]</p><p>Alc[alde]s Pedro Gonzaloz Reguidor m[a]r[ti]n ximenes</p><p>y An m[a]r[ti]n Gueronimo Contrera y Thomas mendes y</p><p>Manuel mendes y Juseph hernandes</p><p>Es[criba]no Nicolas lupes</p></dd>
+              <p><strong>(3r)</strong></p><p>Aanaa chij Martes Cale Bijga Nari chij Beo de</p><p>Agusto yza Ana de 1758 Naa benij guicha Maria</p><p>Manuel Rijzenia Justisia Alc[alde]s Rexidores nia</p><p>xtenij racalachija Conia Memoria testamentos</p><p>xtenis laguelanij hua seni xotete risa cayaa quela</p><p>guichaa ni rena Bea Bejuanna D[io]s lani xpela</p><p>latia hua rilijlachija quichijnio misterio xtenij San</p><p>tissima trinijdad D[io]s Vixoce D[io]s Xijnij D[io]s espiri</p><p>to santo chela hua rielijlachia quichij xiba manda</p><p>mientos xtenij Dios laa nij sicaa = hua rielijlachia se</p><p>cayoo xijbaa xteni xijnia lina santa yglecia rij</p><p>cabia loo testamento chaana Justisia = tobij pesos sij</p><p>bijxoce Copavijtoo lezaca layoo rua guiga chij xij</p><p>pelalatia chaana Justisias = setobij pesos sibijxoce</p><p>Copauitoo lezaca canij nij tobij misa huini lezaca anima</p><p>xtenia chana tomines medio ruonia gona loo D[io]s chonaa</p><p>Justisias = yoo lichaa quitobijnia solar riana nee</p><p>llerno xitenia Manuel de la Cruz quiropa lechielanij</p><p>Ala solar rinachaga Vijsaa Gueronimo Vasque nesa</p><p>Sosila nachaga vissaa Manuel garsia nesa sochij</p><p>nesa socahui nachaaga vijza quetoo Jasinto hernan[de]s</p><p>nesa sotiolla Nachaa Vijzaa Miguel luis chaanaa</p><p>Jostisias = setobij que solar ni naa rua guego Ala solar ri</p><p>Nachaaga Viza xiteni Juan montanio nesa so<br><br></p><p><strong>(3v)</strong></p><p>sijlla nesa sochij Nachaaga Viza Matheas de Agui</p><p>lar nesa socahui Nacha Viza Beronica Visente</p><p>nesa sotiola Nachaaga Viza xitenij Manuel</p><p>montanio riana nee laaca llerno xitenia guee [cortado]</p><p>lechielaani, chaana Jostisias sicanij layoo quin[cortado]</p><p>bijnij ni nalachi xobij rianaa nijga layoo chaana Josti</p><p>sias setobij banco setobi neza guiba gala riaane xia[cortado]</p><p>Beronica xilatisina xitichaana Beni guichaa [cortado]</p><p>Jostisias ricabij lo testamento = Alc[alde]s pasq[ua]l m[cortado]</p><p>Alc[alde]s Pedro Gonzaloz Reguidor m[a]r[ti]n ximenes</p><p>y An m[a]r[ti]n Gueronimo Contrera y Thomas mendes y</p><p>Manuel mendes y Juseph hernandes</p><p>Es[criba]no Nicolas lupes</p>
             
-          
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Tlacolula_permissions.pdf</dd>
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Acknowledgements</dt>
-              <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.  Support for morphological analysis and translation of this document was provided to Lillehaugen through fellowships from the NEH (AY 2015-2016) and the ACLS (2016). Lillehaugen is grateful for the support and must note that all opinions, findings, conclusions or recommendations expressed in this project do not necessarily represent those of the National Endowment for the Humanities.</dd>
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
             
-          
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -397,6 +484,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

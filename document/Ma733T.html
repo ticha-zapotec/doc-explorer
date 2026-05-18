@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Translation of testament from San Mateo Macuilxochitl, 1733 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Spanish Document</h3>
@@ -254,7 +255,7 @@
            
             <a class="group" aria-label="navigate to primary document" href="Ma733.html">          
               <div class="relative h-20 w-48 rounded-tl-[2rem] rounded-br-[2rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
-                <div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
+                <div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
                 <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #a46136;"></div>
               </div>
               <div class="mt-2">
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,86 +282,169 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Spanish</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Spanish" class="text-accent-light hover:text-accent-dark">Spanish</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Teotitlán del Valle" class="text-accent-light hover:text-accent-dark">Teotitlán del Valle</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Caja 72 Dtos. Justicia 1704-1897, Documento 607 1892-93 Vários Pueblos</dd>
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=Unknown&year-max=Unknown" class="text-accent-light hover:text-accent-dark">Unknown</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">1r-2r</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">Unknown</dd>
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Caja 72 Dtos. Justicia 1704-1897, Documento 607 1892-93 Vários Pueblos</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">1r-2r</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Francisco Jiménez</dd>
+                
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Teotitlán del Valle</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Marcos Pérez, Ignacio Martín (alcalde), Lorenzo Gutiérrez (alcalde)</dd>
+                
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Francisco Jiménez</dd>
+              
             
-          
+              
             
-          
+              
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Marcos Pérez, Ignacio Martín (alcalde), Lorenzo Gutiérrez (alcalde)</dd>
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Acknowledgements</dt>
+                
+                <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.</dd>
+                
+              
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><p><strong>(1r)</strong></p><p>digo yo el enfermo fran<sup>co</sup> ximenes Natural</p><p>de este pueblo de S<sup>n</sup> Martheo Macuilsuchil</p><p>como christiano que soy y Bauptisado de</p><p>Dios y creo los misterio de S.S.<sup>mo</sup> Trini</p><p>dad ques Dios padre Dios hijo Dios Espi=</p><p>ritu Santo tres persona y un solo Dios -</p><p>verdadero creo los quatro Doctrina ñra</p><p>señora Santa Maria y creo los <span style="text-decoration:line-through;">catroce ca-</span></p><p>torce Articolos de la fe de ñra Madre S.<sup>ta</sup></p><p>Yglecia digo quatro Reales para la tierra</p><p>sepultura digo yo señores - - - - - 4 rrs</p><p>y.d do reales dejo para limosna de ñra S.<sup>ra</sup> - - - 2 rrs</p><p>y.d do reales dejo para el S<sup>to</sup> christo Yntiera - - - 2 rrs</p><p>yd doy limosna ã S.<sup>n</sup> Matheo - - - - - - - 2 rs</p><p>yd digo mi casa le dejo Domingo Ximenes =</p><p>mi hijo y solar tambien la tierra sembra</p><p>dura esta ã la oriya la cienda le dejo ã Do=</p><p>mingo la mitad y otro la mitad le dejo ma</p><p>nuel Linda la tierra de christobal Xiñes</p><p>por la oriente Linda Mithia de Morales</p><p>por el Norte y Linda pedro de sarrate por</p><p>poniente Linda phelipe torres por el sur</p><p>yd un pedaso tierra esta junto el camino -</p><p>que ande los de Tlacolula y linda con -</p><p>salba don mendosa por la oriente linda</p><p>con phelipe torres por Norte linda -</p><p>pasqual hernandes por poniente le</p><p> </p><p><strong>(1v)</strong></p><p>dejo Nicolas mi hijo ha la tierra es verdad</p><p>un pedaso tierra que Merque vendio Dn</p><p>Domingo pacho y ã los dos hermano y ã phe-</p><p>lipe estan el paraje ya chinigor<sup>e</sup>n donde -</p><p>yo vengo di la tierra en dies pesos como verda</p><p>d lo vido Testigo Bartolome hernandes -</p><p>yd la tierra que esta un lado del Rio junto e -</p><p>pie del serro de Macuilsuchil le dejo pasqual -</p><p>yd la mitad y õtro la mitad le dejo salbador -</p><p>digo otro pedaso tierra que esta al pie de</p><p>serrro ques el araje quichij dejo ã mi hijo</p><p>Santiago linda Lucas de la cruz -</p><p>yd es verdad la mitad tierra que Merque bedio -</p><p>asqual de la Cruz otro la mitad la tierra</p><p>dio ãquel que medieron que bende pasq<sup>l</sup></p><p>de la cruz el mayor -</p><p>es verdad otro pedaso solar le dejo Manuel -</p><p>yd otro pedaso solar le dejo salbador - - - -</p><p>yd otro pedaso solar le dejo ã Nicolas - - - -</p><p>yd otro pedaso solar le dejo santiago - - -</p><p>digo un par telar doy mi hijo Domingo</p><p>digo una mesa y una escanio doy mi hijo -</p><p>pasqual y otro escanio doy mi hijo salbador</p><p>digo un palo de siya y una siya ehiquita le -</p><p>dejo Santiago</p><p>yd otra sinquenta Mata de Magueyes le dejo Sal-</p><p>bador y otra sinquenta pies le dejo Santiago -</p><p>mi hijo y no mas se acavo mi Testamento -</p><p>mio yo el enfermo fran.<sup>co</sup> Ximenes oy dia -</p><p>Jueves dose dia de mes de Julio y año de 1733</p><p> </p><p><strong>(2r)</strong></p><p>como verdad vido el Governador <span style="text-decoration:line-through;">Marco</span></p><p>Marco peres   Ygnacio Martin</p><p>                  Alc.<sup>e</sup></p><p>Lorenso Gutieres    Joseph Manuel</p><p>Alc.<sup>e</sup>                   Esc.<sup>no</sup> nombrado</p><p> </p><p>esta copia en castillano esfielmente saca</p><p>da de su original que se alta en Dioma</p><p>sapoteca y esfielmente corregida y con-</p><p>sertada de su original y por ser assi lo -</p><p>Jura por Dios ñro señor y la señal de la</p><p>santa cruz y assi lo firmo como Ynterp.<sup>te</sup></p><p>del Jusgado -</p><p>                        Pedro Vicente</p><p> </p></dd>
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-          
+              <p><strong>(1r)</strong></p><p>digo yo el enfermo fran<sup>co</sup> ximenes Natural</p><p>de este pueblo de S<sup>n</sup> Martheo Macuilsuchil</p><p>como christiano que soy y Bauptisado de</p><p>Dios y creo los misterio de S.S.<sup>mo</sup> Trini</p><p>dad ques Dios padre Dios hijo Dios Espi=</p><p>ritu Santo tres persona y un solo Dios -</p><p>verdadero creo los quatro Doctrina ñra</p><p>señora Santa Maria y creo los <span style="text-decoration:line-through;">catroce ca-</span></p><p>torce Articolos de la fe de ñra Madre S.<sup>ta</sup></p><p>Yglecia digo quatro Reales para la tierra</p><p>sepultura digo yo señores - - - - - 4 rrs</p><p>y.d do reales dejo para limosna de ñra S.<sup>ra</sup> - - - 2 rrs</p><p>y.d do reales dejo para el S<sup>to</sup> christo Yntiera - - - 2 rrs</p><p>yd doy limosna ã S.<sup>n</sup> Matheo - - - - - - - 2 rs</p><p>yd digo mi casa le dejo Domingo Ximenes =</p><p>mi hijo y solar tambien la tierra sembra</p><p>dura esta ã la oriya la cienda le dejo ã Do=</p><p>mingo la mitad y otro la mitad le dejo ma</p><p>nuel Linda la tierra de christobal Xiñes</p><p>por la oriente Linda Mithia de Morales</p><p>por el Norte y Linda pedro de sarrate por</p><p>poniente Linda phelipe torres por el sur</p><p>yd un pedaso tierra esta junto el camino -</p><p>que ande los de Tlacolula y linda con -</p><p>salba don mendosa por la oriente linda</p><p>con phelipe torres por Norte linda -</p><p>pasqual hernandes por poniente le</p><p> </p><p><strong>(1v)</strong></p><p>dejo Nicolas mi hijo ha la tierra es verdad</p><p>un pedaso tierra que Merque vendio Dn</p><p>Domingo pacho y ã los dos hermano y ã phe-</p><p>lipe estan el paraje ya chinigor<sup>e</sup>n donde -</p><p>yo vengo di la tierra en dies pesos como verda</p><p>d lo vido Testigo Bartolome hernandes -</p><p>yd la tierra que esta un lado del Rio junto e -</p><p>pie del serro de Macuilsuchil le dejo pasqual -</p><p>yd la mitad y õtro la mitad le dejo salbador -</p><p>digo otro pedaso tierra que esta al pie de</p><p>serrro ques el araje quichij dejo ã mi hijo</p><p>Santiago linda Lucas de la cruz -</p><p>yd es verdad la mitad tierra que Merque bedio -</p><p>asqual de la Cruz otro la mitad la tierra</p><p>dio ãquel que medieron que bende pasq<sup>l</sup></p><p>de la cruz el mayor -</p><p>es verdad otro pedaso solar le dejo Manuel -</p><p>yd otro pedaso solar le dejo salbador - - - -</p><p>yd otro pedaso solar le dejo ã Nicolas - - - -</p><p>yd otro pedaso solar le dejo santiago - - -</p><p>digo un par telar doy mi hijo Domingo</p><p>digo una mesa y una escanio doy mi hijo -</p><p>pasqual y otro escanio doy mi hijo salbador</p><p>digo un palo de siya y una siya ehiquita le -</p><p>dejo Santiago</p><p>yd otra sinquenta Mata de Magueyes le dejo Sal-</p><p>bador y otra sinquenta pies le dejo Santiago -</p><p>mi hijo y no mas se acavo mi Testamento -</p><p>mio yo el enfermo fran.<sup>co</sup> Ximenes oy dia -</p><p>Jueves dose dia de mes de Julio y año de 1733</p><p> </p><p><strong>(2r)</strong></p><p>como verdad vido el Governador <span style="text-decoration:line-through;">Marco</span></p><p>Marco peres   Ygnacio Martin</p><p>                  Alc.<sup>e</sup></p><p>Lorenso Gutieres    Joseph Manuel</p><p>Alc.<sup>e</sup>                   Esc.<sup>no</sup> nombrado</p><p> </p><p>esta copia en castillano esfielmente saca</p><p>da de su original que se alta en Dioma</p><p>sapoteca y esfielmente corregida y con-</p><p>sertada de su original y por ser assi lo -</p><p>Jura por Dios ñro señor y la señal de la</p><p>santa cruz y assi lo firmo como Ynterp.<sup>te</sup></p><p>del Jusgado -</p><p>                        Pedro Vicente</p><p> </p>
             
-          
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-              <dt class="font-bold">Acknowledgements</dt>
-              <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.</dd>
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
+            
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -394,6 +478,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

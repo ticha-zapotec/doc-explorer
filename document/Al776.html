@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Testament from San Pedro el Alto, 1776 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Zapotec Document</h3>
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,89 +282,179 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Zapotec</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo General de la Nación, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Zapotec" class="text-accent-light hover:text-accent-dark">Zapotec</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Tierras</dd>
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=San Pedro el Alto" class="text-accent-light hover:text-accent-dark">San Pedro el Alto</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo General de la Nación, Mexico" class="text-accent-light hover:text-accent-dark">Archivo General de la Nación, Mexico</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Volumen 1877, Exp 12</dd>
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1776&year-max=1776" class="text-accent-light hover:text-accent-dark">1776</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">March 2</dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">26r-26v</dd>
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Tierras" class="text-accent-light hover:text-accent-dark">Tierras</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Volumen 1877, Exp 12</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1776</dd>
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">26r-26v</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">María García (testator)</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">March 2</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Juan Martín (alcalde), Marcos de Zarate (regidor), Pascual López (fiscal)</dd>
+                
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">San Pedro el Alto</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">María García (testator)</dd>
+              
             
-          
+              
             
-          
+              
+                
+                <dt class="font-bold">Acknowledgements</dt>
+                
+                <dd class="pb-4 text-text-light">Support for morphological analysis and translation of this document was provided to Lillehaugen through fellowships from the NEH (AY 2015-2016) and the ACLS (2016). Lillehaugen is grateful for the support and must note that all opinions, findings, conclusions or recommendations expressed in this project do not necessarily represent those of the National Endowment for the Humanities.</dd>
+                
+              
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Juan Martín (alcalde), Marcos de Zarate (regidor), Pascual López (fiscal)</dd>
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-          
+              <p><strong>(26r)</strong></p><p>Ni lana yo nago bi Behuanana Jeso chris xinin Dios</p><p>nin cotinni lanin crus nin pici la nin quira licatono</p><p>roba xinin queche layo – hualicanaa laya - -</p><p>maria ga<sup>r</sup>cia huage licala chia tobilica santici -</p><p>ma trinidaa Dios bixose Dios xinin Dios hespi</p><p>rito santo chona na lica pereso naca nin tobicica</p><p>Dios nin pesa nin queba nin peso nin queche layo nin</p><p>pesa nin quira licatonoo roba rinin queche layoo</p><p>nin pesa nin quira lica Angle noo la nique bahua</p><p>gelica lachie Artico los de la fe canin chita xiba ca</p><p>chi xibaa xitene Dios xque labito nin saca chi xi-</p><p>ba xitene Dios xque lanin queyo nin huage lica</p><p>lachie manda miento chii xibaa cayo xiba xiti</p><p>cha xinia na santa glecia cachi xibaa ninlaa</p><p>sacramento queta pasoola yana yo na nin riga</p><p>ba bigaa Rosario chi Domingo chisa bado quiraa mi</p><p>steria rinin coge lica lachia corenaba nina roua</p><p>rinin queche layo canin cela tica nin reluxo testa</p><p>mento xitene – Aachis [??] guelo 2 d <sup>le</sup>marso = 1776</p><p>retobi gaala naba xtene naa – Maria Garcia</p><p>laci canin quinia xitene toxitego la tonoo rego yalachi</p><p>nia xinin cana ya Domingo peres huane miquel peres</p><p>qua nane nin quinia queco too quinia lachi ree</p><p>que quinia queco ritaa quinia queco reyoo quira</p><p>xaque la naa quinia quela tie quinia que coychiila [??]</p><p>paquia niza yo lacica nin quinia queco chiila pe</p><p>quete rego ya la chinia xinin tiaga ya Jocepe pe</p><p>res rua vicee – quinia lachi savii quinia tiaga [??]</p><p> </p><p>[left side bar, starting at mento, to end of page]</p><p>Alarii tobii misa bixi laxi tena anima lesaca 3 p</p><p> </p><p><strong>(26v)</strong></p><p>quia nane xinin canaya Domi<sup>n</sup>go migel huane</p><p>xinin chapaya maria Anttonia - - - -</p><p>huane Juan antonio matia cataliniaa</p><p>canin ciela tica ni rilo xetestamento xitene</p><p>rona viaga testigo – Al<sup>c</sup>de juan mar [rubrico] marcos</p><p>rate rexidor pascual lope sisca [rubrico]</p><p>quira ticha ninin besoBa tiaga nao -</p><p>Juan satiago crivano [rubrico]</p><p> </p><p>[different hand]</p><p>R<sup>ui</sup> la limosna de una chijsa de Vigilia tres p<sup>s</sup> que</p><p>digo por el alma de Maria Garcia que se a mando</p><p>sia su hijo Domingo Peres y para que Conste lo firme</p><p>F<sup>r</sup> chan<sup>l</sup>. de Paz [rubrico]</p>
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><p><strong>(26r)</strong></p><p>Ni lana yo nago bi Behuanana Jeso chris xinin Dios</p><p>nin cotinni lanin crus nin pici la nin quira licatono</p><p>roba xinin queche layo – hualicanaa laya - -</p><p>maria ga<sup>r</sup>cia huage licala chia tobilica santici -</p><p>ma trinidaa Dios bixose Dios xinin Dios hespi</p><p>rito santo chona na lica pereso naca nin tobicica</p><p>Dios nin pesa nin queba nin peso nin queche layo nin</p><p>pesa nin quira licatonoo roba rinin queche layoo</p><p>nin pesa nin quira lica Angle noo la nique bahua</p><p>gelica lachie Artico los de la fe canin chita xiba ca</p><p>chi xibaa xitene Dios xque labito nin saca chi xi-</p><p>ba xitene Dios xque lanin queyo nin huage lica</p><p>lachie manda miento chii xibaa cayo xiba xiti</p><p>cha xinia na santa glecia cachi xibaa ninlaa</p><p>sacramento queta pasoola yana yo na nin riga</p><p>ba bigaa Rosario chi Domingo chisa bado quiraa mi</p><p>steria rinin coge lica lachia corenaba nina roua</p><p>rinin queche layo canin cela tica nin reluxo testa</p><p>mento xitene – Aachis [??] guelo 2 d <sup>le</sup>marso = 1776</p><p>retobi gaala naba xtene naa – Maria Garcia</p><p>laci canin quinia xitene toxitego la tonoo rego yalachi</p><p>nia xinin cana ya Domingo peres huane miquel peres</p><p>qua nane nin quinia queco too quinia lachi ree</p><p>que quinia queco ritaa quinia queco reyoo quira</p><p>xaque la naa quinia quela tie quinia que coychiila [??]</p><p>paquia niza yo lacica nin quinia queco chiila pe</p><p>quete rego ya la chinia xinin tiaga ya Jocepe pe</p><p>res rua vicee – quinia lachi savii quinia tiaga [??]</p><p> </p><p>[left side bar, starting at mento, to end of page]</p><p>Alarii tobii misa bixi laxi tena anima lesaca 3 p</p><p> </p><p><strong>(26v)</strong></p><p>quia nane xinin canaya Domi<sup>n</sup>go migel huane</p><p>xinin chapaya maria Anttonia - - - -</p><p>huane Juan antonio matia cataliniaa</p><p>canin ciela tica ni rilo xetestamento xitene</p><p>rona viaga testigo – Al<sup>c</sup>de juan mar [rubrico] marcos</p><p>rate rexidor pascual lope sisca [rubrico]</p><p>quira ticha ninin besoBa tiaga nao -</p><p>Juan satiago crivano [rubrico]</p><p> </p><p>[different hand]</p><p>R<sup>ui</sup> la limosna de una chijsa de Vigilia tres p<sup>s</sup> que</p><p>digo por el alma de Maria Garcia que se a mando</p><p>sia su hijo Domingo Peres y para que Conste lo firme</p><p>F<sup>r</sup> chan<sup>l</sup>. de Paz [rubrico]</p></dd>
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-          
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Acknowledgements</dt>
-              <dd class="pb-4 text-text-light">Support for morphological analysis and translation of this document was provided to Lillehaugen through fellowships from the NEH (AY 2015-2016) and the ACLS (2016). Lillehaugen is grateful for the support and must note that all opinions, findings, conclusions or recommendations expressed in this project do not necessarily represent those of the National Endowment for the Humanities.</dd>
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
             
-          
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -397,6 +488,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

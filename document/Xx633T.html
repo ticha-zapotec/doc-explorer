@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Translation of Testament from Guaxolotitlan? Santo Domingo?, 1633*** | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Spanish Document</h3>
@@ -254,7 +255,7 @@
            
             <a class="group" aria-label="navigate to primary document" href="Xx633.html">          
               <div class="relative h-20 w-48 rounded-tl-[2rem] rounded-br-[2rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
-                <div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
+                <div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
                 <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #a46136;"></div>
               </div>
               <div class="mt-2">
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,80 +282,161 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Spanish</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Spanish" class="text-accent-light hover:text-accent-dark">Spanish</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Alcaldias Mayores</dd>
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Unknown Town" class="text-accent-light hover:text-accent-dark">Unknown Town</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Legajo 51, Exp 01, 1596</dd>
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=Unknown&year-max=Unknown" class="text-accent-light hover:text-accent-dark">Unknown</a>
+                  </dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">04r-10v</dd>
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Alcaldias Mayores" class="text-accent-light hover:text-accent-dark">Alcaldias Mayores</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Legajo 51, Exp 01, 1596</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">Unknown</dd>
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">04r-10v</dd>
+                
+              
             
-          
+              
             
-          
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Unknown Town</dd>
+              
             
-          
+              
             
-          
+              
             
-          
+              
             
-          
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+                
+              
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light">11633 En el nombre del padre del hijo espíritu sa(??)atoBiernes = 24 de Junio de 1633? años ynatural del pueblo de guaxolotitlan del (??)rio de lagú(??)y vivo en este pueblo lo santo domingo = tateña Eo meca seaora a queri(?)e dió nuestro señor estoi muy malo de enfermedaestoi consetido y asi(?) declaro y creo en vn solo dios todo y de roso el que es tres personas y tanbien crio todo de la le(y?)de dios como cria más[?]ta m[?]e yglecia y adoro y amo (a?)bingé del sieto s[an]ta M[ari]a (M[adr]e de dios (mos[]r?) Jesu(cristo?)y tanbien declaro ya dor(?) a todos los s[an]tos y s[an]tas y todoslos ang[eles] del cielo todo assi (?)o y Pa[dre] que me ayude mimi ma mio cuando llegue lao ra de mi muerte ahorapido perdón y me confise ante el P[adr]e fray Jul[i?]o de albavada halla los s[an]tos sacram[en]to haora hondeno Para esbien de mi anima y mi cuerpo y declaro Palabra (?)dida ante dios mios[](v?) y susi un pobre declaro oyyten 4 to(?) doy de limosna paracanpanas - U4to(?)yyten 9 p[esos] doi de limosna sepultura de n[ues]trode lay o leeia de s[e]n[or] Pablo de Guax[olotitl]an - 9 p[esos]= yten 0 p[esos] doi de limosna (entep?) de manga de plata y de si niales que benga Por mi cuerpo- 9 p[esos]ytten 4 (fo?) doy de limosna depaño de tum-blo para que tape mi cuerpo - 4 (tor?)= ytten 2 p[esos] doi de limosna a el altar deLa birgen del sielo s[an]ta Ma[ria] - 2 p[esos]= ytten 2 p[esos] doy de limosna a el altar de S[e]n[or]Pablo de Guax[olotitl]an - 2 p[esos]= ytten 2 p[esos] doy de limosna a el altar (eriel?) -fijo de dho pueb[lo] de guax[olotitl]an - 2 p[esos]= ytten 2 p[esos] doy de limosna a el altar de s[e]norJacinto de Guax[olotitl]an - 2 p[esos]2chigon 2 p[esos] doy de limosna a san Regm[]do de guax[olotitl]an - 1 p[eso]= ytten (?)p[esos] doy de limosna a el al tarde S[an]to domingo (?) teñaco mayordomo tenga el dinero pa[ra]y (Jar?) - 2 p[esos]= yten dos tomes pa[ra] que toque canpanas lay gle[]ade s[an]to domingo - 2 (tor?)= ytten los p[esos] doy de limosna pa[ra] que contra Vna(enfermo) debito del muj[er] R[]do P[]e para que en buelba mi cuerpo - 10 p[esos]=ytten 9 p[esos] Para el (Religiosos?) que benga a mi cassasque diga su oración y assi mismo se sirba que bengapor mi cuerpo en el camino y assi se sirba de Ruir - 9 p[esos]= yten dos pesos y 4 (tor?) (pto?) y pa[ra] cantores que bengapor mi cuerpo y entierre - 2 p[esos] 4 (tor?)= ytten nuebe pesos pa[ra] Relijiosos y diga ocho mismascon todas p[o]r mi anima ante dios míos - 8 p[esos]= ytten 8 p[esos] pa[ra] candelas que son menestea cuando me muero y tanbien pa[ra] todos mis misas - 8 p[esos]= ytten 2 p[esos] 4 (tor?) pa[ra] todos las seres cuando digaonisas mio - 2 p[esos] 4 (tor?)= ytten 15 p[esos] dineros fe equities onió tiened-po ramires que Pague los dhos quinse pesos= le entriegue en poder de mayordomo de la birgen del sielo S[an]ta Maria R[]ua agan de labirge sinco pesos del prinsipal y otros diespesosgananias y que son p[o]r todos 15 p[esos] que R[]uadon P[edr]o ramires y R[]uan Los mayordomos assi m[]do ora == ytten dies y seis f[]as de frigo las tiene hernandos o jedoi el qual di cuarenta y seis pesos dixo3el suso dho entregaria trigo assi fue con siertoyassi digo que se benda dho trigo pa[ra] ha(?)neros que fuere nesesario assi m[]do y ordeno ahora = 16 f[]s 46 y= ytten 12 f[]s de trigos me debe Ju[](?) hernan[dos] deaspasco y el qual le di treynta y sinco p[esos] me entregaria dho trigos 12 f[]s - u35 p[esos]= ytten 2f[]s de trigo me debe agustin comp[]e de P[]o a deapasco y el qual le di 4 p[esos] y que me buelba luego - 2 f[]s 4 p[esos]= ytten dos f[]s de trigo me tr(?) di gaspar lopesque pague seis pesos y el qual me (or?) triegue todo dho trigo y se bende que seaga dineros pa[ra] en lo nesesario assi hondeno en elclausola m[]o testam[en]to pa[ra] missas y limosna 2f[]s - 16 p[esos]= yten siento y quarenta pesos me tiene miguel lopes de s[a]n ju[]o que conpre de trigo yque el suso dho me entrigue por quenta dhode trigo todo (figo?) que se benda - vo 1040 p[esos]= y que assi mismo que mede por cuenta las f[]s deldho trigo que se benda - vo 1040 p[esos]= ytten dies y seis f[]s de trigo mio tengo asubaslon 903 p[esos] - vo 903 p[esos]= ytten 8 p[esos] me debe mateo de s[a]ntiago apascoy que pague luego este dho dineros - 8 p[esos]= ytten 4 p[esos] me debe trigo xuchi quitongo y q[ue]pague - 4 p[esos]= ytten 2 p[esos] 2 (tor?) me debe grip[]o gallego prinsipal y q[ue] pague luego - 2 p[esos] 2 (?)= yten 2 p[esos] - me debe Ju[]o de Ribera de guax[olotitl]anque pague luego - 2 p[esos]= ytten 2 (tor?) de Ju[]o Juares que pague de L(?) chi~incomplete</dd>
+              
             
-          
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-          
+              11633 En el nombre del padre del hijo espíritu sa(??)atoBiernes = 24 de Junio de 1633? años ynatural del pueblo de guaxolotitlan del (??)rio de lagú(??)y vivo en este pueblo lo santo domingo = tateña Eo meca seaora a queri(?)e dió nuestro señor estoi muy malo de enfermedaestoi consetido y asi(?) declaro y creo en vn solo dios todo y de roso el que es tres personas y tanbien crio todo de la le(y?)de dios como cria más[?]ta m[?]e yglecia y adoro y amo (a?)bingé del sieto s[an]ta M[ari]a (M[adr]e de dios (mos[]r?) Jesu(cristo?)y tanbien declaro ya dor(?) a todos los s[an]tos y s[an]tas y todoslos ang[eles] del cielo todo assi (?)o y Pa[dre] que me ayude mimi ma mio cuando llegue lao ra de mi muerte ahorapido perdón y me confise ante el P[adr]e fray Jul[i?]o de albavada halla los s[an]tos sacram[en]to haora hondeno Para esbien de mi anima y mi cuerpo y declaro Palabra (?)dida ante dios mios[](v?) y susi un pobre declaro oyyten 4 to(?) doy de limosna paracanpanas - U4to(?)yyten 9 p[esos] doi de limosna sepultura de n[ues]trode lay o leeia de s[e]n[or] Pablo de Guax[olotitl]an - 9 p[esos]= yten 0 p[esos] doi de limosna (entep?) de manga de plata y de si niales que benga Por mi cuerpo- 9 p[esos]ytten 4 (fo?) doy de limosna depaño de tum-blo para que tape mi cuerpo - 4 (tor?)= ytten 2 p[esos] doi de limosna a el altar deLa birgen del sielo s[an]ta Ma[ria] - 2 p[esos]= ytten 2 p[esos] doy de limosna a el altar de S[e]n[or]Pablo de Guax[olotitl]an - 2 p[esos]= ytten 2 p[esos] doy de limosna a el altar (eriel?) -fijo de dho pueb[lo] de guax[olotitl]an - 2 p[esos]= ytten 2 p[esos] doy de limosna a el altar de s[e]norJacinto de Guax[olotitl]an - 2 p[esos]2chigon 2 p[esos] doy de limosna a san Regm[]do de guax[olotitl]an - 1 p[eso]= ytten (?)p[esos] doy de limosna a el al tarde S[an]to domingo (?) teñaco mayordomo tenga el dinero pa[ra]y (Jar?) - 2 p[esos]= yten dos tomes pa[ra] que toque canpanas lay gle[]ade s[an]to domingo - 2 (tor?)= ytten los p[esos] doy de limosna pa[ra] que contra Vna(enfermo) debito del muj[er] R[]do P[]e para que en buelba mi cuerpo - 10 p[esos]=ytten 9 p[esos] Para el (Religiosos?) que benga a mi cassasque diga su oración y assi mismo se sirba que bengapor mi cuerpo en el camino y assi se sirba de Ruir - 9 p[esos]= yten dos pesos y 4 (tor?) (pto?) y pa[ra] cantores que bengapor mi cuerpo y entierre - 2 p[esos] 4 (tor?)= ytten nuebe pesos pa[ra] Relijiosos y diga ocho mismascon todas p[o]r mi anima ante dios míos - 8 p[esos]= ytten 8 p[esos] pa[ra] candelas que son menestea cuando me muero y tanbien pa[ra] todos mis misas - 8 p[esos]= ytten 2 p[esos] 4 (tor?) pa[ra] todos las seres cuando digaonisas mio - 2 p[esos] 4 (tor?)= ytten 15 p[esos] dineros fe equities onió tiened-po ramires que Pague los dhos quinse pesos= le entriegue en poder de mayordomo de la birgen del sielo S[an]ta Maria R[]ua agan de labirge sinco pesos del prinsipal y otros diespesosgananias y que son p[o]r todos 15 p[esos] que R[]uadon P[edr]o ramires y R[]uan Los mayordomos assi m[]do ora == ytten dies y seis f[]as de frigo las tiene hernandos o jedoi el qual di cuarenta y seis pesos dixo3el suso dho entregaria trigo assi fue con siertoyassi digo que se benda dho trigo pa[ra] ha(?)neros que fuere nesesario assi m[]do y ordeno ahora = 16 f[]s 46 y= ytten 12 f[]s de trigos me debe Ju[](?) hernan[dos] deaspasco y el qual le di treynta y sinco p[esos] me entregaria dho trigos 12 f[]s - u35 p[esos]= ytten 2f[]s de trigo me debe agustin comp[]e de P[]o a deapasco y el qual le di 4 p[esos] y que me buelba luego - 2 f[]s 4 p[esos]= ytten dos f[]s de trigo me tr(?) di gaspar lopesque pague seis pesos y el qual me (or?) triegue todo dho trigo y se bende que seaga dineros pa[ra] en lo nesesario assi hondeno en elclausola m[]o testam[en]to pa[ra] missas y limosna 2f[]s - 16 p[esos]= yten siento y quarenta pesos me tiene miguel lopes de s[a]n ju[]o que conpre de trigo yque el suso dho me entrigue por quenta dhode trigo todo (figo?) que se benda - vo 1040 p[esos]= y que assi mismo que mede por cuenta las f[]s deldho trigo que se benda - vo 1040 p[esos]= ytten dies y seis f[]s de trigo mio tengo asubaslon 903 p[esos] - vo 903 p[esos]= ytten 8 p[esos] me debe mateo de s[a]ntiago apascoy que pague luego este dho dineros - 8 p[esos]= ytten 4 p[esos] me debe trigo xuchi quitongo y q[ue]pague - 4 p[esos]= ytten 2 p[esos] 2 (tor?) me debe grip[]o gallego prinsipal y q[ue] pague luego - 2 p[esos] 2 (?)= yten 2 p[esos] - me debe Ju[]o de Ribera de guax[olotitl]anque pague luego - 2 p[esos]= ytten 2 (tor?) de Ju[]o Juares que pague de L(?) chi~incomplete
             
-          
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">English translation is not available for this document.</p>
+            
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
+            
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
+            
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -388,6 +470,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>

@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover">
-  <title> | Ticha Digital Text Explorer</title>
+  
+  <title>Translation of Testament from Villa de Zaachila, 1687 | Ticha Digital Text Explorer</title>
+  
 
 
   <link href="/doc-explorer/css/styles.css" rel="stylesheet">
@@ -13,12 +15,12 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
-  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+  <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
         <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
-        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
-          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        <span class="text-2xl ml-1 text-nowrap tracking-tight font-light">
+          <span class="font-bold text-accent-dark">Ticha</span> Digital Text Explorer
         </span>
       </a>
     </div>
@@ -240,9 +242,8 @@
 
     <div id="navbar-spacer" class="h-20"></div>
     <section class="flex-1 bg-neutral-light">
-    
-<header class="bg-neutral-dark">
-  <div class="xl:container px-5 py-14 mx-auto">
+    <header class="bg-neutral-dark">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap justify-between w-full">
       <div class="lg:w-1/2 w-full lg:mb-0">
         <h3 class="text-xs text-accent-light tracking-widest font-medium title-font mb-1 uppercase">Zapotec Document</h3>
@@ -254,7 +255,7 @@
            
             <a class="group" aria-label="navigate to primary document" href="Za687.html">          
               <div class="relative h-20 w-48 rounded-tl-[2rem] rounded-br-[2rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
-                <div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
+                <div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
                 <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #a46136;"></div>
               </div>
               <div class="mt-2">
@@ -272,7 +273,7 @@
 </header>
 
 <main>
-  <div class="xl:container px-5 py-14 mx-auto">
+  <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
@@ -281,89 +282,179 @@
         </div>
       </div>
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-full px-8 pb-24 rounded-lg overflow-hidden relative">
-          
+        <!-- create tabs that open using pure tailwind-->
+        <div class="flex flex-col">
+          <div class="flex border-b border-gray-200">
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
             
-              <dt class="font-bold">Language</dt>
-              <dd class="pb-4 text-text-light">Zapotec</dd>
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             
-          
+             
             
-              <dt class="font-bold">Document_type</dt>
-              <dd class="pb-4 text-text-light">Testament</dd>
             
-          
+          </div>
+          <div id="metadata" class="tab-content py-4">
             
-              <dt class="font-bold">Archive</dt>
-              <dd class="pb-4 text-text-light">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</dd>
+              
+                
+                <dt class="font-bold">Language</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Language=Zapotec" class="text-accent-light hover:text-accent-dark">Zapotec</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Document Type</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Document Type=Testament" class="text-accent-light hover:text-accent-dark">Testament</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Collection</dt>
-              <dd class="pb-4 text-text-light">Alcaldias Mayores</dd>
+              
+                
+                <dt class="font-bold">Town Short</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Unknown Town" class="text-accent-light hover:text-accent-dark">Unknown Town</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Archive</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?Archive=Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico" class="text-accent-light hover:text-accent-dark">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</a>
+                  </dd>
+                
+              
             
-              <dt class="font-bold">Call_number</dt>
-              <dd class="pb-4 text-text-light">Legajo 47, Exp 01, 1774</dd>
+              
+                
+                <dt class="font-bold">Year</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?year-min=1721&year-max=1721" class="text-accent-light hover:text-accent-dark">1721</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Date</dt>
+                
+                <dd class="pb-4 text-text-light">October 7</dd>
+                
+              
             
-              <dt class="font-bold">Page</dt>
-              <dd class="pb-4 text-text-light">11r-11v</dd>
+              
+                
+                <dt class="font-bold">Collection</dt>
+                
+                  <dd class="pb-4 text-text-light">
+                    
+                    
+                    <a href="/doc-explorer/explore/documents?query=Alcaldias Mayores" class="text-accent-light hover:text-accent-dark">Alcaldias Mayores</a>
+                  </dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Call Number</dt>
+                
+                <dd class="pb-4 text-text-light">Legajo 47, Exp 01, 1774</dd>
+                
+              
             
-              <dt class="font-bold">Year</dt>
-              <dd class="pb-4 text-text-light">1721</dd>
+              
+                
+                <dt class="font-bold">Page</dt>
+                
+                <dd class="pb-4 text-text-light">11r-11v</dd>
+                
+              
             
-          
+              
+                
+                <dt class="font-bold">Primary Parties</dt>
+                
+                <dd class="pb-4 text-text-light">Tomás Sebastián (testator)</dd>
+                
+              
             
-              <dt class="font-bold">Date</dt>
-              <dd class="pb-4 text-text-light">October 7</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Witnesses</dt>
+                
+                <dd class="pb-4 text-text-light">Pedro Martn (alcalde), Nicolas M̩ndez (alcalde), Martn Ramrez (witness), Nicols Luís (witness), Pedro de Aguilar (regidor), Marcos de Aguilar (witness), Domingo Pérez (fiscal)</dd>
+                
+              
             
-              <dt class="font-bold">Town_short</dt>
-              <dd class="pb-4 text-text-light">Unknown Town</dd>
+              
             
-          
+              
             
-              <dt class="font-bold">Primary_parties</dt>
-              <dd class="pb-4 text-text-light">Tomás Sebastián (testator)</dd>
+              
             
-          
+              
+                
+                <dt class="font-bold">Permission File</dt>
+                
+                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+                
+              
             
-          
+              
             
-              <dt class="font-bold">Witnesses</dt>
-              <dd class="pb-4 text-text-light">Pedro Martn (alcalde), Nicolas M̩ndez (alcalde), Martn Ramrez (witness), Nicols Luís (witness), Pedro de Aguilar (regidor), Marcos de Aguilar (witness), Domingo Pérez (fiscal)</dd>
+          </div>
+          <div id="transcription" class="tab-content py-4 hidden">
             
-          
+              <strong>(11r)<br></strong>Yo el ynterprete del Jusgado de Señor theniente<br>coronel de los Reales exercitos D<sup>on</sup> Pedro de Pineda y<br>de la torre cavallero del orden de S<sup>n</sup>tiago Primer thenien<br>te del Reximiento de ynfanteria de Guardias españolas co<br>rrexidor deesta ciu<sup>d</sup> y su Jurisdicion; en Virtud del au<br>cto que Antecede tradusgo este testamento que original en la ydi<br>oma zapoteco se me entrego cuyo thenor es como sesigue <br><br>Yo el emfermo, thomas Sebastian, otorgo mi testamento, porq the<br>mo la emfermedad, y la muerte q<sub>^</sub><sup>a#e</sup><sup>de</sup> me pondra Dios mi alma quan<br>do yo me muero q su Mag<sup>d</sup> me cuio me hizo christiano Bau<br>tiszado me yamo Nombre de S<sup>to</sup> Favian Sabastian: creo Un<br>zolo Dios quees la SS<sup>ma</sup> trinidad tres perzonas quees Verda<br>dero, ytt<sup>n</sup>. creo la Virgen S<sup>ta</sup>maria madre de Dios, ytt<sup>n</sup> creo<br>los dies mandamientos de la ley de Dios, y los sinco manda<br>miento de la S<sup>ta</sup> madre yglesia, los siete zacramento<br>Y los catorce articulos de la fee: y le Ruego al Padre q: me<br>entierre mi cuerpo en la yglesia quando yo me muero; y Un peso<br>dnõ. de la tierra bendita; ytt<sup>n</sup>. dos pesos para Una missa mayor<br>que diga el Padre Saserdote; y tt<sup>n</sup>. de los xx tres altares, de la SS<sup>m</sup><sup>o<br></sup>zacramento; del S<sup>to</sup>entierro, de Nrõ señora del Rozario, ã<br>medio doy de limosna = queesto mi cassa y el zolar mio le doy ãmi<br>hijo chiquito Agustin que sea suyo; que biva õ queeste, con mi<br>hijo Jacinto con su muger, que sea como madre õ cavesa de los<br>dos muchachos chiquito Urzula mi hija =<br>ytt<sup>n</sup>. un pedazo de tierra de sembra dura mio que son sinco medidas<br><br><strong>(11v)<br></strong>medidas y media, thome mi hijo Jacinto Martin la mitad<br>thome Agustin chiquito su hermano, este dha tierra linda<br>con tierras de Domingo Luis por aonde naze el zol (oriente)<br>linda con tierra de Favian Deaquino alado de õaxaca<br>(norte), linda con tierra de lucas Martin assi por aonde se mu[ere]<br>el sol (poniente) linda asi mismo Lucas Martin assi alado<br>de simattan (sur) le devo tres Meses ãYgnacio Castilla<sup>no<br></sup>queenta por entero Nuehe<em>p</em>, Pague Jacinto mi hijo, co<br>mo mayordomo del Padre desde aqui la palabra di<br>xo el emfermo thomas Sebastian por Ante los testigos<br>quese hallaron presente y Ante las Justicias; oydia mier<br>coles Veynte de AGosto de mill seiscientos õchenta y<br>siete años Y Ante<sub>^</sub><sup>mi</sup>el ess<sup>no</sup> doy fee = Pedro Martin alcade—<br>Nicolas mendes alcalde = Martin Ramires testigo = Ni-<br>colas Luys testigo = Pedro de Agilar Rexidor = thomas<br>Ramires Rexidor = Marcos de agilar testigo = Domingo pe<br>res fiscal = Ante mi Juachin de la Cruz ess<sup>no</sup>=<br>el borron no vale = entre Renglon aonde: vale<br><br>El qual esta fielmente tradusido y consentado del ydioma za<br>poteco en quese halla al castellano, al que me Remito ãlo<br>do mi leal zaver y entender; y por ser ver<sup>d</sup>, assilo Juro en to<br>da forma de de drõ, y lo firme en dha Ciu<sup>d</sup>, õctubre 7 de 17<br>74 =<br>Phelipe An<sup>o</sup> Lopez<br>Ynterprete
             
-              <dt class="font-bold">Transcription</dt>
-              <dd class="pb-4 text-text-light"><strong>(11r)<br></strong>Yo el ynterprete del Jusgado de Señor theniente<br>coronel de los Reales exercitos D<sup>on</sup> Pedro de Pineda y<br>de la torre cavallero del orden de S<sup>n</sup>tiago Primer thenien<br>te del Reximiento de ynfanteria de Guardias españolas co<br>rrexidor deesta ciu<sup>d</sup> y su Jurisdicion; en Virtud del au<br>cto que Antecede tradusgo este testamento que original en la ydi<br>oma zapoteco se me entrego cuyo thenor es como sesigue <br><br>Yo el emfermo, thomas Sebastian, otorgo mi testamento, porq the<br>mo la emfermedad, y la muerte q<sub>^</sub><sup>a#e</sup><sup>de</sup> me pondra Dios mi alma quan<br>do yo me muero q su Mag<sup>d</sup> me cuio me hizo christiano Bau<br>tiszado me yamo Nombre de S<sup>to</sup> Favian Sabastian: creo Un<br>zolo Dios quees la SS<sup>ma</sup> trinidad tres perzonas quees Verda<br>dero, ytt<sup>n</sup>. creo la Virgen S<sup>ta</sup>maria madre de Dios, ytt<sup>n</sup> creo<br>los dies mandamientos de la ley de Dios, y los sinco manda<br>miento de la S<sup>ta</sup> madre yglesia, los siete zacramento<br>Y los catorce articulos de la fee: y le Ruego al Padre q: me<br>entierre mi cuerpo en la yglesia quando yo me muero; y Un peso<br>dnõ. de la tierra bendita; ytt<sup>n</sup>. dos pesos para Una missa mayor<br>que diga el Padre Saserdote; y tt<sup>n</sup>. de los xx tres altares, de la SS<sup>m</sup><sup>o<br></sup>zacramento; del S<sup>to</sup>entierro, de Nrõ señora del Rozario, ã<br>medio doy de limosna = queesto mi cassa y el zolar mio le doy ãmi<br>hijo chiquito Agustin que sea suyo; que biva õ queeste, con mi<br>hijo Jacinto con su muger, que sea como madre õ cavesa de los<br>dos muchachos chiquito Urzula mi hija =<br>ytt<sup>n</sup>. un pedazo de tierra de sembra dura mio que son sinco medidas<br><br><strong>(11v)<br></strong>medidas y media, thome mi hijo Jacinto Martin la mitad<br>thome Agustin chiquito su hermano, este dha tierra linda<br>con tierras de Domingo Luis por aonde naze el zol (oriente)<br>linda con tierra de Favian Deaquino alado de õaxaca<br>(norte), linda con tierra de lucas Martin assi por aonde se mu[ere]<br>el sol (poniente) linda asi mismo Lucas Martin assi alado<br>de simattan (sur) le devo tres Meses ãYgnacio Castilla<sup>no<br></sup>queenta por entero Nuehe<em>p</em>, Pague Jacinto mi hijo, co<br>mo mayordomo del Padre desde aqui la palabra di<br>xo el emfermo thomas Sebastian por Ante los testigos<br>quese hallaron presente y Ante las Justicias; oydia mier<br>coles Veynte de AGosto de mill seiscientos õchenta y<br>siete años Y Ante<sub>^</sub><sup>mi</sup>el ess<sup>no</sup> doy fee = Pedro Martin alcade—<br>Nicolas mendes alcalde = Martin Ramires testigo = Ni-<br>colas Luys testigo = Pedro de Agilar Rexidor = thomas<br>Ramires Rexidor = Marcos de agilar testigo = Domingo pe<br>res fiscal = Ante mi Juachin de la Cruz ess<sup>no</sup>=<br>el borron no vale = entre Renglon aonde: vale<br><br>El qual esta fielmente tradusido y consentado del ydioma za<br>poteco en quese halla al castellano, al que me Remito ãlo<br>do mi leal zaver y entender; y por ser ver<sup>d</sup>, assilo Juro en to<br>da forma de de drõ, y lo firme en dha Ciu<sup>d</sup>, õctubre 7 de 17<br>74 =<br>Phelipe An<sup>o</sup> Lopez<br>Ynterprete</dd>
+          </div>
+          <div id="analysis" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Interlinear analysis is not available for this document.</p>
             
-          
+          </div>
+          <div id="english" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">English translation is not available for this document.</p>
             
-              <dt class="font-bold">Permission_file</dt>
-              <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+          </div>
+          <div id="modern_spanish" class="tab-content py-4 hidden">
             
-          
+              <p class="text-text-light">Modern Spanish translation is not available for this document.</p>
             
-          
+          </div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
-</div></main>
+</main>
 
     </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
-  <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
       <span class="ml-3 text-xl">Ticha</span>
     </a>
@@ -397,6 +488,7 @@
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
     <script src="/doc-explorer/js/dropdown.js"></script>
+<script src="/doc-explorer/js/tabs.js"></script>
 
   </body>
 </html>
