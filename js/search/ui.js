@@ -187,7 +187,7 @@ export function initUI({ idx, resultsLookupMap }) {
           state.selectedFacets[facetKeyToRemove] = state.selectedFacets[facetKeyToRemove].filter(v => v !== valueToRemove);
 
           // Uncheck the corresponding checkbox
-          const checkboxes = document.querySelectorAll(`input[type="checkbox"][data-facet="${facetKeyToRemove}"]`);
+          const checkboxes = document.querySelectorAll(`input[type="checkbox"][data-facet="${facetKeyToRemove}"][data-value]`);
           checkboxes.forEach((checkbox) => {
             if (pruneDiacritics(checkbox.getAttribute('data-value')) === valueToRemove) {
               checkbox.checked = false;
@@ -204,6 +204,7 @@ export function initUI({ idx, resultsLookupMap }) {
     // Range facet tags
     Object.entries(state.selectedRanges).forEach(([facetKey, range]) => {
       if (!range.min && !range.max) return;
+
       const rangeValue = range.min && range.max ? `${range.min}–${range.max}` : range.min ? `≥${range.min}` : `≤${range.max}`;
       const tag = document.createElement('div');
       tag.className = 'inline-flex items-center gap-2 bg-accent-alt-light text-accent-alt-dark px-3 py-1 rounded-full text-xs hover:shadow ';
@@ -272,6 +273,7 @@ export function initUI({ idx, resultsLookupMap }) {
         state.selectedRanges[normalizedFacetKey][bound] = value;
         return;
       }
+      
 
       state.selectedFacets[key] = pruneDiacritics(value).split('|');
     });
@@ -294,7 +296,7 @@ export function initUI({ idx, resultsLookupMap }) {
    * Wire checkbox inputs (data-facet) to `state.selectedFacets` and attach handlers.
    */
   function setupFacetCheckboxes() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"][data-facet]');
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][data-facet][data-value]');
     checkboxes.forEach((checkbox) => {
       const facetKey = checkbox.getAttribute('data-facet');
       const facetValue = checkbox.getAttribute('data-value');
@@ -336,6 +338,7 @@ export function initUI({ idx, resultsLookupMap }) {
       });
     });
   }
+
 
   // Initialize UI state and handlers
   inferUrlParams();
