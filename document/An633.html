@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" id="top" data-theme="light" class="bg-neutral-light scroll-smooth">
+<html lang="en" id="top" data-theme="light" class="bg-neutral-dark scroll-smooth">
   
 <head>
   <meta charset="utf-8">
@@ -11,124 +11,235 @@
   <link rel="icon" href="/doc-explorer/static/favicon.png" type="image/png">
 </head>
 
-  <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-light">
-    <section class="text-text-dark body-font bg-neutral-dark py-4">
-  <div class="xl:container mx-auto flex p-5 md:flex-row justify-between items-center gap-4">
-    <nav class="flex flex-wrap text-base items-center justify-between gap-4 leading-tight w-full">
-      <div class="justify-start flex flex-wrap items-center gap-4">
-        <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center justify-self-start">
-          <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-8">
-          <span class="ml-2 text-xl text-nowrap">Ticha Digital Text Explorer</span>
-        </a>
-        <div class="flex flex-wrap gap-4">
+  <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
+    <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
+  <div class="xl:container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
+    <div class="flex flex-1 flex-wrap items-center gap-4">
+      <a href="/doc-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
+        <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-6">
+        <span class="text-2xl ml-1 text-nowrap font-light tracking-tight">
+          <span class="font-black text-accent-dark">Ticha</span> Digital Text Explorer
+        </span>
+      </a>
+    </div>
+
+    <div class="hidden lg:flex flex-wrap items-center gap-4">
+      
         
-          
-          <div>
-            <button type="button" class="dropdown-toggle flex items-center justify-start gap-2 cursor-pointer hover:text-text-dark">
-              <span class="pointer-events-none select-none px-2">Get Started</span>
-              <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
-              </svg>
-            </button>
-            <div class="dropdown-menu absolute bg-white mt-2 shadow pl-2 pr-4 py-2 rounded-lg hidden w-fit">
+        <div class="relative group">
+          <button type="button" class="dropdown-toggle flex items-center justify-start p-2 gap-2 cursor-pointer group-hover:text-accent-dark active:text-accent-dark transition-all duration-200 delay-75 group-hover:bg-neutral-light group-focus-within:bg-neutral-light group-open:bg-neutral-light rounded-t-lg px-2" aria-expanded="false">
+            <span class="select-none font-bold">Get Started</span>
+            <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 text-accent-light top-full opacity-0 pointer-events-none bg-neutral-light rounded-b-lg rounded-tr-lg px-4 py-4 w-max transition-all duration-200 delay-75 ease-out group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
+            
               
-                
-                <a href="/doc-explorer/get-started/guides" class="block pb-2 leading-tight text-sm hover:text-text-dark">Using the Ticha Digital Text Explorer</a>
-                
+              <a href="/doc-explorer/get-started/guides" class="block pb-2 leading-tight hover:text-accent-dark">Using the Ticha Digital Text Explorer</a>
               
-                
-                <a href="https://ticha.haverford.edu/en/context/" class="block pb-2 leading-tight text-sm hover:text-text-dark" target="_blank">About Colonial Valley Zapotec ↗</a>
-                
+            
               
-            </div>
+              <a href="https://ticha.haverford.edu/en/context/" target="_blank" class="block pb-2 leading-snug hover:text-accent-dark">About Colonial Valley Zapotec ↗</a>
+              
+            
           </div>
-          
-        
-          
-          <div>
-            <button type="button" class="dropdown-toggle flex items-center justify-start gap-2 cursor-pointer hover:text-text-dark">
-              <span class="pointer-events-none select-none px-2">Explore</span>
-              <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
-              </svg>
-            </button>
-            <div class="dropdown-menu absolute bg-white mt-2 shadow pl-2 pr-4 py-2 rounded-lg hidden w-fit">
-              
-                
-                <a href="/doc-explorer/explore/documents" class="block pb-2 leading-tight text-sm hover:text-text-dark">All Documents</a>
-                
-              
-                
-                <a href="/doc-explorer/explore/editions" class="block pb-2 leading-tight text-sm hover:text-text-dark">Digital Editons</a>
-                
-              
-                
-                <a href="/doc-explorer/explore/towns" class="block pb-2 leading-tight text-sm hover:text-text-dark">Documents by Town</a>
-                
-              
-                
-                <a href="/doc-explorer/explore/persons" class="block pb-2 leading-tight text-sm hover:text-text-dark">Mentioned Persons</a>
-                
-              
-            </div>
-          </div>
-          
-        
-          
-          <div>
-            <button type="button" class="dropdown-toggle flex items-center justify-start gap-2 cursor-pointer hover:text-text-dark">
-              <span class="pointer-events-none select-none px-2">Connect</span>
-              <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
-              </svg>
-            </button>
-            <div class="dropdown-menu absolute bg-white mt-2 shadow pl-2 pr-4 py-2 rounded-lg hidden w-fit">
-              
-                
-                <a href="/doc-explorer/connect/credits" class="block pb-2 leading-tight text-sm hover:text-text-dark">Credits and Acknowledgements</a>
-                
-              
-                
-                <a href="https://ticha.haverford.edu/en/form/" class="block pb-2 leading-tight text-sm hover:text-text-dark" target="_blank">Get in Touch ↗</a>
-                
-              
-            </div>
-          </div>
-          
-        
-          
-          <div>
-            <button type="button" class="dropdown-toggle flex items-center justify-start gap-2 cursor-pointer hover:text-text-dark">
-              <span class="pointer-events-none select-none px-2">More Resources</span>
-              <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
-              </svg>
-            </button>
-            <div class="dropdown-menu absolute bg-white mt-2 shadow pl-2 pr-4 py-2 rounded-lg hidden w-fit">
-              
-                
-                <a href="https://www.webonary.org/colonial_valley_zapotec/" class="block pb-2 leading-tight text-sm hover:text-text-dark" target="_blank">Ticha Diccionario Colonial Valley Zapotec ↗</a>
-                
-              
-                
-                <a href="https://ticha.haverford.edu/en/lessons/" class="block pb-2 leading-tight text-sm hover:text-text-dark" target="_blank">Caseidyneën Saën Teaching Modules ↗</a>
-                
-              
-            </div>
-          </div>
-          
-        
         </div>
-      </div>
-      <div class="inline">
-      <a href="https://ticha.haverford.edu" target="_blank" class="text-accent-light inline-flex items-center hover:text-accent-dark">
+        
+      
+        
+        <div class="relative group">
+          <button type="button" class="dropdown-toggle flex items-center justify-start p-2 gap-2 cursor-pointer group-hover:text-accent-dark active:text-accent-dark transition-all duration-200 delay-75 group-hover:bg-neutral-light group-focus-within:bg-neutral-light group-open:bg-neutral-light rounded-t-lg px-2" aria-expanded="false">
+            <span class="select-none font-bold">Explore</span>
+            <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 text-accent-light top-full opacity-0 pointer-events-none bg-neutral-light rounded-b-lg rounded-tr-lg px-4 py-4 w-max transition-all duration-200 delay-75 ease-out group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
+            
+              
+              <a href="/doc-explorer/explore/documents" class="block pb-2 leading-tight hover:text-accent-dark">All Documents</a>
+              
+            
+              
+              <a href="/doc-explorer/explore/editions" class="block pb-2 leading-tight hover:text-accent-dark">Digital Editons</a>
+              
+            
+              
+              <a href="/doc-explorer/explore/towns" class="block pb-2 leading-tight hover:text-accent-dark">Documents by Town</a>
+              
+            
+              
+              <a href="/doc-explorer/explore/people" class="block pb-2 leading-tight hover:text-accent-dark">People in Documents</a>
+              
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="relative group">
+          <button type="button" class="dropdown-toggle flex items-center justify-start p-2 gap-2 cursor-pointer group-hover:text-accent-dark active:text-accent-dark transition-all duration-200 delay-75 group-hover:bg-neutral-light group-focus-within:bg-neutral-light group-open:bg-neutral-light rounded-t-lg px-2" aria-expanded="false">
+            <span class="select-none font-bold">Connect</span>
+            <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 text-accent-light top-full opacity-0 pointer-events-none bg-neutral-light rounded-b-lg rounded-tr-lg px-4 py-4 w-max transition-all duration-200 delay-75 ease-out group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
+            
+              
+              <a href="/doc-explorer/connect/credits" class="block pb-2 leading-tight hover:text-accent-dark">Credits and Acknowledgements</a>
+              
+            
+              
+              <a href="https://ticha.haverford.edu/en/form/" target="_blank" class="block pb-2 leading-snug hover:text-accent-dark">Get in Touch ↗</a>
+              
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="relative group">
+          <button type="button" class="dropdown-toggle flex items-center justify-start p-2 gap-2 cursor-pointer group-hover:text-accent-dark active:text-accent-dark transition-all duration-200 delay-75 group-hover:bg-neutral-light group-focus-within:bg-neutral-light group-open:bg-neutral-light rounded-t-lg px-2" aria-expanded="false">
+            <span class="select-none font-bold">More Resources</span>
+            <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+            </svg>
+          </button>
+          <div class="dropdown-menu absolute left-0 text-accent-light top-full opacity-0 pointer-events-none bg-neutral-light rounded-b-lg rounded-tr-lg px-4 py-4 w-max transition-all duration-200 delay-75 ease-out group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto">
+            
+              
+              <a href="https://www.webonary.org/colonial_valley_zapotec/" target="_blank" class="block pb-2 leading-snug hover:text-accent-dark">Ticha Diccionario Colonial Valley Zapotec ↗</a>
+              
+            
+              
+              <a href="https://ticha.haverford.edu/en/lessons/" target="_blank" class="block pb-2 leading-snug hover:text-accent-dark">Caseidyneën Saën Teaching Modules ↗</a>
+              
+            
+          </div>
+        </div>
+        
+      
+    </div>
+
+    <div class="hidden lg:inline-flex items-center">
+      <a href="https://ticha.haverford.edu" target="_blank" class="bg-accent-light inline-flex items-center hover:bg-accent-dark text-neutral-light rounded-lg px-3 py-1 text-sm font-bold">
         Ticha Website ↗
       </a>
-      </div>
-    </nav>
-    
+    </div>
+
+    <button id="mobile-menu-toggle" class="lg:hidden cursor-pointer inline-flex items-center justify-center rounded-lg p-2 text-text-dark hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-accent-light" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Open navigation menu</span>
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="fixed inset-0 z-40 hidden bg-neutral-dark backdrop-blur-sm p-6 lg:hidden">
+    <div class="flex items-center justify-between border-b border-white/30 pb-4">
+      <a href="/doc-explorer/" class="text-accent-light inline-flex items-center gap-2">
+        <img src="/doc-explorer/static/ticha1.gif" alt="Ticha Logo" class="h-8">
+        <span class="ml-2 text-xl text-nowrap">Ticha Digital Text Explorer</span>
+      </a>
+      <button id="mobile-menu-close" class="rounded-lg p-2 text-text-dark cursor-pointer hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-accent-light" aria-label="Close navigation menu">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mt-6 space-y-5">
+      
+        
+        <div class="space-y-2">
+          <span class="block text-base font-semibold text-text-dark">Get Started</span>
+          <div class="space-y-2 pl-3">
+            
+            
+            <a href="/doc-explorer/get-started/guides" class="block text-sm text-accent-dark hover:text-accent-light">Using the Ticha Digital Text Explorer</a>
+            
+            
+            
+            <a href="https://ticha.haverford.edu/en/context/" target="_blank" class="block text-sm text-accent-dark hover:text-accent-light">About Colonial Valley Zapotec ↗</a>
+            
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="space-y-2">
+          <span class="block text-base font-semibold text-text-dark">Explore</span>
+          <div class="space-y-2 pl-3">
+            
+            
+            <a href="/doc-explorer/explore/documents" class="block text-sm text-accent-dark hover:text-accent-light">All Documents</a>
+            
+            
+            
+            <a href="/doc-explorer/explore/editions" class="block text-sm text-accent-dark hover:text-accent-light">Digital Editons</a>
+            
+            
+            
+            <a href="/doc-explorer/explore/towns" class="block text-sm text-accent-dark hover:text-accent-light">Documents by Town</a>
+            
+            
+            
+            <a href="/doc-explorer/explore/people" class="block text-sm text-accent-dark hover:text-accent-light">People in Documents</a>
+            
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="space-y-2">
+          <span class="block text-base font-semibold text-text-dark">Connect</span>
+          <div class="space-y-2 pl-3">
+            
+            
+            <a href="/doc-explorer/connect/credits" class="block text-sm text-accent-dark hover:text-accent-light">Credits and Acknowledgements</a>
+            
+            
+            
+            <a href="https://ticha.haverford.edu/en/form/" target="_blank" class="block text-sm text-accent-dark hover:text-accent-light">Get in Touch ↗</a>
+            
+            
+          </div>
+        </div>
+        
+      
+        
+        <div class="space-y-2">
+          <span class="block text-base font-semibold text-text-dark">More Resources</span>
+          <div class="space-y-2 pl-3">
+            
+            
+            <a href="https://www.webonary.org/colonial_valley_zapotec/" target="_blank" class="block text-sm text-accent-dark hover:text-accent-light">Ticha Diccionario Colonial Valley Zapotec ↗</a>
+            
+            
+            
+            <a href="https://ticha.haverford.edu/en/lessons/" target="_blank" class="block text-sm text-accent-dark hover:text-accent-light">Caseidyneën Saën Teaching Modules ↗</a>
+            
+            
+          </div>
+        </div>
+        
+      
+    </div>
+
+    <div class="mt-8 border-t border-white/30 pt-4">
+      <a href="https://ticha.haverford.edu" target="_blank" class="inline-flex items-center text-accent-light hover:text-accent-dark">
+        Ticha Website ↗
+      </a>
+    </div>
   </div>
 </section>
+
+    <div id="navbar-spacer" class="h-20"></div>
+    <section class="flex-1 bg-neutral-light">
     
 <header class="bg-neutral-dark">
   <div class="xl:container px-5 py-14 mx-auto">
@@ -253,6 +364,7 @@
   </div>
 </div></main>
 
+    </section>
     <footer class="text-text-light body-font bg-neutral-dark mt-16">
   <div class="xl:container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-text-dark">
@@ -287,7 +399,7 @@
   </div>
 </footer>
 <!-- <div class="bg-[url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg)] bg-contain h-6 bg-repeat-x"></div> -->
-    <script src="/doc-explorer/static/dropdown.js"></script>
+    <script src="/doc-explorer/js/dropdown.js"></script>
 
   </body>
 </html>
