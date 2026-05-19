@@ -98,6 +98,10 @@
               
             
               
+              <a href="https://ticha.haverford.edu/en/about/" target="_blank" class="block pb-2 leading-snug hover:text-accent-dark">Our Mission and Values ↗</a>
+              
+            
+              
               <a href="https://ticha.haverford.edu/en/form/" target="_blank" class="block pb-2 leading-snug hover:text-accent-dark">Get in Touch ↗</a>
               
             
@@ -214,6 +218,10 @@
             
             
             
+            <a href="https://ticha.haverford.edu/en/about/" target="_blank" class="block text-sm text-accent-dark hover:text-accent-light">Our Mission and Values ↗</a>
+            
+            
+            
             <a href="https://ticha.haverford.edu/en/form/" target="_blank" class="block text-sm text-accent-dark hover:text-accent-light">Get in Touch ↗</a>
             
             
@@ -296,7 +304,8 @@
 		"Document_Type",
 		"Year",
 		"Collection",
-		"Date"
+		"Date",
+		"Color"
 	],
 	"lunrFieldMap": {
 		"Title": "Title",
@@ -308,7 +317,8 @@
 		"Year": "Year",
 		"Town": "Town",
 		"Collection": "Collection",
-		"Date": "Date"
+		"Date": "Date",
+		"Color": "Color"
 	},
 	"facetKeyToProperty": {
 		"Language": "language",
@@ -342,51 +352,25 @@
 		},
 		{
 			"key": "Language",
-			"type": "multiselect",
-			"values": [
-				"Zapotec",
-				"Spanish",
-				"Spanish with some Zapotec"
-			]
+			"type": "multiselect"
 		},
 		{
 			"key": "Document Type",
-			"type": "multiselect",
-			"values": [
-				"Bill of Sale",
-				"Testament",
-				"Receipt",
-				"Land Deed",
-				"Petition",
-				"Complaint",
-				"Land Description",
-				"Unknown"
-			]
+			"type": "multiselect"
 		},
 		{
 			"key": "Year",
-			"type": "numrange",
-			"values": [
-				1633,
-				1832
-			]
+			"type": "numrange"
 		},
 		{
 			"key": "Archive",
-			"type": "multiselect",
-			"values": [
-				"Archivo General de la Nación, Mexico",
-				"Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico",
-				"Archivo Histórico de Notarias del Estado de Oaxaca, Mexico",
-				"Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico"
-			]
+			"type": "multiselect"
 		}
 	]
 }</script>
 <script>
   window.prefixUrl    = "/doc-explorer/";
-  window.promisedData = fetchData("/doc-explorer/documents.json"); 
-  console.log("Search data promise:", window.promisedData);
+  window.promisedData = fetchData("/doc-explorer/api/documents.json");
 </script>
 <div class="w-full mb-12 align-middle">
   <div class="join relative mt-2 flex justify-between items-center w-full shadow rounded-md bg-[#f8f4ea]">
@@ -413,138 +397,14 @@
     <div class="container px-5 py-12 mx-auto">
       <div class="flex md:flex-nowrap gap-12 flex-wrap w-full">
         <div class="basis-full md:basis-1/3 xl:basis-1/4">
-          <ul><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
-              <div class="text-xl font-bold my-3 px-2 ">
-                Features 
-              </div>
-<p></p><ul><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Features" data-value="digital_edition" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Digital Edition</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Features" data-value="transcription" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Has Transcription</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Features" data-value="has_translation" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Has Translation Document</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Features" data-value="is_translation" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Is Translation Document</span>
-</label>
-</li></ul><p></p>
-<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
-<div class="text-xl font-bold my-3 px-2 ">
-Language
-</div><p></p>
-<p></p><ul><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Language" data-value="Zapotec" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Zapotec</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Language" data-value="Spanish" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Spanish</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Language" data-value="Spanish with some Zapotec" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Spanish with some Zapotec</span>
-</label>
-</li></ul><p></p>
-<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
-<div class="text-xl font-bold my-3 px-2 ">
-Document Type
-</div><p></p>
-<p></p><ul><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Document Type" data-value="Bill of Sale" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Bill of Sale</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Document Type" data-value="Testament" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Testament</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Document Type" data-value="Receipt" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Receipt</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Document Type" data-value="Land Deed" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Land Deed</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Document Type" data-value="Petition" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Petition</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Document Type" data-value="Complaint" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Complaint</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Document Type" data-value="Land Description" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Land Description</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Document Type" data-value="Unknown" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Unknown</span>
-</label>
-</li></ul><p></p>
-<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
-<div class="text-xl font-bold my-3 px-2 ">
-Year
-</div><p></p>
-<p></p><div class="pl-2 flex flex-row w-full gap-2 items-center justify-start">
-<input min="1633" max="1832" type="number" data-facet="Year" data-range="min" placeholder="1633" class="border rounded-md px-2 focus-visible:ring focus-visible:ring-text-light max-w-24">
-<span class="text-center">—</span>
-<input min="1633" max="1832" type="number" data-facet="Year" data-range="max" placeholder="1832" class="border rounded-md px-2 focus:ring focus:ring-text-light max-w-24">
-</div><p></p>
-<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
-<div class="text-xl font-bold my-3 px-2 ">
-Archive
-</div><p></p>
-<p></p><ul><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Archive" data-value="Archivo General de la Nación, Mexico" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Archivo General de la Nación, Mexico</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Archive" data-value="Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Archivo General del Poder Ejecutivo del Estado de Oaxaca, Mexico</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Archive" data-value="Archivo Histórico de Notarias del Estado de Oaxaca, Mexico" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Archivo Histórico de Notarias del Estado de Oaxaca, Mexico</span>
-</label>
-</li><li>
-<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
-<input type="checkbox" data-facet="Archive" data-value="Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
-<span class="ml-2 text-text-dark hover:text-accent-light">Archivo Histórico de Tlacolula de Matamoros Oaxaca, Mexico</span>
-</label>
-</li></ul><p></p>
-<p></p></li></ul>
-</div>
-<div class="basis-full md:basis-2/3 xl:basis-3/4">
-<div id="results-info" class="mb-6 font-bold"></div>
-<div id="active-facets" class="flex flex-wrap gap-2 mb-12"></div>
-<div id="results" class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-6 xl:gap-12 flex-wrap justify-between w-full"></div>
-</div>
-</div><p></p>
+          <ul id="facet-panels"></ul>
+        </div>
+        <div class="basis-full md:basis-2/3 xl:basis-3/4">
+          <div id="results-info" class="mb-6 font-bold"></div>
+          <div id="active-facets" class="flex flex-wrap gap-2 mb-12"></div>
+          <div id="results" class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-6 xl:gap-12 flex-wrap justify-between w-full"></div>
+      </div>
+    </div>
   </div></section>
 </main>
 <script type="module" src="/doc-explorer/js/search.js"></script>

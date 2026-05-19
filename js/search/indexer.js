@@ -7,6 +7,7 @@ import { pruneDiacritics } from './utils.js';
 function toDoc(doc) {
   return {
     'Slug': doc.slug,
+    'Color': doc.color,
     'Title': pruneDiacritics(doc.title),
     'Language': pruneDiacritics(doc.language),
     'Town': pruneDiacritics(doc.town_short),

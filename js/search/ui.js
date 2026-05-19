@@ -1,4 +1,4 @@
-import { pruneDiacritics, toQueryString, randomHexColor } from './utils.js';
+import { pruneDiacritics, toQueryString } from './utils.js';
 import { loadConfig } from './config.js';
 
 /*
@@ -87,7 +87,7 @@ export function submitSearchQuery(idx, resultsLookupMap, state) {
  * Wire up DOM elements, event handlers, and state. Returns an object with
  * methods to interact with the UI if needed.
  */
-export function initUI({ idx, resultsLookupMap }) {
+export async function initUI({ idx, resultsLookupMap, documents }) {
   const CONFIG = loadConfig();
   const resultsContainer  = document.getElementById('results');
   const resultsInfo       = document.getElementById('results-info');
@@ -95,6 +95,8 @@ export function initUI({ idx, resultsLookupMap }) {
   const searchInput       = document.getElementById('search-input');
   const searchLimitSelect = document.getElementById('search-limit-select');
   const searchSubmit      = document.getElementById('search-submit');
+  const facetPanels       = document.getElementById('facet-panels');
+  const apiBase           = `${window.prefixUrl}api/`;
 
   const state = {
     selectedFacets: {},
@@ -103,33 +105,141 @@ export function initUI({ idx, resultsLookupMap }) {
     searchInput
   };
 
-  /*
-   * appendSearchResults(results)
-   * Render the array of Lunr results into the `#results` container.
-   */
+  const isNonEmpty = (value) => value !== undefined && value !== null && String(value).trim() !== '';
+  const sortStrings = (a, b) => String(a).localeCompare(String(b), undefined, { sensitivity: 'base', numeric: true });
+  const uniqueOrdered = (values) => [...new Set(values.filter(isNonEmpty))].sort(sortStrings);
+
+  const facetValues = {
+    Language: uniqueOrdered(documents.map((doc) => doc.language)),
+    'Document Type': [],
+    Archive: []
+  };
+
+  const yearNumbers = documents
+    .map((doc) => Number(doc.year))
+    .filter((value) => !Number.isNaN(value));
+  const yearRange = yearNumbers.length
+    ? { min: Math.min(...yearNumbers), max: Math.max(...yearNumbers) }
+    : { min: '', max: '' };
+
+  async function loadApiFacetValues() {
+    const [archives, documentTypes] = await Promise.all([
+      fetch(`${apiBase}archives.json`).then((res) => res.ok ? res.json() : []).catch(() => []),
+      fetch(`${apiBase}document_types.json`).then((res) => res.ok ? res.json() : []).catch(() => [])
+    ]);
+
+    facetValues.Archive = uniqueOrdered(archives);
+    facetValues['Document Type'] = uniqueOrdered(documentTypes);
+  }
+
+  function createCheckboxOption(facetKey, value) {
+    const listItem = document.createElement('li');
+    const label = document.createElement('label');
+    label.className = 'flex items-center cursor-pointer rounded px-2 py-1 transition-colors';
+
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.dataset.facet = facetKey;
+    input.dataset.value = value;
+    input.className = 'w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer';
+
+    const text = document.createElement('span');
+    text.className = 'ml-2 text-text-dark hover:text-accent-light';
+    text.textContent = value;
+
+    label.appendChild(input);
+    label.appendChild(text);
+    listItem.appendChild(label);
+    return listItem;
+  }
+
+  function createRangeInputs(facetKey, min, max) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'pl-2 flex flex-row w-full gap-2 items-center justify-start';
+
+    const minInput = document.createElement('input');
+    minInput.type = 'number';
+    minInput.dataset.facet = facetKey;
+    minInput.dataset.range = 'min';
+    minInput.placeholder = min;
+    minInput.min = min;
+    minInput.max = max;
+    minInput.className = 'border rounded-md px-2 focus-visible:ring focus-visible:ring-text-light max-w-24';
+
+    const maxInput = document.createElement('input');
+    maxInput.type = 'number';
+    maxInput.dataset.facet = facetKey;
+    maxInput.dataset.range = 'max';
+    maxInput.placeholder = max;
+    maxInput.min = min;
+    maxInput.max = max;
+    maxInput.className = 'border rounded-md px-2 focus:ring focus:ring-text-light max-w-24';
+
+    const separator = document.createElement('span');
+    separator.className = 'text-center';
+    separator.textContent = '—';
+
+    wrapper.append(minInput, separator, maxInput);
+    return wrapper;
+  }
+
+  function renderFacetPanels() {
+    if (!facetPanels) return;
+    facetPanels.innerHTML = '';
+
+    (CONFIG.facets || []).forEach((facet) => {
+      const listItem = document.createElement('li');
+      listItem.className = 'p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6';
+
+      const heading = document.createElement('div');
+      heading.className = `text-xl font-bold my-3 px-2 ${facet.wip ? 'text-accent-light' : ''}`;
+      heading.textContent = facet.key;
+      listItem.appendChild(heading);
+
+      if (facet.type === 'multiselect') {
+        const values = facetValues[facet.key] || [];
+        const valuesList = document.createElement('ul');
+        values.forEach((value) => valuesList.appendChild(createCheckboxOption(facet.key, value)));
+        listItem.appendChild(valuesList);
+      }
+
+      if (facet.type === 'booleanlist') {
+        const valuesList = document.createElement('ul');
+        facet.list.forEach((value) => {
+          valuesList.appendChild(createCheckboxOption(facet.key, value.key));
+          valuesList.lastChild.querySelector('span').textContent = value.label;
+        });
+        listItem.appendChild(valuesList);
+      }
+
+      if (facet.type === 'numrange') {
+        listItem.appendChild(createRangeInputs(facet.key, yearRange.min, yearRange.max));
+      }
+
+      facetPanels.appendChild(listItem);
+    });
+  }
+
   function appendSearchResults(results) {
     resultsContainer.innerHTML = null;
     results.forEach(function (res) {
       let item = resultsLookupMap[res.ref];
       let resultDiv = document.createElement('div');
-      let hexColor = randomHexColor();
-      resultDiv.classList.add("w-full", "group", "transition", "duration-350", "ease-in-out", "hover:scale-110");
+      let hexColor = `${item.color}`;
+      resultDiv.classList.add('w-full', 'group', 'transition', 'duration-350', 'ease-in-out', 'hover:scale-110');
       resultDiv.innerHTML = `
         <a href="${prefixUrl}document/${ item.slug }.html">          
           <div class="relative h-36 w-full rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
-            ${ item.language && item.language.startsWith("Zapotec") ? 
+            ${ item.language && item.language.startsWith('Zapotec') ? 
               `<div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>` 
             : 
             `<div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Spanish</div>` 
             }
-            <!-- If digital edition, show bottom left badge -->
             ${ item.digital_edition ? `<div class="absolute bottom-0 left-0 bg-[url(../static/flower.png)] bg-cover bg-center h-10 w-10 px-2 py-1 rounded-tr-lg z-10"></div>` : '' }
             <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #${hexColor};"></div>
           </div>
           <div class="mt-4">
-          <!-- if item title starts with "Translation", style the first word differently -->
-          <!-- else if item is digital edition, prepend the title with "Digital Edition" and add the same hover style as "Translation -->
-          ${ item.title.startsWith("Translation") ?
+          ${ item.title.startsWith('Translation') ?
             `<h2 class="text-text-dark title-font text-lg font-bold leading-tight"><span class="underline group-hover:text-accent-light">${item.title.split(' ')[0]}</span> ${item.title.split(' ').slice(1).join(' ')}</h2>`
             :
             item.digital_edition ?
@@ -143,10 +253,6 @@ export function initUI({ idx, resultsLookupMap }) {
     });
   }
 
-  /*
-   * appendSearchInfo(resultsLength, fullIndexLength)
-   * Update the results info summary text above the results grid.
-   */
   function appendSearchInfo(resultsLength, fullIndexLength) {
     resultsInfo.innerHTML = null;
     let infoDiv = document.createElement('div');
@@ -154,14 +260,9 @@ export function initUI({ idx, resultsLookupMap }) {
     resultsInfo.appendChild(infoDiv);
   }
 
-  /*
-   * renderActiveFacets()
-   * Render removable facet and range tags for currently selected filters.
-   */
   function renderActiveFacets() {
     activeFacetsContainer.innerHTML = null;
 
-    // Query tag
     if (searchInput && searchInput.value) {
       const queryTag = document.createElement('div');
       queryTag.className = 'inline-flex items-center gap-2 bg-accent-alt-light text-accent-alt-dark px-3 py-1 rounded-full text-xs';
@@ -182,7 +283,6 @@ export function initUI({ idx, resultsLookupMap }) {
       activeFacetsContainer.appendChild(queryTag);
     }
 
-    // Facet tags
     const getFacetLabel = (facetKey, valueKey) => {
       const facetDef = (CONFIG.facets || []).find((facet) => facet.key === facetKey);
       if (!facetDef || facetDef.type !== 'booleanlist') return valueKey;
@@ -210,7 +310,6 @@ export function initUI({ idx, resultsLookupMap }) {
 
           state.selectedFacets[facetKeyToRemove] = state.selectedFacets[facetKeyToRemove].filter(v => v !== valueToRemove);
 
-          // Uncheck the corresponding checkbox
           const checkboxes = document.querySelectorAll(`input[type="checkbox"][data-facet="${facetKeyToRemove}"][data-value]`);
           checkboxes.forEach((checkbox) => {
             if (pruneDiacritics(checkbox.getAttribute('data-value')) === valueToRemove) {
@@ -225,7 +324,6 @@ export function initUI({ idx, resultsLookupMap }) {
       });
     });
 
-    // Range facet tags
     Object.entries(state.selectedRanges).forEach(([facetKey, range]) => {
       if (!range.min && !range.max) return;
 
@@ -255,10 +353,6 @@ export function initUI({ idx, resultsLookupMap }) {
     });
   }
 
-  /*
-   * updateUrlParams()
-   * Serialize current search state (query, facets, ranges) into the URL.
-   */
   function updateUrlParams() {
     const newUrlParams = new URLSearchParams();
     if (searchInput.value) newUrlParams.set('query', searchInput.value);
@@ -287,10 +381,6 @@ export function initUI({ idx, resultsLookupMap }) {
     window.history.replaceState({}, '', newUrl);
   }
 
-  /*
-   * inferUrlParams()
-   * Read URL parameters and initialize `state.selectedFacets` and `state.selectedRanges`.
-   */
   function inferUrlParams() {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('query')) searchInput.value = urlParams.get('query');
@@ -332,10 +422,6 @@ export function initUI({ idx, resultsLookupMap }) {
     });
   }
 
-  /*
-   * handleSearchBehavior()
-   * Run the search, update the results, facets UI, and URL state.
-   */
   function handleSearchBehavior() {
     const results = submitSearchQuery(idx, resultsLookupMap, state);
     appendSearchInfo(results.length, Object.keys(resultsLookupMap).length);
@@ -344,10 +430,6 @@ export function initUI({ idx, resultsLookupMap }) {
     updateUrlParams();
   }
 
-  /*
-   * setupFacetCheckboxes()
-   * Wire checkbox inputs (data-facet) to `state.selectedFacets` and attach handlers.
-   */
   function setupFacetCheckboxes() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"][data-facet][data-value]');
     checkboxes.forEach((checkbox) => {
@@ -369,10 +451,6 @@ export function initUI({ idx, resultsLookupMap }) {
     });
   }
 
-  /*
-   * setupFacetRangeInputs()
-   * Wire numeric range inputs (data-range) to `state.selectedRanges` and attach handlers.
-   */
   function setupFacetRangeInputs() {
     const rangeInputs = document.querySelectorAll('input[type="number"][data-facet][data-range]');
     rangeInputs.forEach((input) => {
@@ -392,15 +470,15 @@ export function initUI({ idx, resultsLookupMap }) {
     });
   }
 
-
-  // Initialize UI state and handlers
+  await loadApiFacetValues();
+  renderFacetPanels();
   inferUrlParams();
   setupFacetCheckboxes();
   setupFacetRangeInputs();
   handleSearchBehavior();
 
   document.body.addEventListener('keypress', function(e) {
-    if (e.key === "Enter") handleSearchBehavior();
+    if (e.key === 'Enter') handleSearchBehavior();
   });
 
   if (searchSubmit) searchSubmit.addEventListener('click', function() { handleSearchBehavior(); }, false);

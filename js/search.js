@@ -19,7 +19,7 @@ window.addEventListener('load', async () => {
   const { idx, resultsLookupMap } = buildIndex(data, CONFIG);
 
   // Initialize UI and wire handlers
-  initUI({ idx, resultsLookupMap });
+  initUI({ idx, resultsLookupMap, documents: data });
 });
 // This file is now a thin ES module loader; functionality has been moved to
 // `src/js/search/*.js` modules for clarity and maintainability.

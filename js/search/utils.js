@@ -27,13 +27,3 @@ export function truncateString(string){
   if (str.length < max) return str;
   return str.substring(0, max) + "...";
 }
-
-/*
- * randomHexColor()
- * Return a three-component hex color fragment for result cards.
- */
-export function randomHexColor() {
-  return Math.floor(Math.random() * 256).toString(16).padStart(2, '0') + 
-         Math.floor(Math.random() * 128).toString(16).padStart(2, '0') + 
-         Math.floor(Math.random() * 64).toString(16).padStart(2, '0');
-}
