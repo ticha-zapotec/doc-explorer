@@ -2544,6 +2544,7 @@
   {
     "id": "161",
     "slug": "Ma733",
+    "digital_edition": true,
     "title": "Testament from San Mateo Macuilxóchitl, 1733",
     "título": "Testamento de San Mateo Macuilxóchitl, 1733",
     "language": "Zapotec",
@@ -6412,6 +6413,7 @@
   {
     "id": "174",
     "slug": "Te744",
+    "digital_edition": true,
     "title": "Testament from San Sebastián Teitipac, 1744***",
     "título": "Testamento de San Sebastián Teitipac, 1744***",
     "language": "Zapotec",
@@ -6852,6 +6854,7 @@
   {
     "id": "188",
     "slug": "Tv716",
+    "digital_edition": true,
     "title": "Testament from Teotitlán del Valle, 1716",
     "título": "Testamento de Teotitlán del Valle, 1716",
     "language": "Zapotec",

@@ -248,6 +248,9 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -365,6 +368,9 @@
   .hidden {
     display: none;
   }
+  .inline-block {
+    display: inline-block;
+  }
   .inline-flex {
     display: inline-flex;
   }
@@ -388,6 +394,9 @@
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
   }
   .h-20 {
     height: calc(var(--spacing) * 20);
@@ -424,6 +433,12 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
   }
   .w-20 {
     width: calc(var(--spacing) * 20);
@@ -657,11 +672,17 @@
   .bg-\[url\(\.\.\/static\/Tl675b\.png\)\] {
     background-image: url(../static/Tl675b.png);
   }
+  .bg-\[url\(\.\.\/static\/flower\.png\)\] {
+    background-image: url(../static/flower.png);
+  }
   .bg-\[url\(https\:\/\/raw\.githubusercontent\.com\/mnyrop\/ticha-doc-explorer\/refs\/heads\/main\/static\/flowers\.jpg\)\] {
     background-image: url(https://raw.githubusercontent.com/mnyrop/ticha-doc-explorer/refs/heads/main/static/flowers.jpg);
   }
   .bg-contain {
     background-size: contain;
+  }
+  .bg-cover {
+    background-size: cover;
   }
   .bg-center {
     background-position: center;
@@ -856,6 +877,9 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .accent-accent-alt-dark {
     accent-color: var(--color-accent-alt-dark);
   }
@@ -980,6 +1004,13 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         color: var(--color-accent-dark);
+      }
+    }
+  }
+  .group-hover\:text-accent-light {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-accent-light);
       }
     }
   }
@@ -1286,9 +1317,9 @@
       width: calc(1/2 * 100%);
     }
   }
-  .lg\:w-1\/5 {
+  .lg\:w-1\/4 {
     @media (width >= 64rem) {
-      width: calc(1/5 * 100%);
+      width: calc(1/4 * 100%);
     }
   }
   .lg\:grid-cols-3 {
@@ -1336,9 +1367,9 @@
       text-align: left;
     }
   }
-  .xl\:w-1\/6 {
+  .xl\:w-1\/5 {
     @media (width >= 80rem) {
-      width: calc(1/6 * 100%);
+      width: calc(1/5 * 100%);
     }
   }
   .xl\:basis-1\/4 {
@@ -1356,9 +1387,9 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
-  .xl\:grid-cols-5 {
+  .xl\:gap-12 {
     @media (width >= 80rem) {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: calc(var(--spacing) * 12);
     }
   }
   .xl\:gap-18 {

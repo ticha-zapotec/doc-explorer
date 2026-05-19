@@ -23,15 +23,27 @@ export function submitSearchQuery(idx, resultsLookupMap, state) {
 
   let results = idx.search(query) || [];
 
-  // Apply facet and range filters
+  const facetDefinitions = CONFIG.facets || [];
   const activeFacets = Object.entries(state.selectedFacets).filter(([_, values]) => values.length > 0);
   const activeRanges = Object.entries(state.selectedRanges).filter(([_key, range]) => range.min !== '' || range.max !== '');
+
+  const truthyField = (value) => {
+    if (value === true || value === 'true' || value === 1 || value === '1') return true;
+    if (value === false || value === 'false' || value === 0 || value === '0' || value == null) return false;
+    if (Array.isArray(value)) return value.length > 0;
+    return typeof value === 'string' ? value.trim().length > 0 : Boolean(value);
+  };
 
   if (activeFacets.length > 0 || activeRanges.length > 0) {
     results = results.filter((res) => {
       const item = resultsLookupMap[res.ref];
 
       const facetMatch = activeFacets.every(([facetKey, selectedValues]) => {
+        const facetDef = facetDefinitions.find((facet) => facet.key === facetKey);
+        if (facetDef?.type === 'booleanlist') {
+          return selectedValues.some((selected) => truthyField(item[selected]));
+        }
+
         const propMap = CONFIG.facetKeyToProperty || {};
         const propName = propMap[facetKey] || facetKey.toLowerCase().replaceAll(' ', '_');
         const itemValue = pruneDiacritics(item[propName] || '');
@@ -110,17 +122,21 @@ export function initUI({ idx, resultsLookupMap }) {
             : 
             `<div class="absolute top-0 right-0 bg-accent-dark text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Spanish</div>` 
             }
+            <!-- If digital edition, show bottom left badge -->
+            ${ item.digital_edition ? `<div class="absolute bottom-0 left-0 bg-[url(../static/flower.png)] bg-cover bg-center h-10 w-10 px-2 py-1 rounded-tr-lg z-10"></div>` : '' }
             <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #${hexColor};"></div>
           </div>
           <div class="mt-4">
-            ${ item.title.startsWith("Translation") ? 
-              `<h2 class="text-text-dark title-font text-lg font-bold leading-tight">
-                <span class="border-b-2 group-hover:text-accent-dark ease-in-out duration-350">${ item.title.substring(0, 11) }</span>
-                ${ item.title.substring(11) }
-              </h2>`
+          <!-- if item title starts with "Translation", style the first word differently -->
+          <!-- else if item is digital edition, prepend the title with "Digital Edition" and add the same hover style as "Translation -->
+          ${ item.title.startsWith("Translation") ?
+            `<h2 class="text-text-dark title-font text-lg font-bold leading-tight"><span class="underline group-hover:text-accent-light">${item.title.split(' ')[0]}</span> ${item.title.split(' ').slice(1).join(' ')}</h2>`
             :
-              `<h2 class="text-text-dark title-font text-lg font-bold leading-tight">${ item.title }</h2>`
-            }
+            item.digital_edition ?
+            `<h2 class="text-text-dark title-font text-lg font-bold leading-tight"><span class="underline group-hover:text-accent-light">Digital Edition</span> ${item.title}</h2>`
+            :
+            `<h2 class="text-text-dark title-font text-lg font-bold leading-tight">${item.title}</h2>`
+          }
           </div>
         </a>`;
       resultsContainer.appendChild(resultDiv);
@@ -167,13 +183,21 @@ export function initUI({ idx, resultsLookupMap }) {
     }
 
     // Facet tags
+    const getFacetLabel = (facetKey, valueKey) => {
+      const facetDef = (CONFIG.facets || []).find((facet) => facet.key === facetKey);
+      if (!facetDef || facetDef.type !== 'booleanlist') return valueKey;
+      const listItem = facetDef.list.find((item) => item.key === valueKey);
+      return listItem?.label || valueKey;
+    };
+
     Object.entries(state.selectedFacets).forEach(([facetKey, values]) => {
       values.forEach((value) => {
+        const displayValue = getFacetLabel(facetKey, value);
         const tag = document.createElement('div');
         tag.className = 'inline-flex items-center gap-2 bg-accent-alt-light text-accent-alt-dark px-3 py-1 rounded-full text-xs hover:shadow ';
         tag.innerHTML = `
         <button class="hover:text-accent-light cursor-pointer" data-facet="${facetKey}" data-value="${value}">
-          <span class="font-mono"><b>${facetKey}:</b> ${value}</span>
+          <span class="font-mono"><b>${facetKey}:</b> ${displayValue}</span>
           <span class="ml-1 font-bold"> × </span>
         </button>
         `;

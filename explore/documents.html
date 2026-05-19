@@ -311,6 +311,28 @@
 	},
 	"facets": [
 		{
+			"key": "Features",
+			"type": "booleanlist",
+			"list": [
+				{
+					"label": "Digital Edition",
+					"key": "digital_edition"
+				},
+				{
+					"label": "Has Transcription",
+					"key": "transcription"
+				},
+				{
+					"label": "Has Translation Document",
+					"key": "has_translation"
+				},
+				{
+					"label": "Is Translation Document",
+					"key": "is_translation"
+				}
+			]
+		},
+		{
 			"key": "Language",
 			"type": "multiselect",
 			"values": [
@@ -385,8 +407,33 @@
         <div class="basis-full md:basis-1/3 xl:basis-1/4">
           <ul><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
               <div class="text-xl font-bold my-3 px-2 ">
-                Language 
+                Features 
               </div>
+<p></p><ul><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Features" data-value="digital_edition" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
+<span class="ml-2 text-text-dark hover:text-accent-light">Digital Edition</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Features" data-value="transcription" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
+<span class="ml-2 text-text-dark hover:text-accent-light">Has Transcription</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Features" data-value="has_translation" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
+<span class="ml-2 text-text-dark hover:text-accent-light">Has Translation Document</span>
+</label>
+</li><li>
+<label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
+<input type="checkbox" data-facet="Features" data-value="is_translation" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
+<span class="ml-2 text-text-dark hover:text-accent-light">Is Translation Document</span>
+</label>
+</li></ul><p></p>
+<p></p></li><li class="p-4 bg-[#f8f4ea] shadow rounded-md tracking-tight mb-6">
+<div class="text-xl font-bold my-3 px-2 ">
+Language
+</div><p></p>
 <p></p><ul><li>
 <label class="flex items-center cursor-pointer rounded px-2 py-1 transition-colors">
 <input type="checkbox" data-facet="Language" data-value="Zapotec" class="w-4 h-4 rounded accent-accent-alt-dark border-text-light text-accent-light focus:ring-text-light focus:ring cursor-pointer">
@@ -487,7 +534,7 @@ Archive
 <div class="basis-full md:basis-2/3 xl:basis-3/4">
 <div id="results-info" class="mb-6 font-bold"></div>
 <div id="active-facets" class="flex flex-wrap gap-2 mb-12"></div>
-<div id="results" class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12 flex-wrap justify-between w-full"></div>
+<div id="results" class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-6 xl:gap-12 flex-wrap justify-between w-full"></div>
 </div>
 </div><p></p>
   </div></section>
