@@ -31,7 +31,6 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
-    --font-weight-extralight: 200;
     --font-weight-light: 300;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -314,9 +313,6 @@
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
-  .-mr-1 {
-    margin-right: calc(var(--spacing) * -1);
-  }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
@@ -337,6 +333,9 @@
   }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
   }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
@@ -461,6 +460,9 @@
   .max-w-24 {
     max-width: calc(var(--spacing) * 24);
   }
+  .max-w-\[50ch\] {
+    max-width: 50ch;
+  }
   .min-w-\[150px\] {
     min-width: 150px;
   }
@@ -511,6 +513,9 @@
   }
   .items-center {
     align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
   }
   .justify-between {
     justify-content: space-between;
@@ -828,10 +833,6 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .font-extralight {
-    --tw-font-weight: var(--font-weight-extralight);
-    font-weight: var(--font-weight-extralight);
   }
   .font-light {
     --tw-font-weight: var(--font-weight-light);
@@ -1232,6 +1233,12 @@
       padding-left: calc(var(--spacing) * 4);
     }
   }
+  .sm\:text-2xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
   .sm\:text-3xl {
     @media (width >= 40rem) {
       font-size: var(--text-3xl);
@@ -1398,6 +1405,33 @@
   .xl\:gap-18 {
     @media (width >= 80rem) {
       gap: calc(var(--spacing) * 18);
+    }
+  }
+  .\[\&_a\]\:font-medium {
+    & a {
+      --tw-font-weight: var(--font-weight-medium);
+      font-weight: var(--font-weight-medium);
+    }
+  }
+  .\[\&_a\]\:tracking-tight {
+    & a {
+      --tw-tracking: var(--tracking-tight);
+      letter-spacing: var(--tracking-tight);
+    }
+  }
+  .\[\&_a\]\:text-accent-light {
+    & a {
+      color: var(--color-accent-light);
+    }
+  }
+  .\[\&_a\:hover\]\:text-accent-dark {
+    & a:hover {
+      color: var(--color-accent-dark);
+    }
+  }
+  .\[\&_p\]\:my-4 {
+    & p {
+      margin-block: calc(var(--spacing) * 4);
     }
   }
 }
