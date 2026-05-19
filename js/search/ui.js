@@ -106,8 +106,7 @@ export async function initUI({ idx, resultsLookupMap, documents }) {
   };
 
   const isNonEmpty = (value) => value !== undefined && value !== null && String(value).trim() !== '';
-  const sortStrings = (a, b) => String(a).localeCompare(String(b), undefined, { sensitivity: 'base', numeric: true });
-  const uniqueOrdered = (values) => [...new Set(values.filter(isNonEmpty))].sort(sortStrings);
+  const uniqueOrdered = (values) => [...new Set(values.filter(isNonEmpty))];
 
   const facetValues = {
     Language: uniqueOrdered(documents.map((doc) => doc.language)),
