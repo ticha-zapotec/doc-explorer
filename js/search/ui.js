@@ -41,7 +41,7 @@ export function submitSearchQuery(idx, resultsLookupMap, state) {
       const facetMatch = activeFacets.every(([facetKey, selectedValues]) => {
         const facetDef = facetDefinitions.find((facet) => facet.key === facetKey);
         if (facetDef?.type === 'booleanlist') {
-          return selectedValues.some((selected) => truthyField(item[selected]));
+          return selectedValues.every((selected) => truthyField(item[selected]));
         }
 
         const propMap = CONFIG.facetKeyToProperty || {};
@@ -263,8 +263,19 @@ export function initUI({ idx, resultsLookupMap }) {
     const newUrlParams = new URLSearchParams();
     if (searchInput.value) newUrlParams.set('query', searchInput.value);
 
+    const booleanlistFacetKeys = new Set((CONFIG.facets || [])
+      .filter((facet) => facet.type === 'booleanlist')
+      .map((facet) => facet.key));
+
     Object.entries(state.selectedFacets).forEach(([facetKey, values]) => {
-      if (values.length > 0) newUrlParams.set(facetKey, values.join('|'));
+      if (!values.length) return;
+
+      if (booleanlistFacetKeys.has(facetKey)) {
+        values.forEach((value) => newUrlParams.set(value, 'true'));
+        return;
+      }
+
+      newUrlParams.set(facetKey, values.join('|'));
     });
 
     Object.entries(state.selectedRanges).forEach(([facetKey, range]) => {
@@ -284,6 +295,15 @@ export function initUI({ idx, resultsLookupMap }) {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('query')) searchInput.value = urlParams.get('query');
 
+    const booleanlistValueMap = (CONFIG.facets || [])
+      .filter((facet) => facet.type === 'booleanlist')
+      .reduce((map, facet) => {
+        facet.list.forEach((item) => {
+          map[item.key] = facet.key;
+        });
+        return map;
+      }, {});
+
     urlParams.forEach((value, key) => {
       if (key === 'query') return;
 
@@ -297,7 +317,16 @@ export function initUI({ idx, resultsLookupMap }) {
         state.selectedRanges[normalizedFacetKey][bound] = value;
         return;
       }
-      
+
+      if (booleanlistValueMap[key]) {
+        const facetKey = booleanlistValueMap[key];
+        const featureValue = key;
+        if (value === 'true' || value === '') {
+          if (!state.selectedFacets[facetKey]) state.selectedFacets[facetKey] = [];
+          state.selectedFacets[facetKey].push(featureValue);
+        }
+        return;
+      }
 
       state.selectedFacets[key] = pruneDiacritics(value).split('|');
     });
