@@ -109,9 +109,9 @@ export async function initUI({ idx, resultsLookupMap, documents }) {
   const uniqueOrdered = (values) => [...new Set(values.filter(isNonEmpty))];
 
   const facetValues = {
-    Language: uniqueOrdered(documents.map((doc) => doc.language)),
+    'Language': ['Zapotec', 'Spanish', 'Spanish with some Zapotec'],
     'Document Type': [],
-    Archive: []
+    'Archive': []
   };
 
   const yearNumbers = documents
