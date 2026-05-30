@@ -287,10 +287,45 @@
   <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-          <h2 class="tracking-widest text-xs title-font font-medium text-text-light mb-1">Document Viewer</h2>
-          <p class="leading-relaxed mb-3">TO DO</p>
-        </div>
+        <script src="https://unpkg.com/mirador@3.4.3/dist/mirador.min.js"></script>
+<div class="relative w-full">
+  <div id="map" class="w-full mb-20 z-0 bg-base-200 max-h-[80vh] h-[40rem]"></div>
+</div>
+
+<script type="text/javascript">
+  var mirador = Mirador.viewer({
+    id: "map",
+    window: { 
+      allowClose: false,
+      allowFullscreen: true,
+      allowMaximize: false,
+      allowTopMenuButton: true, 
+      allowWindowSideBar: false,
+      defaultView: 'single',  // (e.g. single, book, gallery) 
+      hideWindowTitle: true,
+      panels: { 
+        info: false,
+        attribution: false,
+        canvas: false,
+        annotations: false,
+        search: false,
+        layers: false,
+      }
+    },
+    thumbnailNavigation: {
+      defaultPosition: 'off',
+      displaySettings: false
+    },
+    windows: [ 
+      {
+        manifestId: 'https://ticha-iiif.s3.us-east-1.amazonaws.com/ticha/Tm731/manifest.json'
+      }
+    ],
+    workspaceControlPanel: {
+      enabled: false
+    }
+  });
+</script>
       </div>
       <div class="p-4 md:w-1/2 w-full">
         <!-- create tabs that open using pure tailwind-->
@@ -368,7 +403,7 @@
                 
                 <dt class="font-bold">Date</dt>
                 
-                <dd class="pb-4 text-text-light">January 28</dd>
+                <dd class="pb-4 text-text-light break-words">January 28</dd>
                 
               
             
@@ -378,7 +413,7 @@
                 
                 <dt class="font-bold">Call Number</dt>
                 
-                <dd class="pb-4 text-text-light">Caja 69 Dtos. Justicia Criminal Penal Civil, Documento 588</dd>
+                <dd class="pb-4 text-text-light break-words">Caja 69 Dtos. Justicia Criminal Penal Civil, Documento 588</dd>
                 
               
             
@@ -386,7 +421,7 @@
                 
                 <dt class="font-bold">Page</dt>
                 
-                <dd class="pb-4 text-text-light">1r-1v</dd>
+                <dd class="pb-4 text-text-light break-words">1r-1v</dd>
                 
               
             
@@ -406,7 +441,7 @@
                 
                 <dt class="font-bold">Permission File</dt>
                 
-                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Tlacolula_permissions.pdf</dd>
+                <dd class="pb-4 text-text-light break-words">http://ticha.haverford.edu/images/permissions/Tlacolula_permissions.pdf</dd>
                 
               
             
@@ -414,7 +449,7 @@
                 
                 <dt class="font-bold">Acknowledgements</dt>
                 
-                <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.</dd>
+                <dd class="pb-4 text-text-light break-words">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.</dd>
                 
               
             

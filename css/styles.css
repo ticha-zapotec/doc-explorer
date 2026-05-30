@@ -9,7 +9,6 @@
       "Courier New", monospace;
     --color-red-100: oklch(93.6% 0.032 17.717);
     --color-red-950: oklch(25.8% 0.092 26.042);
-    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-black: #000;
@@ -253,6 +252,9 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .z-0 {
+    z-index: 0;
+  }
   .z-10 {
     z-index: 10;
   }
@@ -343,6 +345,9 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
+  .mb-20 {
+    margin-bottom: calc(var(--spacing) * 20);
+  }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
   }
@@ -412,11 +417,17 @@
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
+  .h-\[40rem\] {
+    height: 40rem;
+  }
   .h-\[80vh\] {
     height: 80vh;
   }
   .h-full {
     height: 100%;
+  }
+  .max-h-\[80vh\] {
+    max-height: 80vh;
   }
   .min-h-24 {
     min-height: calc(var(--spacing) * 24);
@@ -659,9 +670,6 @@
   .bg-accent-light {
     background-color: var(--color-accent-light);
   }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
-  }
   .bg-neutral-dark {
     background-color: var(--color-neutral-dark);
   }
@@ -676,9 +684,6 @@
   }
   .bg-transparent {
     background-color: transparent;
-  }
-  .bg-\[url\(\.\.\/static\/Tl675b\.png\)\] {
-    background-image: url(../static/Tl675b.png);
   }
   .bg-\[url\(\.\.\/static\/flower\.png\)\] {
     background-image: url(../static/flower.png);
@@ -725,9 +730,6 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
-  .px-8 {
-    padding-inline: calc(var(--spacing) * 8);
-  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
@@ -763,9 +765,6 @@
   }
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
-  }
-  .pt-16 {
-    padding-top: calc(var(--spacing) * 16);
   }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
@@ -856,6 +855,9 @@
   }
   .text-nowrap {
     text-wrap: nowrap;
+  }
+  .break-words {
+    overflow-wrap: break-word;
   }
   .text-\[\#f7efdc\] {
     color: #f7efdc;

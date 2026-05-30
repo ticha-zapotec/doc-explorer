@@ -228,7 +228,7 @@ export async function initUI({ idx, resultsLookupMap, documents }) {
       resultDiv.classList.add('w-full', 'group', 'transition', 'duration-350', 'ease-in-out', 'hover:scale-110');
       resultDiv.innerHTML = `
         <a href="${prefixUrl}document/${ item.slug }.html">          
-          <div class="relative h-36 w-full rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
+          <div class="relative h-36 w-full rounded-tl-[3rem] rounded-br-[3rem] overflow-hidden bg-contain bg-center" style="background-image: url('${prefixUrl}static/thumbnails/${item.slug}.jpg');">
             ${ item.language && item.language.startsWith('Zapotec') ? 
               `<div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>` 
             : 

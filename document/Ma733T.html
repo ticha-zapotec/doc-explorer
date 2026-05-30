@@ -278,7 +278,7 @@
         <!-- <div class="basis-1/6"> -->
            
             <a class="group" aria-label="navigate to primary document" href="Ma733.html">          
-              <div class="relative h-20 w-48 rounded-tl-[2rem] rounded-br-[2rem] overflow-hidden bg-[url(../static/Tl675b.png)] bg-contain bg-center">
+              <div class="relative h-20 w-48 rounded-tl-[2rem] rounded-br-[2rem] overflow-hidden bg-cover bg-center" style="background-image: url('../static/thumbnails/Ma733.jpg');">
                 <div class="absolute top-0 right-0 bg-red-950 text-[#f7efdc] text-lg font-bold px-2 py-1 rounded-bl-lg z-10">Zapotec</div>
                 <div class="absolute top-0 left-0 w-full h-full block transition-opacity saturate-50 opacity-80 duration-350 ease-in-out group-hover:opacity-0" style="background-color: #a46136;"></div>
               </div>
@@ -299,10 +299,45 @@
   <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-          <h2 class="tracking-widest text-xs title-font font-medium text-text-light mb-1">Document Viewer</h2>
-          <p class="leading-relaxed mb-3">TO DO</p>
-        </div>
+        <script src="https://unpkg.com/mirador@3.4.3/dist/mirador.min.js"></script>
+<div class="relative w-full">
+  <div id="map" class="w-full mb-20 z-0 bg-base-200 max-h-[80vh] h-[40rem]"></div>
+</div>
+
+<script type="text/javascript">
+  var mirador = Mirador.viewer({
+    id: "map",
+    window: { 
+      allowClose: false,
+      allowFullscreen: true,
+      allowMaximize: false,
+      allowTopMenuButton: true, 
+      allowWindowSideBar: false,
+      defaultView: 'single',  // (e.g. single, book, gallery) 
+      hideWindowTitle: true,
+      panels: { 
+        info: false,
+        attribution: false,
+        canvas: false,
+        annotations: false,
+        search: false,
+        layers: false,
+      }
+    },
+    thumbnailNavigation: {
+      defaultPosition: 'off',
+      displaySettings: false
+    },
+    windows: [ 
+      {
+        manifestId: 'https://ticha-iiif.s3.us-east-1.amazonaws.com/ticha/Ma733T/manifest.json'
+      }
+    ],
+    workspaceControlPanel: {
+      enabled: false
+    }
+  });
+</script>
       </div>
       <div class="p-4 md:w-1/2 w-full">
         <!-- create tabs that open using pure tailwind-->
@@ -386,7 +421,7 @@
                 
                 <dt class="font-bold">Call Number</dt>
                 
-                <dd class="pb-4 text-text-light">Caja 72 Dtos. Justicia 1704-1897, Documento 607 1892-93 Vários Pueblos</dd>
+                <dd class="pb-4 text-text-light break-words">Caja 72 Dtos. Justicia 1704-1897, Documento 607 1892-93 Vários Pueblos</dd>
                 
               
             
@@ -394,7 +429,7 @@
                 
                 <dt class="font-bold">Page</dt>
                 
-                <dd class="pb-4 text-text-light">1r-2r</dd>
+                <dd class="pb-4 text-text-light break-words">1r-2r</dd>
                 
               
             
@@ -402,7 +437,7 @@
                 
                 <dt class="font-bold">Primary Parties</dt>
                 
-                <dd class="pb-4 text-text-light">Francisco Jiménez</dd>
+                <dd class="pb-4 text-text-light break-words">Francisco Jiménez</dd>
                 
               
             
@@ -412,7 +447,7 @@
                 
                 <dt class="font-bold">Witnesses</dt>
                 
-                <dd class="pb-4 text-text-light">Marcos Pérez, Ignacio Martín (alcalde), Lorenzo Gutiérrez (alcalde)</dd>
+                <dd class="pb-4 text-text-light break-words">Marcos Pérez, Ignacio Martín (alcalde), Lorenzo Gutiérrez (alcalde)</dd>
                 
               
             
@@ -426,7 +461,7 @@
                 
                 <dt class="font-bold">Permission File</dt>
                 
-                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+                <dd class="pb-4 text-text-light break-words">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
                 
               
             
@@ -434,7 +469,7 @@
                 
                 <dt class="font-bold">Acknowledgements</dt>
                 
-                <dd class="pb-4 text-text-light">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.</dd>
+                <dd class="pb-4 text-text-light break-words">Thanks to the 2015 Ayuntamiento de Tlacolula for arranging the consultation of the Municipal Historical Archive. Archival work funded by a 2015 grant to Lillehaugen from the American Philosophical Society.</dd>
                 
               
             

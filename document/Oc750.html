@@ -287,10 +287,45 @@
   <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
-        <div class="h-[80vh] bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-          <h2 class="tracking-widest text-xs title-font font-medium text-text-light mb-1">Document Viewer</h2>
-          <p class="leading-relaxed mb-3">TO DO</p>
-        </div>
+        <script src="https://unpkg.com/mirador@3.4.3/dist/mirador.min.js"></script>
+<div class="relative w-full">
+  <div id="map" class="w-full mb-20 z-0 bg-base-200 max-h-[80vh] h-[40rem]"></div>
+</div>
+
+<script type="text/javascript">
+  var mirador = Mirador.viewer({
+    id: "map",
+    window: { 
+      allowClose: false,
+      allowFullscreen: true,
+      allowMaximize: false,
+      allowTopMenuButton: true, 
+      allowWindowSideBar: false,
+      defaultView: 'single',  // (e.g. single, book, gallery) 
+      hideWindowTitle: true,
+      panels: { 
+        info: false,
+        attribution: false,
+        canvas: false,
+        annotations: false,
+        search: false,
+        layers: false,
+      }
+    },
+    thumbnailNavigation: {
+      defaultPosition: 'off',
+      displaySettings: false
+    },
+    windows: [ 
+      {
+        manifestId: 'https://ticha-iiif.s3.us-east-1.amazonaws.com/ticha/Oc750/manifest.json'
+      }
+    ],
+    workspaceControlPanel: {
+      enabled: false
+    }
+  });
+</script>
       </div>
       <div class="p-4 md:w-1/2 w-full">
         <!-- create tabs that open using pure tailwind-->
@@ -370,7 +405,7 @@
                 
                 <dt class="font-bold">Date</dt>
                 
-                <dd class="pb-4 text-text-light">July 1</dd>
+                <dd class="pb-4 text-text-light break-words">July 1</dd>
                 
               
             
@@ -390,7 +425,7 @@
                 
                 <dt class="font-bold">Call Number</dt>
                 
-                <dd class="pb-4 text-text-light">Legajo 42, Exp 35, 1696-1804</dd>
+                <dd class="pb-4 text-text-light break-words">Legajo 42, Exp 35, 1696-1804</dd>
                 
               
             
@@ -398,7 +433,7 @@
                 
                 <dt class="font-bold">Page</dt>
                 
-                <dd class="pb-4 text-text-light">10r-10v</dd>
+                <dd class="pb-4 text-text-light break-words">10r-10v</dd>
                 
               
             
@@ -406,7 +441,7 @@
                 
                 <dt class="font-bold">Primary Parties</dt>
                 
-                <dd class="pb-4 text-text-light">Sebastián Sánchez (owner)</dd>
+                <dd class="pb-4 text-text-light break-words">Sebastián Sánchez (owner)</dd>
                 
               
             
@@ -416,7 +451,7 @@
                 
                 <dt class="font-bold">Witnesses</dt>
                 
-                <dd class="pb-4 text-text-light">Sebastián Sánchez, Antonio Santiago, Antonio Martín, Juan Ambrosio, Domingo Santiago, Martin Sánchez, Cristóbal Alonzo, Pascual Ramírez, Pascual Godines, Pedro Riaga, Martín Sánchez (Juez de Sementera)</dd>
+                <dd class="pb-4 text-text-light break-words">Sebastián Sánchez, Antonio Santiago, Antonio Martín, Juan Ambrosio, Domingo Santiago, Martin Sánchez, Cristóbal Alonzo, Pascual Ramírez, Pascual Godines, Pedro Riaga, Martín Sánchez (Juez de Sementera)</dd>
                 
               
             
@@ -430,7 +465,7 @@
                 
                 <dt class="font-bold">Permission File</dt>
                 
-                <dd class="pb-4 text-text-light">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
+                <dd class="pb-4 text-text-light break-words">http://ticha.haverford.edu/images/permissions/Ticha_permissions_from_AGEO.pdf</dd>
                 
               
             
