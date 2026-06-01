@@ -682,6 +682,9 @@
   .bg-red-950 {
     background-color: var(--color-red-950);
   }
+  .bg-text-dark {
+    background-color: var(--color-text-dark);
+  }
   .bg-transparent {
     background-color: transparent;
   }

@@ -287,7 +287,7 @@
   <div class="container px-5 py-14 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
-        <script src="https://unpkg.com/mirador@3.4.3/dist/mirador.min.js"></script>
+        <script src="/digital-text-explorer/js/mirador/mirador.min.js"></script>
 <div class="relative w-full">
   <div id="map" class="w-full mb-20 z-0 bg-base-200 max-h-[80vh] h-[40rem]"></div>
 </div>
@@ -295,13 +295,29 @@
 <script type="text/javascript">
   var mirador = Mirador.viewer({
     id: "map",
+    selectedTheme: 'dark',
+    themes: {
+      dark: {
+        palette: {
+          type: 'dark',
+          primary: {
+            main: '#A52812'
+          }
+        },
+        typography:{
+          fontFamily: ['Alexandria',
+                      'sans-serif'
+                      ],
+        }
+      }
+    },
     window: { 
       allowClose: false,
       allowFullscreen: true,
       allowMaximize: false,
-      allowTopMenuButton: true, 
+      allowTopMenuButton: false, 
       allowWindowSideBar: false,
-      defaultView: 'single',  // (e.g. single, book, gallery) 
+      defaultView: 'single',
       hideWindowTitle: true,
       panels: { 
         info: false,
@@ -314,7 +330,7 @@
     },
     thumbnailNavigation: {
       defaultPosition: 'off',
-      displaySettings: false
+      showThumbnailLabels: false,
     },
     windows: [ 
       {
