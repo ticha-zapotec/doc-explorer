@@ -1,8 +1,7 @@
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: './dist',
-
+      staticDistDir: './lhci-root',
       url: [
         "/",
         "/index.html",
@@ -14,8 +13,9 @@ module.exports = {
         "/get-started/guides.html",
         "/get-started/guides/finding-documents.html",
         "/get-started/guides/linguists.html",
-        "/document/Al642.html",
-      ]
+        "/document/Al642.html"
+      ],
+      numberOfRuns: 1,
     },
     settings: {
       urlReplacementPatterns: [

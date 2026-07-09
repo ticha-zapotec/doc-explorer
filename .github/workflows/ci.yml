@@ -20,6 +20,10 @@ jobs:
         run: |
           npm install
           npm run build
+      - name: Reorganize asset paths for LHCI
+        run: |
+          mkdir lhci-root
+          mv dist lhci-root/digital-text-explorer
       - name: run Lighthouse CI
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
