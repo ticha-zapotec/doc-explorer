@@ -11,10 +11,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: npm install, build
+      - name: npm install, dev
         run: |
           npm install
-          npm run build
+          npm run dev
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.15.x
