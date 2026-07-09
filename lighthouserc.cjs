@@ -17,6 +17,11 @@ module.exports = {
         "/document/Al642.html",
       ]
     },
+    settings: {
+      urlReplacementPatterns: [
+        's#.*/digital-text-explorer/##g'
+      ]
+    },
     upload: {
       target: 'temporary-public-storage',
     },
