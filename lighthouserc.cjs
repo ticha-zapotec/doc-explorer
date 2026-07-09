@@ -17,6 +17,76 @@ module.exports = {
       ],
       numberOfRuns: 1,
     },
+    assert :{
+      assertions: {
+        //Global Fallback Rule
+        'accessibility': ['error', { minScore: 0.90 }],
+
+        'accessibility': [
+          'error',
+          {
+            minScore: 0.98,
+            matchingUrlPattern: '.*index\\.html$'
+          }
+        ],
+        'accessibility': [
+          'error',
+          {
+            minScore: 1.0,
+            matchingUrlPattern: '.*404\\.html$'
+          }
+        ],
+        'accessibility': [
+          'error',
+          {
+            minScore: 1.0,
+            matchingUrlPattern: '.*404\\.html$'
+          }
+        ],
+        'accessibility': [
+          'error',
+          {
+            minScore: 1.0,
+            matchingUrlPattern: '.*people\\.html$'
+          }
+        ],
+        'accessibility': [
+          'error',
+          {
+            minScore: 1.0,
+            matchingUrlPattern: '.*towns\\.html$'
+          }
+        ],
+        'accessibility': [
+          'error',
+          {
+            minScore: 1.0,
+            matchingUrlPattern: '.*guides\\.html$'
+          }
+        ],
+        'accessibility': [
+          'error',
+          {
+            minScore: 1.0,
+            matchingUrlPattern: '.*finding-documents\\.html$'
+          }
+        ],
+        'accessibility': [
+          'error',
+          {
+            minScore: 1.0,
+            matchingUrlPattern: '.*linguists\\.html$'
+          }
+        ],
+        'accessibility': [
+          'error',
+          {
+            minScore: 0.90,
+            matchingUrlPattern: '.*Al642\\.html$'
+          }
+        ]
+      }
+    },
     settings: {
       urlReplacementPatterns: [
         's#.*/digital-text-explorer/##g'
