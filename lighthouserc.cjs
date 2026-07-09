@@ -18,74 +18,56 @@ module.exports = {
       numberOfRuns: 1,
     },
     assert :{
-      assertions: {
-        //Global Fallback Rule
-        'accessibility': ['error', { minScore: 0.90 }],
-
-        'accessibility': [
-          'error',
-          {
-            minScore: 0.98,
-            matchingUrlPattern: '.*index\\.html$'
+      assertions: [
+        {
+          matchingUrlPattern: '.*index\\.html$',
+          assertions: {
+            'categories:accessibility':['error', { minScore: 0.98 }]
           }
-        ],
-        'accessibility': [
-          'error',
-          {
-            minScore: 1.0,
-            matchingUrlPattern: '.*404\\.html$'
+        },
+        {
+          matchingUrlPattern: '.*404\\.html$',
+          assertions: {
+            'categories:accessibility':['error', { minScore: 1.0 }]
           }
-        ],
-        'accessibility': [
-          'error',
-          {
-            minScore: 1.0,
-            matchingUrlPattern: '.*404\\.html$'
+        },
+        {
+          matchingUrlPattern: '.*people\\.html$',
+          assertions: {
+            'categories:accessibility':['error', { minScore: 1.0 }]
           }
-        ],
-        'accessibility': [
-          'error',
-          {
-            minScore: 1.0,
-            matchingUrlPattern: '.*people\\.html$'
+        },
+        {
+          matchingUrlPattern: '.*towns\\.html$',
+          assertions: {
+            'categories:accessibility':['error', { minScore: 1.0 }]
           }
-        ],
-        'accessibility': [
-          'error',
-          {
-            minScore: 1.0,
-            matchingUrlPattern: '.*towns\\.html$'
+        },
+        {
+          matchingUrlPattern: '.*guides\\.html$',
+          assertions: {
+            'categories:accessibility':['error', { minScore: 1.0 }]
           }
-        ],
-        'accessibility': [
-          'error',
-          {
-            minScore: 1.0,
-            matchingUrlPattern: '.*guides\\.html$'
+        },
+        {
+          matchingUrlPattern: '.*finding-documents\\.html$',
+          assertions: {
+            'categories:accessibility':['error', { minScore: 1.0 }]
           }
-        ],
-        'accessibility': [
-          'error',
-          {
-            minScore: 1.0,
-            matchingUrlPattern: '.*finding-documents\\.html$'
+        },
+        {
+          matchingUrlPattern: '.*linguists\\.html$',
+          assertions: {
+            'categories:accessibility':['error', { minScore: 1.0 }]
           }
-        ],
-        'accessibility': [
-          'error',
-          {
-            minScore: 1.0,
-            matchingUrlPattern: '.*linguists\\.html$'
+        },
+        {
+          matchingUrlPattern: '.*Al642\\.html$',
+          assertions: {
+            'categories:accessibility':['error', { minScore: 0.9 }]
           }
-        ],
-        'accessibility': [
-          'error',
-          {
-            minScore: 0.90,
-            matchingUrlPattern: '.*Al642\\.html$'
-          }
-        ]
-      }
+        },
+      ]
     },
     settings: {
       urlReplacementPatterns: [
