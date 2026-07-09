@@ -17,8 +17,8 @@ module.exports = {
       ],
       numberOfRuns: 1,
     },
-    assert :{
-      assertions: [
+    assert: {
+      assertMatrix: [
         {
           matchingUrlPattern: '.*index\\.html$',
           assertions: {
