@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "NODE_VERSION=$(cat '.nvmrc')" >> ${GITHUB_ENV}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -22,6 +21,8 @@ jobs:
           npm install
           npm run build
       - name: run Lighthouse CI
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: |
           npm install -g @lhci/cli@0.9.x
           lhci autorun
