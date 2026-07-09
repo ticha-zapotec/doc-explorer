@@ -1,5 +1,11 @@
 name: CI
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   lhci:
     name: Lighthouse
@@ -7,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo "NODE_VERSION=$(cat '.nvmrc')" >> ${GITHUB_ENV}
-      - name: Use Node.js 16.x
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
@@ -17,5 +23,5 @@ jobs:
           npm run build
       - name: run Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.15.x
+          npm install -g @lhci/cli@0.9.x
           lhci autorun
