@@ -5,16 +5,16 @@ module.exports = {
 
       url: [
         "/",
-        "/index/",
-        "/404/",
-        "/explore/documents/",
-        "/explore/editions/",
-        "/explore/people/",
-        "/explore/towns/",
-        "/get-started/guides",
-        "/get-started/guides/finding-documents/",
-        "/get-started/guides/linguists/",
-        "/document/Al641",
+        "/index.html",
+        "/404.html",
+        "/explore/documents.html",
+        "/explore/editions.html",
+        "/explore/people.html",
+        "/explore/towns.html",
+        "/get-started/guides.html",
+        "/get-started/guides/finding-documents.html",
+        "/get-started/guides/linguists.html",
+        "/document/Al641.html",
       ]
     },
     upload: {
