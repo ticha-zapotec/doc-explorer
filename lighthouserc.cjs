@@ -3,17 +3,17 @@ module.exports = {
     collect: {
       staticDistDir: './lhci-root',
       url: [
-        "/",
-        "/index.html",
-        "/404.html",
-        "/explore/documents.html",
-        "/explore/editions.html",
-        "/explore/people.html",
-        "/explore/towns.html",
-        "/get-started/guides.html",
-        "/get-started/guides/finding-documents.html",
-        "/get-started/guides/linguists.html",
-        "/document/Al642.html"
+        "/digital-text-explorer/",
+        "/digital-text-explorer/index.html",
+        "/digital-text-explorer/404.html",
+        "/digital-text-explorer/explore/documents.html",
+        "/digital-text-explorer/explore/editions.html",
+        "/digital-text-explorer/explore/people.html",
+        "/digital-text-explorer/explore/towns.html",
+        "/digital-text-explorer/get-started/guides.html",
+        "/digital-text-explorer/get-started/guides/finding-documents.html",
+        "/digital-text-explorer/get-started/guides/linguists.html",
+        "/digital-text-explorer/document/Al642.html"
       ],
       numberOfRuns: 1,
     },
