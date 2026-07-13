@@ -25,6 +25,7 @@ jobs:
           mkdir lhci-root
           mv dist lhci-root/digital-text-explorer
       - name: run Lighthouse CI
+        id: lighthouse
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: |
@@ -34,7 +35,7 @@ jobs:
         if: ${{ success() }}
         run: |
           echo '### Successfully published to Deploy Now :white_check_mark:' >> $GITHUB_STEP_SUMMARY
-          echo "Triggered by **${{ github.actor	}}** ∙ deployed from **${{ github.ref_name	}}**" >> $GITHUB_STEP_SUMMARY
+          echo "Triggered by **${{ github.actor }}** ∙ deployed from **${{ github.ref_name }}**" >> $GITHUB_STEP_SUMMARY
           echo ' ' >> $GITHUB_STEP_SUMMARY
           echo "**Lighthouse results:**" >> $GITHUB_STEP_SUMMARY
           echo "Home page accessibility score: ${{ fromJSON(steps.lighthouse.outputs.manifest)[0].summary.accessibility }}" >> $GITHUB_STEP_SUMMARY
