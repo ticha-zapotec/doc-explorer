@@ -1,0 +1,39 @@
+name: Accessibility Regression Tests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: npm install, build
+        run: |
+          npm install
+          npm run build
+      - name: Reorganize asset paths for LHCI
+        run: |
+          mkdir lhci-root
+          mv dist lhci-root/digital-text-explorer
+      - name: run Lighthouse CI
+        id: lighthouse
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        run: |
+          npm install -g @lhci/cli@0.9.x
+          lhci autorun
+      - name: Successful Job Summary
+        if: success()
+        run: |
+          echo "The job was successful!" >> $GITHUB_STEP_SUMMARY
+          echo ' ' >> $GITHUB_STEP_SUMMARY
+
