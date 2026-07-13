@@ -41,6 +41,7 @@ jobs:
           jq -c '.[] | {url: .url, score: (.actual * 100 | round)}' .lighthouseci/assertion-results.json | while read -r row; do
             URL=$(echo "$row" | jq -r '.url')
             SCORE=$(echo "$row" | jq -r '.score')
+            SHORT_URL=${URL#*localhost:[0-9]*}
             echo "* The page \`${SHORT_URL}\` achieved a score of **${SCORE}%**" >> $GITHUB_STEP_SUMMARY
           done
 
