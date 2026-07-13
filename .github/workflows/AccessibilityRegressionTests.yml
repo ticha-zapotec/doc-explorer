@@ -36,4 +36,11 @@ jobs:
         run: |
           echo "The job was successful!" >> $GITHUB_STEP_SUMMARY
           echo ' ' >> $GITHUB_STEP_SUMMARY
+          echo "The results are below:"
+
+          jq -c '.[] | {url: .url, score: (.actual * 100 | round)}' .lighthouseci/assertion-results.json | while read -r row; do
+            URL=$(echo "$row" | jq -r '.url')
+            SCORE=$(echo "$row" | jq -r '.score')
+            echo "* The page \`${SHORT_URL}\` achieved a score of **${SCORE}%**" >> $GITHUB_STEP_SUMMARY
+          done
 
