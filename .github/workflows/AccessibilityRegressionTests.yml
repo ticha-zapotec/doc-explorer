@@ -31,17 +31,4 @@ jobs:
         run: |
           npm install -g @lhci/cli@0.9.x
           lhci autorun
-      - name: Successful Job Summary
-        if: success()
-        run: |
-          echo "The job was successful!" >> $GITHUB_STEP_SUMMARY
-          echo ' ' >> $GITHUB_STEP_SUMMARY
-          echo "The results are below:" >> $GITHUB_STEP_SUMMARY
-
-          jq -c '.[] | {url: .url, score: (.actual * 100 | round)}' .lighthouseci/assertion-results.json | while read -r row; do
-            URL=$(echo "$row" | jq -r '.url')
-            SCORE=$(echo "$row" | jq -r '.score')
-            SHORT_URL=${URL#*localhost:[0-9]*}
-            echo "* The page \`${SHORT_URL}\` achieved a score of **${SCORE}%**" >> $GITHUB_STEP_SUMMARY
-          done
 
