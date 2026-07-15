@@ -7,7 +7,7 @@ permalink: "{{ page.fileSlug | slugify }}/index.html"
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     {% include "components/navbar.html" %}
     <div id="navbar-spacer" class="h-20"></div>
-    <section class="flex-1 bg-neutral-light">
+    <section class="flex-1 bg-neutral-light" id="main-content", tabindex="0">
     {{ content }}
     </section>
     {% include "components/footer.html" %}
