@@ -15,6 +15,9 @@
 
   <body class="flex flex-col min-h-screen overflow-x-clip bg-neutral-dark">
     <section style="z-index:10000" class="js-site-navbar fixed inset-x-0 top-0 bg-neutral-dark text-text-dark body-font shadow">
+  <div style="outline:none" tabindex="-1">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:static focus:top-0 focus:left-0 focus:w-full focus:block focus:bg-gray-700 focus:text-gray-200 focus:text-center focus:py-3 focus:px-4 focus:z-50">Skip to main content</a>
+  </div>
   <div class="container mx-auto flex flex-wrap items-center justify-between px-5 py-3 gap-6">
     <div class="flex flex-1 flex-wrap items-center gap-4">
       <a href="/digital-text-explorer/" class="text-accent-light hover:text-accent-dark flex title-font font-medium items-center">
@@ -257,7 +260,7 @@
 </section>
 
     <div id="navbar-spacer" class="h-20"></div>
-    <section class="flex-1 bg-neutral-light">
+    <section class="flex-1 bg-neutral-light" id="main-content" ,="" tabindex="0">
     <section class="text-text-light body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
