@@ -421,8 +421,8 @@
   .h-\[40rem\] {
     height: 40rem;
   }
-  .h-\[80vh\] {
-    height: 80vh;
+  .h-\[55vh\] {
+    height: 55vh;
   }
   .h-full {
     height: 100%;
@@ -475,6 +475,9 @@
   .max-w-\[50ch\] {
     max-width: 50ch;
   }
+  .min-w-0 {
+    min-width: calc(var(--spacing) * 0);
+  }
   .min-w-\[150px\] {
     min-width: 150px;
   }
@@ -483,6 +486,9 @@
   }
   .flex-none {
     flex: none;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
   }
   .flex-grow {
     flex-grow: 1;
@@ -543,6 +549,9 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -856,9 +865,6 @@
   .tracking-widest {
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
-  }
-  .text-nowrap {
-    text-wrap: nowrap;
   }
   .break-words {
     overflow-wrap: break-word;
@@ -1293,6 +1299,11 @@
       padding-block: calc(var(--spacing) * 2);
     }
   }
+  .sm\:py-18 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 18);
+    }
+  }
   .sm\:pr-4 {
     @media (width >= 40rem) {
       padding-right: calc(var(--spacing) * 4);
@@ -1319,6 +1330,23 @@
     @media (width >= 40rem) {
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
+  .sm\:text-lg {
+    @media (width >= 40rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .sm\:text-xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .md\:h-\[80vh\] {
+    @media (width >= 48rem) {
+      height: 80vh;
     }
   }
   .md\:w-1\/2 {
@@ -1445,6 +1473,12 @@
   .lg\:text-left {
     @media (width >= 64rem) {
       text-align: left;
+    }
+  }
+  .lg\:text-2xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
   .xl\:w-1\/5 {
