@@ -23,6 +23,7 @@ metadata:
   - key: interlinear_analysis
   - key: modern_spanish
   - key: permission_file
+  - key: document_pdf
   - key: acknowledgements
 ---
 {% include "components/headers/document.html" %}
@@ -52,8 +53,37 @@ metadata:
             {% endif %}
           </div>
           <div id="metadata" class="tab-content py-4">
+            {% assign document_pdf_url = document.document_pdf %}
+            {% unless document_pdf_url %}
+              {% assign document_pdf_url = "https://ticha.haverford.edu/en/texts/" | append: document.slug | append: ".pdf" %}
+            {% endunless %}
+            {% assign permission_file_url = document.permission_file | replace: "http://ticha.haverford.edu/images/permissions/", "/static/permissions/" | replace: "https://ticha.haverford.edu/images/permissions/", "/static/permissions/" %}
+            <div class="mb-6 flex flex-wrap gap-3" aria-label="Document downloads">
+              <a
+                href="{{ document_pdf_url }}"
+                class="inline-flex items-center rounded border border-accent-light px-4 py-2 text-sm font-semibold text-accent-light transition-colors hover:bg-accent-light hover:text-neutral-light focus:outline-none focus:ring-2 focus:ring-accent-light focus:ring-offset-2 focus:ring-offset-neutral-light"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-document-pdf-download
+                data-manifest-url="https://ticha-iiif.s3.us-east-1.amazonaws.com/ticha/{{ document.slug }}/manifest.json"
+                data-document-title="{{ document.title | escape }}"
+                data-pdf-filename="{{ document.slug }}.pdf"
+              >
+                Download document PDF
+              </a>
+              {% if document.permission_file %}
+                <a
+                  href="{{ permission_file_url }}"
+                  class="inline-flex items-center rounded border border-text-light px-4 py-2 text-sm font-semibold text-text-light transition-colors hover:bg-text-light hover:text-neutral-light focus:outline-none focus:ring-2 focus:ring-text-light focus:ring-offset-2 focus:ring-offset-neutral-light"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download permissions PDF
+                </a>
+              {% endif %}
+            </div>
             {% for meta in metadata %}
-              {% if document[meta.key] and meta.key != "transcription" and meta.key != "interlinear_analysis" and meta.key != "modern_spanish" %}
+              {% if document[meta.key] and meta.key != "transcription" and meta.key != "interlinear_analysis" and meta.key != "modern_spanish" and meta.key != "permission_file" and meta.key != "document_pdf" %}
                 {% assign display_key = meta.key | title_display %}
                 <dt class="font-bold">{{ display_key }}</dt>
                 {% if meta.click == "facet" %}
@@ -113,3 +143,6 @@ metadata:
     </div>
   </div>
 </main>
+
+<script src="/js/jspdf/jspdf.umd.min.js"></script>
+<script src="/js/document-pdf.js"></script>

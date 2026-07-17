@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "csvtojson": "^2.0.14",
+    "jspdf": "^4.2.1",
     "mirador": "^4.0.0",
     "normalize-path": "^3.0.0",
     "openseadragon": "^6.0.0"
