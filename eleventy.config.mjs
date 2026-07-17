@@ -36,6 +36,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/_data/api': 'api' })
   eleventyConfig.addPassthroughCopy({ 'src/js': 'js' })
   eleventyConfig.addPassthroughCopy({ 'node_modules/mirador/dist': 'js/mirador' })
+  eleventyConfig.addPassthroughCopy({ 'node_modules/jspdf/dist': 'js/jspdf' })
 
   
   return {
