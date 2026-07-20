@@ -14,7 +14,7 @@
 
     <div class="hidden lg:flex flex-wrap items-center gap-4">
       {% for item in site.menu %}
-        {% if item.sub.size %}
+        {% if item.sub.size %} 
         <div class="relative group">
           <button type="button" class="dropdown-toggle flex items-center justify-start p-2 gap-2 cursor-pointer group-hover:text-accent-dark active:text-accent-dark transition-all duration-200 delay-75 group-hover:bg-neutral-light group-focus-within:bg-neutral-light group-open:bg-neutral-light rounded-t-lg px-2" aria-expanded="false">
             <span class="select-none font-bold">{{ item.title }}</span>
