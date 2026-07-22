@@ -3898,6 +3898,13 @@
     "idioma": "Zapoteco",
     "document_type": "Spiritual Text",
     "material_type": "Printed Text",
+    "author": "Leonardo Levanto",
+    "year": "1766",
+    "description": "A religious text in Colonial Valley Zapotec divided into a catechism, an explanation of Catholic doctrine, and fifteen songs about the Mysteries of the Rosary.",
+    "page_count": "60",
+    "source_url": "https://ticha.haverford.edu/en/levanto_cathecismo/",
+    "edition_data_base_url": "https://raw.githubusercontent.com/ticha-zapotec/digital-text-explorer-data/main/html/levanto_cathecismo",
+    "edition_data_pages": "40",
     "color": "8f0d12"
   },
   {
