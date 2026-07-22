@@ -28,3 +28,65 @@
 #mobile-menu {
   transition: opacity 0.2s ease;
 }
+
+.edition-content {
+  color: var(--color-text-light);
+  overflow-x: auto;
+}
+
+.edition-content .flex-document {
+  max-width: 70ch;
+}
+
+.edition-content h1,
+.edition-content h2,
+.edition-content h3,
+.edition-content h4 {
+  color: var(--color-text-dark);
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.edition-content .itx_Words {
+  margin: 0 0 1rem;
+}
+
+.edition-content .itx_Frame_Number {
+  color: var(--color-accent-light);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.edition-content .itx_Frame_Word {
+  display: inline-block;
+  margin-right: 0.3rem;
+  vertical-align: top;
+}
+
+.edition-content .itx_txt,
+.edition-content .itx_punct {
+  color: var(--color-text-dark);
+}
+
+.edition-content .itx_morphemes,
+.edition-content .itx_Freeform_gls,
+.edition-content .itx_gls {
+  font-size: 0.85rem;
+}
+
+.edition-content .itx_morph {
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+
+.edition-content .itx_morph_txt {
+  color: var(--color-accent-light);
+}
+
+.edition-content table {
+  border-collapse: collapse;
+}
+
+.edition-content td {
+  padding: 0 0.15rem;
+}
