@@ -7001,6 +7001,13 @@
     "idioma": "Zapoteco",
     "document_type": "Spiritual Text",
     "material_type": "Printed Text",
+    "author": "Agüero",
+    "year": "1666",
+    "description": "A compilation of smaller spiritual texts in Colonial Valley Zapotec, including a catechism, confessional, miracle stories, prayers, and discussions of the rosary.",
+    "page_count": "540",
+    "source_url": "https://ticha.haverford.edu/en/aguero_miscelaneo/",
+    "edition_data_base_url": "https://raw.githubusercontent.com/ticha-zapotec/digital-text-explorer-data/main/html/aguero_miscelaneo",
+    "edition_data_pages": "11",
     "color": "326228"
   },
   {
@@ -7012,6 +7019,13 @@
     "idioma": "Zapoteco",
     "document_type": "Grammatical Text",
     "material_type": "Printed Text",
+    "author": "Juan de Cordova",
+    "year": "1578",
+    "description": "A 16th-century grammar of Colonial Valley Zapotec by Friar Juan de Cordova.",
+    "page_count": "276",
+    "source_url": "https://ticha.haverford.edu/en/arte/",
+    "edition_data_base_url": "https://raw.githubusercontent.com/ticha-zapotec/digital-text-explorer-data/main/html/arte",
+    "edition_data_pages": "173",
     "color": "f55727"
   },
   {
@@ -7023,6 +7037,13 @@
     "idioma": "Zapoteco",
     "document_type": "Spiritual Text",
     "material_type": "Printed Text",
+    "author": "Pedro de Feria",
+    "year": "1567",
+    "description": "A religious text in Colonial Valley Zapotec explaining Catholic doctrine in parallel Spanish and Zapotec columns.",
+    "page_count": "246",
+    "source_url": "https://ticha.haverford.edu/en/doctrina/",
+    "edition_data_base_url": "https://raw.githubusercontent.com/ticha-zapotec/digital-text-explorer-data/main/html/doctrina",
+    "edition_data_pages": "273",
     "color": "2b431a"
   },
   {
@@ -7034,6 +7055,13 @@
     "idioma": "Zapoteco",
     "document_type": "Grammatical Text",
     "material_type": "Manuscript",
+    "author": "Leonardo Levanto",
+    "year": "1732",
+    "description": "A grammar of Colonial Valley Zapotec followed by priestly scripts and phrases, including confession and baptism texts with interwoven Spanish and Zapotec translations.",
+    "page_count": "206",
+    "source_url": "https://ticha.haverford.edu/en/levanto_arte/",
+    "edition_data_base_url": "https://raw.githubusercontent.com/ticha-zapotec/digital-text-explorer-data/main/html/levanto_arte",
+    "edition_data_pages": "70",
     "color": "0c1b13"
   }
 ]

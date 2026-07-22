@@ -5,6 +5,8 @@ metadata:
     click: facet
   - key: document_type
     click: facet
+  - key: author
+  - key: description
   - key: town_short
     click: search
   - key: archive
@@ -16,6 +18,7 @@ metadata:
     click: search
   - key: call_number
   - key: page
+  - key: page_count
   - key: primary_parties
   - key: scribe
   - key: witnesses
@@ -24,6 +27,7 @@ metadata:
   - key: modern_spanish
   - key: permission_file
   - key: acknowledgements
+  - key: source_url
 ---
 {% include "components/headers/document.html" %}
 
@@ -38,14 +42,14 @@ metadata:
         <div class="flex flex-col">
           <div class="flex border-b border-gray-200">
             <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-accent-light focus:outline-none" data-tab-target="#metadata">Metadata</button>
-            {% if document.transcription %}
+            {% if document.transcription or document.edition_data_pages %}
             <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#transcription">Transcription</button>
             {% endif %}
              {% if document.english_translation %}
             <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#english">English Translation</button>
             {% endif %}
-            {% if document.interlinear_analysis %}
-            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#analysis">Interlinear Analysis</button>
+            {% if document.interlinear_analysis or document.edition_data_pages %}
+            <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#analysis">Analysis</button>
             {% endif %}
             {% if document.modern_spanish %} 
             <button class="py-2 px-4 text-sm font-medium text-text-dark border-b-2 border-transparent hover:border-gray-300 focus:outline-none" data-tab-target="#modern_spanish">Modern Spanish</button>
@@ -53,7 +57,7 @@ metadata:
           </div>
           <div id="metadata" class="tab-content py-4">
             {% for meta in metadata %}
-              {% if document[meta.key] and meta.key != "transcription" and meta.key != "interlinear_analysis" and meta.key != "modern_spanish" %}
+              {% if document[meta.key] and meta.key != "transcription" and meta.key != "interlinear_analysis" and meta.key != "modern_spanish" and meta.key != "edition_data_base_url" and meta.key != "edition_data_pages" %}
                 {% assign display_key = meta.key | title_display %}
                 <dt class="font-bold">{{ display_key }}</dt>
                 {% if meta.click == "facet" %}
@@ -74,6 +78,8 @@ metadata:
                     {% assign query_url = "/explore/documents?" | append: meta.key | append: "-min=" | append: num_value | append: "&" | append: meta.key | append: "-max=" | append: num_value %}
                     <a href="{{ query_url }}" class="text-accent-light hover:text-accent-dark">{{ num_value }}</a>
                   </dd>
+                {% elsif meta.key == "source_url" %}
+                  <dd class="pb-4 text-text-light break-words"><a href="{{ document.source_url }}" class="text-accent-light hover:text-accent-dark" target="_blank" rel="noopener noreferrer">View source edition ↗</a></dd>
                 {% else %}
                 <dd class="pb-4 text-text-light break-words">{{ document[meta.key] }}</dd>
                 {% endif %}
@@ -81,14 +87,29 @@ metadata:
             {% endfor %}
           </div>
           <div id="transcription" class="tab-content py-4 hidden">
-            {% if document.transcription %}
+            {% if document.edition_data_pages %}
+              <div class="mb-4 flex flex-wrap items-center gap-2 text-sm text-text-light" data-edition-controls data-edition-base-url="{{ document.edition_data_base_url }}" data-edition-page-count="{{ document.edition_data_pages }}" data-edition-source-url="{{ document.source_url }}">
+                <button type="button" class="rounded border border-text-light px-3 py-1 hover:bg-text-light hover:text-neutral-light" data-edition-first>First</button>
+                <button type="button" class="rounded border border-text-light px-3 py-1 hover:bg-text-light hover:text-neutral-light" data-edition-prev>Previous</button>
+                <label class="flex items-center gap-2">Page <input class="w-16 rounded border border-text-light bg-transparent px-2 py-1 text-center" type="number" min="1" max="{{ document.edition_data_pages }}" value="1" data-edition-page></label>
+                <span>of <span data-edition-page-count>{{ document.edition_data_pages }}</span></span>
+                <button type="button" class="rounded border border-text-light px-3 py-1 hover:bg-text-light hover:text-neutral-light" data-edition-next>Next</button>
+                <button type="button" class="rounded border border-text-light px-3 py-1 hover:bg-text-light hover:text-neutral-light" data-edition-last>Last</button>
+                <a class="text-accent-light hover:text-accent-dark" href="{{ document.source_url }}" target="_blank" rel="noopener noreferrer">Source edition ↗</a>
+              </div>
+              <p class="mb-4 text-sm text-text-light" data-edition-status>Loading transcription...</p>
+              <div class="edition-content" data-edition-transcription></div>
+            {% elsif document.transcription %}
               {{ document.transcription | newline_to_br }}
             {% else %}
               <p class="text-text-light">Transcription is not available for this document.</p>
             {% endif %}
           </div>
           <div id="analysis" class="tab-content py-4 hidden">
-            {% if document.interlinear_analysis %}
+            {% if document.edition_data_pages %}
+              <p class="mb-4 text-sm text-text-light" data-edition-analysis-status>Loading analysis...</p>
+              <div class="edition-content" data-edition-analysis></div>
+            {% elsif document.interlinear_analysis %}
               <p class="text-text-light">Interlinear analysis content is available for this document.</p>
             {% else %}
               <p class="text-text-light">Interlinear analysis is not available for this document.</p>
@@ -113,3 +134,7 @@ metadata:
     </div>
   </div>
 </main>
+
+{% if document.edition_data_pages %}
+<script src="/js/edition.js"></script>
+{% endif %}
